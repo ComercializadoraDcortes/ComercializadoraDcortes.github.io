@@ -185,8 +185,9 @@ span {
 }
 
 .header-img {
-    flex-basis: 50%;
-    text-align: center;
+    max-width: 100%; 
+    height: auto; /* elimina la altura fija */
+    
 }
 
 .header-img img {
@@ -423,9 +424,7 @@ h2 {
     display: flex;
   }
 
-  .logo {
-    display: none;
-  }
+  
 
   .menu .navbar ul li a:hover {
     color: #FFFFFF;
@@ -442,7 +441,7 @@ h2 {
   }
 
   .header-txt {
-    margin-right: 0;
+    flex:1;
   }
 
   .buttons {
@@ -458,7 +457,8 @@ h2 {
 
     
     .header-img{
-        display: none;
+        flex:1; 
+        text-align:center;
     }
 
     .offerts {
@@ -774,6 +774,7 @@ h2 {
     gap: 20px;
   }
 }
+
 
 
 
