@@ -713,7 +713,7 @@ h2 {
   }
 
   /* Botones */
-  .butons a {
+  .buttons a {
     display: block;
     margin: 10px auto;
     width: 80%;
@@ -756,5 +756,6 @@ h2 {
     gap: 20px;
   }
 }
+
 
 
