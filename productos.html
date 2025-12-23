@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Productos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="menu container">
+      <a href="Index.html" class="logo">Todo para Sublimar</a>
+      <input type="checkbox" id="menu"/>
+      <label for="menu">
+        <img src="images/menu.png" class="menu-icono" alt="menu" />
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+        </ul>
+      </nav>
+      <div>
+        <ul>
+          <li class="submenu">
+            <img id="img-carrito" src="images/car.svg" alt="car" />
+            <div id="carrito">
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="filtros container">
+  <h2 style="text-align: center;">Filtrar por categoría</h2>
+
+  <button class="btn-3" onclick="filtrar('todos')">Todos</button>
+  <button class="btn-3" onclick="filtrar('tazas')">Tazas</button>
+  <button class="btn-3" onclick="filtrar('camisas')">Camisas</button>
+  <button class="btn-3" onclick="filtrar('termos')">Termos</button>
+  <button class="btn-3" onclick="filtrar('bolsas')">Bolsas</button>
+</section>
+
+
+ <!-- CATÁLOGO -->
+<main class="products container">
+
+  <!-- TAZAS -->
+  <div class="box-container categoria tazas">
+    <div class="box">
+      <img src="images/pr2.png" alt="Taza">
+      <div class="product-txt">
+        <h3>Taza personalizada</h3>
+        <p>Diseño vibrante</p>
+        <p class="precio">$150</p>
+        <a
+          href="https://wa.me/522223569095?text=Hola%20👋,%20quiero%20comprar%20la%20🧉%20Taza%20personalizada%20de%20$150.%20¿Está%20disponible?"
+          target="_blank"
+          class="btn-3"
+        >
+          Agregar al carrito
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMISAS -->
+  <div class="box-container categoria camisas">
+    <div class="box">
+      <img src="images/pr1.png" alt="Camisa">
+      <div class="product-txt">
+        <h3>Playera sublimada</h3>
+        <p>Algodón Premium</p>
+        <p class="precio">$200</p>
+        <a
+          href="https://wa.me/522223569095?text=Hola%20👋,%20quiero%20comprar%20la%20👕%20Playera%20sublimada%20de%20$200.%20¿Está%20disponible?"
+          target="_blank"
+          class="btn-3"
+        >
+          Agregar al carrito
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMOS -->
+  <div class="box-container categoria termos">
+    <div class="box">
+      <img src="images/pr3.png" alt="Termo">
+      <div class="product-txt">
+        <h3>Termo personalizado</h3>
+        <p>Acero inoxidable</p>
+        <p class="precio">$250</p>
+        <a
+          href="https://wa.me/522223569095?text=Hola%20👋,%20quiero%20comprar%20el%20🧊%20Termo%20personalizado%20de%20$250.%20¿Está%20disponible?"
+          target="_blank"
+          class="btn-3"
+        >
+          Agregar al carrito
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOLSAS -->
+  <div class="box-container categoria bolsas">
+    <div class="box">
+      <img src="images/pr6.png" alt="Bolsa">
+      <div class="product-txt">
+        <h3>Bolsa ecológica</h3>
+        <p>Material reciclado</p>
+        <p class="precio">$180</p>
+        <a
+          href="https://wa.me/522223569095?text=Hola%20👋,%20quiero%20comprar%20la%20👜%20Bolsa%20ecológica%20de%20$180.%20¿Está%20disponible?"
+          target="_blank"
+          class="btn-3"
+        >
+          Agregar al carrito
+        </a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+
+ 
+
+<script src="script.js"></script>
+</body>
+</html>
