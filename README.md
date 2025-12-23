@@ -1,1 +1,280 @@
-# ComercializadoraDcortes.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="Index.html" class="logo">Todo para Sublimar</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img id="img-carrito" src="images/car.svg" alt="car">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <span>Bienvenido a nuestra tienda</span>
+                <h1>Ofertas especiales</h1>
+                <p>
+                    Aprovecha nuestras ofertas exclusivas en productos para sublimar.
+                </p>
+                <div class="butons">
+                    <a href="promociones.html" class="btn-1">Información.</a>
+                    <a href="promociones.html" class="btn-1">Leer más.</a>
+
+                </div>
+
+            </div>
+            <div class="header-img">
+                <img src="images/bag.png" alt="">
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!--SECCIÓN DE OFERTAS-->
+    <section class="oferts container">
+
+        <div class="ofert-1 b1">
+            <div class="ofert-txt">
+                <h3>Ofertas de temporada.</h3>
+                <a href="#">Leer más</a>
+            </div>
+            <div class="ofert-img">
+                <img src="images/s1.png" alt="">
+            </div>
+        </div>
+    
+
+    <!--SECCIÓN-->
+    
+        <div class="ofert-1 b2">
+            <div class="ofert-txt">
+                <h3>Selección de nuestros clientes</h3>
+                <a href="#">Leer más</a>
+            </div>
+            <div class="ofert-img">
+                <img src="images/s2.png" alt="">
+            </div>
+        </div>
+    
+
+    <!--SECCIÓN-->
+    
+        <div class="ofert-1 b3">
+            <div class="ofert-txt">
+                <h3>Temáticas especiales</h3>
+                <a href="#">Leer más</a>
+            </div>
+            <div class="ofert-img">
+                <img src="images/s3.png" alt="">
+            </div>
+        </div>
+    
+    </section>
+
+
+
+    <!--CONTAINER DE PRODUCTOS-->
+    <main class="products container">
+        <h2>Productos</h2>
+        <div class="box-container" id="lista-1">
+            <div class="box">
+                <img src="images/pr1.png" alt="">
+                <div class="product-txt">
+                    <h3>Playeras</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">
+                        Agregar al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="images/pr2.png" alt="">
+                <div class="product-txt">
+                    <h3>Tazas</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">
+                        Agregar al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="images/pr3.png" alt="">
+                <div class="product-txt">
+                    <h3>Termos</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="images/pr4.png" alt="">
+                <div class="product-txt">
+                    <h3>Agendas</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="images/pr5.png" alt="">
+                <div class="product-txt">
+                    <h3>Gorras</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="images/pr6.png" alt="">
+                <div class="product-txt">
+                    <h3>Bolsas</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!--CONTAINER DE PRODUCTOS-->
+
+
+
+
+        <a href="productos.html" class="btn-2" id="load-more">Ver todos los productos</a>
+
+
+    </main>
+
+    <section class="testimonial container">
+        <span>Opiniones de nuestros clientes</span>
+        <h2>¿Qué opinan nuestros clientes?</h2>
+        <div class="testimonial-content">
+            <div class="testimonial-1">
+                <p>
+                    "¡Me encantó la taza! El diseño es vibrante y se nota que fue hecho con mucho cuidado. Los colores no se han deslavado ni con el uso diario, y el acabado brillante le da un toque profesional. La recibí en perfecto estado y justo como se veía en el catálogo. Ideal para regalar o para tener en la oficina. ¡Recomendadísima!" — Laura G., CDMX
+                </p>
+                <img src="images/starts.png" alt="">
+                <h4></h4>
+
+            </div>
+
+             <div class="testimonial-1">
+                <p>"La gorra está increíble. El diseño se ve nítido y los colores resaltan muchísimo. Me gustó que no se siente como una impresión barata, sino como parte del tejido. La uso para entrenar y no ha perdido color ni forma. ¡Muy buen trabajo!" — Carlos M., Guadalajara
+                </p>
+                <img src="images/starts.png" alt="">
+                <h4></h4>
+
+            </div>
+
+            
+        </div>
+
+    </section>
+
+    <div style="text-align: center;">
+  <img src="images/ornamento.png" alt="ornamento" style="width: 700px; margin: 1px 0;">
+</div>
+
+
+
+    <footer class="footer">
+        <div class="footer-context container">
+            <div class="link">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="#">Numero telefónico </a></li>
+                    
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/">Youtube</a></li>
+                    <li><a href="https://www.tiktok.com/">Tiktok</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Dirección</h3>
+                <ul>
+                    <li><a href="#">Avenida 17 Poniente 105 local 11 Col.Centro, El Carmen, 72530, PUE, México</a></li>
+                   
+                </ul>
+            </div>
+            
+        </div>
+
+
+
+        
+
+    </footer>
+
+
+
+
+   
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
