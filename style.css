@@ -694,3 +694,66 @@ h2 {
   color: #515557;
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  /* Encabezado */
+  .header {
+    padding: 40px 0 0 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-txt h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .header-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Botones */
+  .butons a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* Ofertas */
+  .oferts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ofert-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Productos */
+  .box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Testimonios */
+  .testimonial-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Ornamento */
+  img[alt="ornamento"] {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer-context {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
