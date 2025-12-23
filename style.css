@@ -811,5 +811,52 @@ h2 {
 
 
 
+/* Ajustes de espaciado para logo y encabezado */
+.logo {
+  font-size: 25px;
+  color: #9BCE21;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 20px; /* espacio debajo del logo */
+}
+
+.header {
+  padding: 80px 0 40px 0; /* más balanceado que 130px */
+}
+
+.header-txt span {
+  margin-top: 20px; /* espacio arriba del “Bienvenido a nuestra tienda” */
+}
+
+/* Imagen visible en escritorio */
+.header-img {
+  flex: 1;
+  text-align: center;
+}
+
+.header-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Texto ocupa el otro lado */
+.header-txt {
+  flex: 1;
+}
+
+/* Ocultar imagen solo en pantallas pequeñas */
+@media (max-width: 991px) {
+  .header-img {
+    display: none;
+  }
+  .logo {
+    display: block; /* asegura que el logo se vea en móvil */
+  }
+}
+
+
+
+
+
 
 
