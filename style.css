@@ -801,6 +801,14 @@ h2 {
   }
 }
 
+.header {
+  padding: 80px 0 40px 0;
+}
+.header-img img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 
