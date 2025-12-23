@@ -775,6 +775,32 @@ h2 {
   }
 }
 
+/* Imagen visible por defecto */
+.header-img {
+  flex: 1;
+  text-align: center;
+}
+
+.header-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Texto ocupa el otro lado */
+.header-txt {
+  flex: 1;
+}
+
+/* Ocultar solo en pantallas pequeñas */
+@media (max-width: 991px) {
+  .header-img {
+    display: none;
+  }
+  .logo {
+    display: block; /* asegúrate que el logo se vea */
+  }
+}
+
 
 
 
