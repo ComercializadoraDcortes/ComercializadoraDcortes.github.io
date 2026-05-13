@@ -1,283 +1,693 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comercializadora d'Cortes — Todo para Sublimar</title>
+<meta name="description" content="Sublimación, impresión en lonas, gorras, camisas y diseño digital en Puebla. Comercializadora d'Cortes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#2563EB;
+  --blue-dark:#1A45B0;
+  --blue-light:#EFF4FF;
+  --blue-mid:#DBEAFE;
+  --carbon:#1C2331;
+  --carbon2:#2D3748;
+  --muted:#718096;
+  --light:#F9FAFB;
+  --white:#FFFFFF;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --ease2:cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);overflow-x:hidden;cursor:none}
+
+/* ── CURSOR ── */
+#cur-dot{position:fixed;width:7px;height:7px;border-radius:50%;background:var(--blue);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform .08s}
+#cur-ring{position:fixed;width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(37,99,235,.45);pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .28s var(--ease),height .28s var(--ease),border-color .28s}
+#cur-ring.h{width:52px;height:52px;border-color:rgba(37,99,235,.9)}
+
+/* ── SCROLL PROGRESS ── */
+#spb{position:fixed;top:0;left:0;height:2px;background:var(--blue);z-index:9997;width:0%;transition:width .08s linear}
+
+/* ── LOADER ── */
+#loader{position:fixed;inset:0;background:var(--carbon);z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;transition:opacity .8s var(--ease),visibility .8s}
+#loader.out{opacity:0;visibility:hidden}
+.ld-logo{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#fff}
+.ld-logo span{color:var(--blue)}
+.ld-bar{width:120px;height:2px;background:rgba(255,255,255,.1);overflow:hidden}
+.ld-fill{height:100%;background:var(--blue);animation:ldfill 1.7s var(--ease2) forwards}
+@keyframes ldfill{from{width:0}to{width:100%}}
+
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(36px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rl{opacity:0;transform:translateX(-42px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rr{opacity:0;transform:translateX(42px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rs{opacity:0;transform:scale(.93);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.r.on,.rl.on,.rr.on,.rs.on{opacity:1;transform:none}
+.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}
+.d4{transition-delay:.2s}.d5{transition-delay:.25s}.d6{transition-delay:.3s}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0;transition:background .4s,box-shadow .4s,padding .4s}
+nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.nav-i{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-mark{width:36px;height:36px;position:relative}
+/* SVG logo mark (double C) */
+.nav-logo-text{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--carbon);line-height:1.1}
+.nav-logo-text span{display:block;font-size:10px;font-weight:400;color:var(--muted);letter-spacing:.5px}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--carbon);text-decoration:none;padding:7px 14px;border-radius:6px;transition:background .2s,color .2s;letter-spacing:.2px}
+.nav-links a:hover{background:var(--blue-light);color:var(--blue)}
+.nav-btn{background:var(--blue)!important;color:#fff!important;border-radius:8px!important;padding:9px 20px!important;transition:background .2s,transform .15s!important}
+.nav-btn:hover{background:var(--blue-dark)!important;transform:translateY(-1px)!important}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden}
+.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.hero-bg-blob{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.12) 0%,transparent 70%);right:-100px;top:-100px;pointer-events:none;animation:blobFloat 8s ease-in-out infinite}
+.hero-bg-blob2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.07) 0%,transparent 70%);left:-80px;bottom:-60px;pointer-events:none;animation:blobFloat 11s ease-in-out infinite reverse}
+@keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-30px) scale(1.05)}}
+.hero-i{max-width:1200px;margin:0 auto;padding:0 2.5rem;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--blue);margin-bottom:20px;display:flex;align-items:center;gap:10px;animation:fadeUp .9s var(--ease) .2s both}
+.hero-eyebrow::before{content:'';width:24px;height:1.5px;background:var(--blue);flex-shrink:0}
+.hero-h1{font-family:'Syne',sans-serif;font-size:clamp(44px,5.5vw,72px);font-weight:800;line-height:1.0;letter-spacing:-1.5px;color:var(--carbon);margin-bottom:24px;animation:fadeUp .9s var(--ease) .35s both}
+.hero-h1 em{color:var(--blue);font-style:normal;display:block}
+.hero-p{font-size:17px;font-weight:300;line-height:1.8;color:var(--muted);max-width:440px;margin-bottom:36px;animation:fadeUp .9s var(--ease) .5s both}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .9s var(--ease) .62s both}
+.btn-primary{background:var(--blue);color:#fff;font-size:14px;font-weight:600;padding:15px 32px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 14px rgba(37,99,235,.3)}
+.btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,.38)}
+.btn-sec{background:transparent;color:var(--carbon);font-size:14px;font-weight:600;padding:15px 32px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(0,0,0,.14);transition:border-color .2s,background .2s}
+.btn-sec:hover{border-color:var(--blue);background:var(--blue-light);color:var(--blue)}
+.hero-right{animation:fadeUp .9s var(--ease) .3s both}
+.hero-visual{position:relative}
+.hero-card-main{background:var(--white);border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.1),0 1px 0 rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.06)}
+.hero-card-img{width:100%;height:200px;background:linear-gradient(135deg,var(--blue-light),var(--blue-mid));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;overflow:hidden;position:relative}
+.hero-card-img-text{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:var(--blue);opacity:.3;letter-spacing:-2px}
+.hero-card-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:10px}
+.hero-card-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--carbon);margin-bottom:6px}
+.hero-card-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.hero-badge{position:absolute;top:-16px;right:-16px;background:var(--blue);color:#fff;width:70px;height:70px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;text-align:center;line-height:1.2;box-shadow:0 8px 20px rgba(37,99,235,.4);animation:rotateSlow 12s linear infinite}
+@keyframes rotateSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hero-mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.hero-mini-card{background:var(--light);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px}
+.hero-mini-icon{width:36px;height:36px;background:var(--blue-light);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
+.hero-mini-icon svg{width:18px;height:18px}
+.hero-mini-name{font-size:12px;font-weight:600;color:var(--carbon)}
+.hero-mini-sub{font-size:11px;color:var(--muted)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+/* ── STRIP ── */
+.strip{background:var(--carbon);padding:18px 0;overflow:hidden}
+.strip-track{display:flex;width:max-content;animation:stripMq 22s linear infinite}
+.strip-track:hover{animation-play-state:paused}
+@keyframes stripMq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.strip-item{padding:0 40px;font-family:'Syne',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);white-space:nowrap;display:flex;align-items:center;gap:16px}
+.strip-item::after{content:'·';color:var(--blue);font-size:18px}
+
+/* ── SECTION STRUCTURE ── */
+.section{padding:100px 0}
+.sec-i{max-width:1200px;margin:0 auto;padding:0 2.5rem}
+.sec-label{font-size:11px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--blue);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sec-label::before{content:'';width:0;height:1.5px;background:var(--blue);transition:width .7s var(--ease)}
+.sec-label.on::before{width:22px}
+.sec-h{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,50px);font-weight:800;letter-spacing:-1px;color:var(--carbon);margin-bottom:16px;line-height:1.05}
+.sec-h em{color:var(--blue);font-style:normal}
+.sec-lead{font-size:16px;font-weight:300;line-height:1.85;color:var(--muted);max-width:520px}
+
+/* ── SERVICES ── */
+.services{background:var(--white)}
+.services-grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.07)}
+.svc{background:var(--white);padding:44px 36px;position:relative;overflow:hidden;transition:background .3s,transform .4s var(--ease)}
+.svc::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:width .4s var(--ease)}
+.svc:hover{background:var(--blue-light);transform:translateY(-4px);z-index:1;box-shadow:0 12px 40px rgba(37,99,235,.1)}
+.svc:hover::before{width:100%}
+.svc-n{position:absolute;top:16px;right:20px;font-family:'Syne',sans-serif;font-size:64px;font-weight:800;color:rgba(0,0,0,.04);line-height:1;pointer-events:none;transition:color .3s}
+.svc:hover .svc-n{color:rgba(37,99,235,.08)}
+.svc-icon{width:50px;height:50px;border:1.5px solid var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue);margin-bottom:22px;transition:background .2s,transform .3s var(--ease)}
+.svc:hover .svc-icon{background:var(--blue);color:#fff;transform:scale(1.08) rotate(-5deg)}
+.svc-icon svg{width:22px;height:22px}
+.svc-name{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;color:var(--carbon);margin-bottom:10px}
+.svc-desc{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7}
+
+/* ── PROCESS ── */
+.process{background:var(--light);padding:100px 0}
+.process-steps{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-steps::before{content:'';position:absolute;top:36px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--blue-mid),var(--blue-mid),transparent);z-index:0}
+.step{position:relative;z-index:1;text-align:center;padding:0 20px}
+.step-num{width:72px;height:72px;border-radius:50%;background:var(--white);border:2px solid var(--blue-mid);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--blue);transition:background .3s,border-color .3s,transform .35s var(--ease)}
+.step:hover .step-num{background:var(--blue);border-color:var(--blue);color:#fff;transform:scale(1.1)}
+.step-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--carbon);margin-bottom:8px}
+.step-desc{font-size:13.5px;font-weight:300;color:var(--muted);line-height:1.7}
+
+/* ── PRODUCTOS ── */
+.productos{background:var(--white);padding:100px 0}
+.prod-grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod-card{border-radius:16px;overflow:hidden;background:var(--light);border:1px solid rgba(0,0,0,.06);transition:transform .4s var(--ease),box-shadow .4s;cursor:none}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.prod-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:60px;position:relative;overflow:hidden}
+.prod-img-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--blue-light),var(--blue-mid));transition:transform .5s var(--ease)}
+.prod-card:hover .prod-img-bg{transform:scale(1.06)}
+.prod-emoji{position:relative;z-index:1;font-size:56px;transition:transform .4s var(--ease)}
+.prod-card:hover .prod-emoji{transform:scale(1.15) rotate(-5deg)}
+.prod-body{padding:20px}
+.prod-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--carbon);margin-bottom:6px}
+.prod-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.65}
+
+/* ── WHY / ABOUT ── */
+.about{background:var(--carbon);padding:100px 0;position:relative;overflow:hidden}
+.about-blob{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.15) 0%,transparent 70%);right:-120px;bottom:-120px;pointer-events:none}
+.about-i{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.about .sec-label{color:rgba(255,255,255,.4)}
+.about .sec-label::before{background:rgba(255,255,255,.3)}
+.about .sec-h{color:#fff}
+.about .sec-lead{color:rgba(255,255,255,.5)}
+.about-list{margin-top:40px;display:flex;flex-direction:column;gap:16px}
+.about-item{display:flex;align-items:flex-start;gap:14px;padding:20px 22px;border:1px solid rgba(255,255,255,.08);border-radius:10px;transition:border-color .25s,background .25s,transform .35s var(--ease)}
+.about-item:hover{border-color:rgba(37,99,235,.5);background:rgba(37,99,235,.07);transform:translateX(6px)}
+.about-item-icon{width:40px;height:40px;border-radius:8px;background:rgba(37,99,235,.2);display:flex;align-items:center;justify-content:center;color:#93C5FD;flex-shrink:0;transition:background .2s}
+.about-item:hover .about-item-icon{background:var(--blue)}
+.about-item-icon svg{width:18px;height:18px}
+.about-item-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.about-item-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.astat{padding:28px;background:rgba(255,255,255,.04);border-radius:14px;border:1px solid rgba(255,255,255,.07);transition:background .25s}
+.astat:hover{background:rgba(37,99,235,.12)}
+.astat-n{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:#fff;line-height:1;margin-bottom:6px}
+.astat-n span{color:#60A5FA;font-size:.6em}
+.astat-l{font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+
+/* ── CTA ── */
+.cta{background:var(--blue);padding:90px 0;position:relative;overflow:hidden}
+.cta-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.6;pointer-events:none}
+.cta-text-bg{position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Syne',sans-serif;font-size:180px;font-weight:800;color:rgba(255,255,255,.07);white-space:nowrap;letter-spacing:-5px;pointer-events:none;animation:ctaSlide 12s ease-in-out infinite alternate}
+@keyframes ctaSlide{from{transform:translateY(-50%) translateX(0)}to{transform:translateY(-50%) translateX(-60px)}}
+.cta-i{max-width:1200px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-h{font-family:'Syne',sans-serif;font-size:clamp(34px,4vw,54px);font-weight:800;color:#fff;line-height:1.05;letter-spacing:-1px}
+.cta-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.78);margin-top:10px;max-width:400px}
+.btn-white{background:#fff;color:var(--blue);font-size:14px;font-weight:700;padding:16px 34px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s,transform .15s;letter-spacing:.3px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.btn-white:hover{opacity:.92;transform:translateY(-2px)}
+.btn-wa{background:#25D366;color:#fff;font-size:14px;font-weight:700;padding:16px 34px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s,transform .15s;letter-spacing:.3px}
+.btn-wa:hover{opacity:.9;transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+footer{background:#0F1623;padding:70px 0 0}
+.footer-i{max-width:1200px;margin:0 auto;padding:0 2.5rem}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.4fr;gap:48px;margin-bottom:56px}
+.footer-logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:10px;letter-spacing:-.3px}
+.footer-logo span{color:#60A5FA}
+.footer-logo-cc{width:32px;height:32px;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;color:#fff}
+.footer-desc{font-size:13.5px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.8;margin-bottom:20px;max-width:280px}
+.footer-contact a{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;margin-bottom:9px;transition:color .2s}
+.footer-contact a:hover{color:#fff}
+.footer-contact svg{width:13px;height:13px;flex-shrink:0}
+.footer-social{display:flex;gap:9px;margin-top:16px}
+.fsoc{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .2s,transform .2s}
+.fsoc:hover{background:var(--blue);transform:translateY(-2px)}
+.fsoc svg{width:15px;height:15px}
+.fcol-title{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:20px}
+.flinks{list-style:none}
+.flinks li{margin-bottom:9px}
+.flinks a{font-size:13.5px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:22px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;color:rgba(255,255,255,.2)}
+.footer-bottom-logo{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:rgba(255,255,255,.25);letter-spacing:-.2px}
+.footer-bottom-logo span{color:rgba(37,99,235,.6)}
+
+/* ── WA FLOAT ── */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;cursor:none;animation:wap 2.2s infinite;transition:transform .25s var(--ease)}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:26px;height:26px}
+@keyframes wap{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+@media(max-width:900px){
+  .hero-i{grid-template-columns:1fr;gap:48px}
+  .hero-right{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:28px}
+  .process-steps::before{display:none}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .about-i{grid-template-columns:1fr;gap:40px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  nav .nav-links{display:none}
+}
+@media(max-width:600px){
+  .prod-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .cta-i{flex-direction:column}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="menu container">
-            <a href="index.html" class="logo">Todo para Sublimar</a>
-            <input type="checkbox" id="menu"/>
-            <label for="menu">
-                <img src="images/menu.png" class="menu-icono" alt="menu">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="promociones.html">Promociones</a></li>
-                </ul>
-            </nav>
-
-            <div>
-                <ul>
-                    <li class="submenu">
-                        <img id="img-carrito" src="images/car.svg" alt="car">
-                        <div id="carrito">
-                            <table id="lista-carrito">
-                                <thead>
-                                    <tr>
-                                        <th>Imagen</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-
-                            </table>
-                            <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
-
-                        </div>
-
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="header-content container">
-  <div class="header-txt">
-    <span>Bienvenido a nuestra tienda</span>
-    <h1>Ofertas especiales</h1>
-    <p>Aprovecha nuestras ofertas exclusivas en productos para sublimar.</p>
-    <div class="buttons">
-      <a href="promociones.html" class="btn-1">Información.</a>
-      <a href="promociones.html" class="btn-1">Leer más.</a>
-    </div>
-  </div>
-
-  <div class="header-img">
-    <img src="images/bag.png" alt="">
-  </div>
-
-
-
-    </header>
-
-
-
-    <!--SECCIÓN DE OFERTAS-->
-    <section class="oferts container">
-
-        <div class="ofert-1 b1">
-            <div class="ofert-txt">
-                <h3>Ofertas de temporada.</h3>
-                <a href="#">Leer más</a>
-            </div>
-            <div class="ofert-img">
-                <img src="images/s1.png" alt="">
-            </div>
-        </div>
-    
-
-    <!--SECCIÓN-->
-    
-        <div class="ofert-1 b2">
-            <div class="ofert-txt">
-                <h3>Selección de nuestros clientes</h3>
-                <a href="#">Leer más</a>
-            </div>
-            <div class="ofert-img">
-                <img src="images/s2.png" alt="">
-            </div>
-        </div>
-    
-
-    <!--SECCIÓN-->
-    
-        <div class="ofert-1 b3">
-            <div class="ofert-txt">
-                <h3>Temáticas especiales</h3>
-                <a href="#">Leer más</a>
-            </div>
-            <div class="ofert-img">
-                <img src="images/s3.png" alt="">
-            </div>
-        </div>
-    
-    </section>
-
-
-
-    <!--CONTAINER DE PRODUCTOS-->
-    <main class="products container">
-        <h2>Productos</h2>
-        <div class="box-container" id="lista-1">
-            <div class="box">
-                <img src="images/pr1.png" alt="">
-                <div class="product-txt">
-                    <h3>Playeras</h3>
-                    <p>Calidad Premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-3" data-id="1">
-                        Agregar al carrito</a>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <img src="images/pr2.png" alt="">
-                <div class="product-txt">
-                    <h3>Tazas</h3>
-                    <p>Calidad Premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-3" data-id="2">
-                        Agregar al carrito</a>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <img src="images/pr3.png" alt="">
-                <div class="product-txt">
-                    <h3>Termos</h3>
-                    <p>Calidad Premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <img src="images/pr4.png" alt="">
-                <div class="product-txt">
-                    <h3>Agendas</h3>
-                    <p>Calidad Premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <img src="images/pr5.png" alt="">
-                <div class="product-txt">
-                    <h3>Gorras</h3>
-                    <p>Calidad Premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <img src="images/pr6.png" alt="">
-                <div class="product-txt">
-                    <h3>Bolsas</h3>
-                    <p>Calidad Premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-        <!--CONTAINER DE PRODUCTOS-->
-
-
-
-
-        <a href="productos.html" class="btn-2" id="load-more">Ver todos los productos</a>
-
-
-    </main>
-
-    <section class="testimonial container">
-        <span>Opiniones de nuestros clientes</span>
-        <h2>¿Qué opinan nuestros clientes?</h2>
-        <div class="testimonial-content">
-            <div class="testimonial-1">
-                <p>
-                    "¡Me encantó la taza! El diseño es vibrante y se nota que fue hecho con mucho cuidado. Los colores no se han deslavado ni con el uso diario, y el acabado brillante le da un toque profesional. La recibí en perfecto estado y justo como se veía en el catálogo. Ideal para regalar o para tener en la oficina. ¡Recomendadísima!" — Laura G., CDMX
-                </p>
-                <img src="images/starts.png" alt="">
-                <h4></h4>
-
-            </div>
-
-             <div class="testimonial-1">
-                <p>"La gorra está increíble. El diseño se ve nítido y los colores resaltan muchísimo. Me gustó que no se siente como una impresión barata, sino como parte del tejido. La uso para entrenar y no ha perdido color ni forma. ¡Muy buen trabajo!" — Carlos M., Guadalajara
-                </p>
-                <img src="images/starts.png" alt="">
-                <h4></h4>
-
-            </div>
-
-            
-        </div>
-
-    </section>
-
-    <div style="text-align: center;">
-  <img src="images/ornamento.png" alt="ornamento" style="width: 700px; margin: 1px 0;">
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-logo">D'<span>CORTES</span></div>
+  <div class="ld-bar"><div class="ld-fill"></div></div>
 </div>
 
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="spb"></div>
 
+<!-- ═══ NAV ═══ -->
+<nav id="mainNav">
+  <div class="nav-i">
+    <a href="#" class="nav-logo">
+      <!-- Logo CC mark -->
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="8" fill="#2563EB"/>
+        <path d="M22 18c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M25 18c0 3.87-3.13 7-7 7s-7-3.13-7-7 3.13-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+      </svg>
+      <div class="nav-logo-text">
+        Comercializadora d'Cortes
+        <span>Todo para Sublimar</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="https://wa.me/52" class="nav-btn">Cotizar</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <footer class="footer">
-        <div class="footer-context container">
-            <div class="link">
-                <h3>Contacto</h3>
-                <ul>
-                    <li><a href="#">Numero telefónico </a></li>
-                    
-                </ul>
-            </div>
-            <div class="link">
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>Instagram</a></li>
-                    <li><a href="https://www.facebook.com/">Facebook</a></li>
-                    <li><a href="https://www.youtube.com/">Youtube</a></li>
-                    <li><a href="https://www.tiktok.com/">Tiktok</a></li>
-                </ul>
-            </div>
-            <div class="link">
-                <h3>Dirección</h3>
-                <ul>
-                    <li><a href="#">Avenida 17 Poniente 105 local 11 Col.Centro, El Carmen, 72530, PUE, México</a></li>
-                   
-                </ul>
-            </div>
-            
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-blob"></div>
+  <div class="hero-bg-blob2"></div>
+  <div class="hero-i">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Todo para Sublimar · Puebla</div>
+      <h1 class="hero-h1">
+        Diseño que<br>
+        <em>imprime</em>
+        tu marca
+      </h1>
+      <p class="hero-p">Sublimación, impresión en lonas, gorras, camisas y diseño digital. Convertimos tu idea en un producto que habla por ti.</p>
+      <div class="hero-btns">
+        <a href="#servicios" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          Ver servicios
+        </a>
+        <a href="https://wa.me/52" class="btn-sec">
+          Cotización gratis
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="hero-badge">
+          <span style="font-size:9px">DISEÑO</span>
+          <span style="font-size:9px">DIGITAL</span>
         </div>
+        <div class="hero-card-main">
+          <div class="hero-card-img">
+            <div class="hero-card-img-text">CC</div>
+          </div>
+          <div class="hero-card-tag">Sublimación</div>
+          <div class="hero-card-title">Impresión de alta resolución</div>
+          <div class="hero-card-desc">Colores vibrantes y duraderos sobre cualquier superficie.</div>
+          <div class="hero-mini-cards">
+            <div class="hero-mini-card">
+              <div class="hero-mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg></div>
+              <div><div class="hero-mini-name">Camisas</div><div class="hero-mini-sub">100% sublimadas</div></div>
+            </div>
+            <div class="hero-mini-card">
+              <div class="hero-mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+              <div><div class="hero-mini-name">Lonas</div><div class="hero-mini-sub">Gran formato</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══ STRIP MARQUEE ═══ -->
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item">Sublimación</span>
+    <span class="strip-item">Impresión en Lona</span>
+    <span class="strip-item">Diseño Digital</span>
+    <span class="strip-item">Gorras Personalizadas</span>
+    <span class="strip-item">Camisas Sublimadas</span>
+    <span class="strip-item">Tazas y Regalos</span>
+    <span class="strip-item">Branding Corporativo</span>
+    <!-- duplicate -->
+    <span class="strip-item">Sublimación</span>
+    <span class="strip-item">Impresión en Lona</span>
+    <span class="strip-item">Diseño Digital</span>
+    <span class="strip-item">Gorras Personalizadas</span>
+    <span class="strip-item">Camisas Sublimadas</span>
+    <span class="strip-item">Tazas y Regalos</span>
+    <span class="strip-item">Branding Corporativo</span>
+  </div>
+</div>
 
+<!-- ═══ SERVICIOS ═══ -->
+<section class="section services" id="servicios">
+  <div class="sec-i">
+    <div class="sec-label r">Servicios</div>
+    <h2 class="sec-h r d1">Lo que hacemos<br><em>mejor</em></h2>
+    <p class="sec-lead r d2">Servicios completos de impresión y diseño digital para personas, empresas y eventos.</p>
+    <div class="services-grid">
+      <div class="svc r d1">
+        <div class="svc-n">01</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <div class="svc-name">Sublimación</div>
+        <p class="svc-desc">Impresión de alta calidad en camisas, playeras, gorras, tazas, almohadas, puzzles y más. Colores permanentes que no se despegan ni desvanecen.</p>
+      </div>
+      <div class="svc r d2">
+        <div class="svc-n">02</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+        <div class="svc-name">Impresión en Lona</div>
+        <p class="svc-desc">Lonas de gran formato para publicidad, eventos, negocios y exteriores. Alta resolución, resistentes a la intemperie con acabados profesionales.</p>
+      </div>
+      <div class="svc r d3">
+        <div class="svc-n">03</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17 2H7a5 5 0 00-5 5v10a5 5 0 005 5h10a5 5 0 005-5V7a5 5 0 00-5-5zM2 10h20"/></svg></div>
+        <div class="svc-name">Diseño Digital</div>
+        <p class="svc-desc">Creación de logotipos, branding, materiales publicitarios, redes sociales y todo tipo de contenido visual para tu negocio.</p>
+      </div>
+      <div class="svc r d4">
+        <div class="svc-n">04</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg></div>
+        <div class="svc-name">Ropa Personalizada</div>
+        <p class="svc-desc">Uniformes corporativos, equipos deportivos, camisas de evento. Pedidos desde una pieza hasta producción en serie.</p>
+      </div>
+      <div class="svc r d5">
+        <div class="svc-n">05</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="svc-name">Gorras y Accesorios</div>
+        <p class="svc-desc">Gorras, bolsas, mochilas y artículos promocionales con tu diseño o logotipo. Perfectos para regalos corporativos y eventos.</p>
+      </div>
+      <div class="svc r d6">
+        <div class="svc-n">06</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="svc-name">Artículos de Regalo</div>
+        <p class="svc-desc">Tazas, termos, porta retratos, puzzles, cojines y más artículos personalizados ideales para regalos únicos y memorables.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        
+<!-- ═══ PROCESO ═══ -->
+<section class="process" id="proceso">
+  <div class="sec-i">
+    <div class="sec-label r">Proceso</div>
+    <h2 class="sec-h r d1">Tu pedido en<br><em>4 pasos</em></h2>
+    <p class="sec-lead r d2">Sencillo, rápido y con acompañamiento en cada etapa.</p>
+    <div class="process-steps">
+      <div class="step r d1">
+        <div class="step-num">1</div>
+        <div class="step-title">Cuéntanos tu idea</div>
+        <p class="step-desc">Escríbenos por WhatsApp o visítanos. Cuéntanos qué necesitas, cuántas piezas y para cuándo.</p>
+      </div>
+      <div class="step r d2">
+        <div class="step-num">2</div>
+        <div class="step-title">Diseño y aprobación</div>
+        <p class="step-desc">Nuestro equipo de diseño crea una propuesta visual. Ajustamos hasta que quede perfecta.</p>
+      </div>
+      <div class="step r d3">
+        <div class="step-num">3</div>
+        <div class="step-title">Producción</div>
+        <p class="step-desc">Con tu aprobación iniciamos la impresión con los mejores materiales y equipos de sublimación.</p>
+      </div>
+      <div class="step r d4">
+        <div class="step-num">4</div>
+        <div class="step-title">Entrega</div>
+        <p class="step-desc">Recoge tu pedido en tienda o lo enviamos a domicilio. ¡Listo para sorprender!</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    </footer>
+<!-- ═══ PRODUCTOS ═══ -->
+<section class="productos" id="productos">
+  <div class="sec-i">
+    <div class="sec-label r">Productos</div>
+    <h2 class="sec-h r d1">Imprimimos en<br><em>todo</em></h2>
+    <p class="sec-lead r d2">Una amplia gama de productos personalizables para cualquier ocasión.</p>
+    <div class="prod-grid">
+      <div class="prod-card rs d1">
+        <div class="prod-img"><div class="prod-img-bg"></div><div class="prod-emoji">👕</div></div>
+        <div class="prod-body">
+          <div class="prod-name">Camisas y Playeras</div>
+          <p class="prod-desc">Sublimación total o parcial en poliéster y mezclas. Diseños full color sin límite.</p>
+        </div>
+      </div>
+      <div class="prod-card rs d2">
+        <div class="prod-img"><div class="prod-img-bg"></div><div class="prod-emoji">🧢</div></div>
+        <div class="prod-body">
+          <div class="prod-name">Gorras</div>
+          <p class="prod-desc">Gorras planas, curvas y trucker con sublimación o bordado en el panel frontal.</p>
+        </div>
+      </div>
+      <div class="prod-card rs d3">
+        <div class="prod-img"><div class="prod-img-bg"></div><div class="prod-emoji">🖼️</div></div>
+        <div class="prod-body">
+          <div class="prod-name">Lonas y Banners</div>
+          <p class="prod-desc">Gran formato para exteriores, eventos, puntos de venta y publicidad en general.</p>
+        </div>
+      </div>
+      <div class="prod-card rs d4">
+        <div class="prod-img"><div class="prod-img-bg"></div><div class="prod-emoji">☕</div></div>
+        <div class="prod-body">
+          <div class="prod-name">Tazas y Regalos</div>
+          <p class="prod-desc">Tazas mágicas, termos, vasos y artículos de regalo con tus fotos o diseños favoritos.</p>
+        </div>
+      </div>
+      <div class="prod-card rs d5">
+        <div class="prod-img"><div class="prod-img-bg"></div><div class="prod-emoji">🛍️</div></div>
+        <div class="prod-body">
+          <div class="prod-name">Artículos Promocionales</div>
+          <p class="prod-desc">Bolsas, cojines, puzzles, porta retratos y más para empresas y eventos especiales.</p>
+        </div>
+      </div>
+      <div class="prod-card rs d6" style="background:linear-gradient(135deg,var(--blue),#1A45B0);border-color:transparent">
+        <div class="prod-img" style="background:none"><div class="prod-img-bg" style="background:rgba(255,255,255,.08)"></div><div style="position:relative;z-index:1;font-family:'Syne',sans-serif;font-size:44px;font-weight:800;color:rgba(255,255,255,.7)">+</div></div>
+        <div class="prod-body">
+          <div class="prod-name" style="color:#fff">¿No encuentras lo que buscas?</div>
+          <p class="prod-desc" style="color:rgba(255,255,255,.65)">Cuéntanos tu idea. Si se puede imprimir, nosotros lo hacemos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="nosotros">
+  <div class="about-blob"></div>
+  <div class="about-i">
+    <div>
+      <div class="sec-label r">Nosotros</div>
+      <h2 class="sec-h r d1">Por qué elegir<br><em>d'Cortes</em></h2>
+      <p class="sec-lead r d2" style="margin-bottom:0">Somos una empresa apasionada por transformar ideas en productos impresos de alta calidad.</p>
+      <div class="about-list">
+        <div class="about-item r d3">
+          <div class="about-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div>
+            <div class="about-item-title">Calidad garantizada</div>
+            <p class="about-item-desc">Usamos tintas y materiales de primera línea para resultados duraderos y vibrantes.</p>
+          </div>
+        </div>
+        <div class="about-item r d4">
+          <div class="about-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="about-item-title">Entregas a tiempo</div>
+            <p class="about-item-desc">Cumplimos los plazos acordados. Tu evento o lanzamiento no puede esperar.</p>
+          </div>
+        </div>
+        <div class="about-item r d5">
+          <div class="about-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div>
+            <div class="about-item-title">Atención personalizada</div>
+            <p class="about-item-desc">Te acompañamos desde la idea hasta la entrega. Sin complicaciones.</p>
+          </div>
+        </div>
+        <div class="about-item r d6">
+          <div class="about-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div>
+            <div class="about-item-title">Precios justos</div>
+            <p class="about-item-desc">Cotizaciones claras y sin sorpresas. Ajustamos a tu presupuesto sin sacrificar calidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="about-stats">
+        <div class="astat r d1">
+          <div class="astat-n"><span class="counter" data-target="500">0</span><span>+</span></div>
+          <div class="astat-l">Clientes satisfechos</div>
+        </div>
+        <div class="astat r d2">
+          <div class="astat-n"><span class="counter" data-target="5">0</span><span>+ años</span></div>
+          <div class="astat-l">De experiencia</div>
+        </div>
+        <div class="astat r d3">
+          <div class="astat-n"><span class="counter" data-target="10">0</span><span>k+</span></div>
+          <div class="astat-l">Piezas producidas</div>
+        </div>
+        <div class="astat r d4">
+          <div class="astat-n"><span class="counter" data-target="100">0</span><span>%</span></div>
+          <div class="astat-l">Garantía de calidad</div>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:30px;background:rgba(255,255,255,.04);border-radius:14px;border:1px solid rgba(255,255,255,.07)" class="r d5">
+        <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:8px">¿Tienes un proyecto en mente?</div>
+        <p style="font-size:13.5px;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:18px">Cuéntanos tu idea y te enviamos una cotización sin costo ni compromiso.</p>
+        <a href="https://wa.me/52" class="btn-wa" style="width:100%;justify-content:center;border-radius:8px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══ CTA ═══ -->
+<section class="cta" id="contacto">
+  <div class="cta-noise"></div>
+  <div class="cta-text-bg">SUBLIMAR</div>
+  <div class="cta-i">
+    <div class="rl">
+      <h2 class="cta-h">¿Listo para<br>ver tu idea impresa?</h2>
+      <p class="cta-p">Contáctanos hoy y recibe una cotización sin costo. Entregamos en Puebla y enviamos a todo México.</p>
+    </div>
+    <div class="rr" style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="tel:" class="btn-white">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Llamar ahora
+      </a>
+      <a href="https://wa.me/52" class="btn-wa">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
 
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-i">
+    <div class="footer-grid">
+      <div class="r">
+        <div class="footer-logo">
+          <div class="footer-logo-cc">CC</div>
+          Comercializadora <span>d'Cortes</span>
+        </div>
+        <p class="footer-desc">Todo para sublimar en Puebla. Impresión en lonas, gorras, camisas y diseño digital. Tu idea, nuestro trabajo.</p>
+        <div class="footer-contact">
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Puebla, México
+          </a>
+          <a href="tel:">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Tu número aquí
+          </a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="fsoc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="fsoc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="fsoc">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="r d2">
+        <div class="fcol-title">Servicios</div>
+        <ul class="flinks">
+          <li><a href="#">Sublimación</a></li>
+          <li><a href="#">Impresión en Lona</a></li>
+          <li><a href="#">Diseño Digital</a></li>
+          <li><a href="#">Ropa Personalizada</a></li>
+          <li><a href="#">Artículos de Regalo</a></li>
+        </ul>
+      </div>
+      <div class="r d3">
+        <div class="fcol-title">Empresa</div>
+        <ul class="flinks">
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#proceso">¿Cómo funciona?</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="r d4">
+        <div class="fcol-title">Contáctanos</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.32);margin-bottom:16px;font-weight:300;line-height:1.75">Recibe nuestras promociones y novedades.</p>
+        <div style="display:flex">
+          <input type="email" placeholder="Tu correo electrónico" style="flex:1;padding:11px 13px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-right:none;color:#fff;font-size:13px;font-family:'Inter',sans-serif;outline:none;border-radius:8px 0 0 8px;min-width:0">
+          <button style="background:var(--blue);color:#fff;border:none;padding:11px 16px;font-size:12px;font-weight:600;cursor:none;font-family:'Inter',sans-serif;border-radius:0 8px 8px 0;white-space:nowrap;letter-spacing:.3px">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Comercializadora d'Cortes. Todos los derechos reservados.</span>
+      <span class="footer-bottom-logo">D'<span>CORTES</span></span>
+    </div>
+  </div>
+</footer>
 
-   
+<!-- WA FLOAT -->
+<a href="https://wa.me/52" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
+<script>
+/* LOADER */
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('out'),1800));
 
-    <script src="script.js"></script>
-    
+/* CURSOR */
+const dot=document.getElementById('cur-dot'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;dot.style.left=mx+'px';dot.style.top=my+'px';ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,input').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('h'));el.addEventListener('mouseleave',()=>ring.classList.remove('h'))});
+
+/* SCROLL BAR + NAV */
+const spb=document.getElementById('spb'),nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{
+  spb.style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%';
+  nav.classList.toggle('scrolled',scrollY>50);
+},{passive:true});
+
+/* SCROLL REVEAL */
+const io=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -48px 0px'});
+document.querySelectorAll('.r,.rl,.rr,.rs,.sec-label').forEach(el=>io.observe(el));
+
+/* COUNTERS */
+const cio=new IntersectionObserver(en=>{en.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,t=+el.dataset.target,dur=1800,s=performance.now();
+  (function tick(n){const p=Math.min((n-s)/dur,1),q=p<.5?2*p*p:-1+(4-2*p)*p;el.textContent=Math.round(q*t);p<1?requestAnimationFrame(tick):el.textContent=t})(s);
+  cio.unobserve(el);
+})},{threshold:1});
+document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+
+/* 3D TILT on svc cards */
+document.querySelectorAll('.svc,.prod-card').forEach(c=>{
+  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-4px) rotateX(${-y*5}deg) rotateY(${x*5}deg)`;c.style.transition='transform .05s'});
+  c.addEventListener('mouseleave',()=>{c.style.transform='';c.style.transition='transform .45s cubic-bezier(0.22,1,0.36,1)'});
+});
+</script>
 </body>
-
 </html>
-
 
 
 
