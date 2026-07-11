@@ -31,10 +31,9 @@ body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);
 
 /* ── DISEÑO PLANO - SIN TEXTURAS ── */
 
-/* ── MANCHAS CIRCULARES DE PINTURA ── */
-/* Cada mancha es un círculo con diferentes tamaños, colores y posiciones */
+/* ── MANCHAS GIGANTES DE PINTURA ── */
 
-/* ── MANCHAS GRANDES (las principales) ── */
+/* ── MANCHAS GIGANTES (como en las tarjetas) ── */
 .splash {
   position: absolute;
   pointer-events: none;
@@ -44,42 +43,79 @@ body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);
 }
 
 .splash-1 {
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(circle, #2563EB 0%, #1A45B0 50%, transparent 75%);
-  top: -70px;
-  left: -70px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #2563EB 0%, #1A45B0 40%, transparent 75%);
+  top: -150px;
+  left: -150px;
   transform: rotate(15deg);
 }
 
 .splash-2 {
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, #F59E0B 0%, #D97706 50%, transparent 75%);
-  bottom: -60px;
-  right: -60px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #F59E0B 0%, #D97706 40%, transparent 75%);
+  bottom: -140px;
+  right: -140px;
   transform: rotate(-10deg);
 }
 
 .splash-3 {
-  width: 140px;
-  height: 140px;
-  background: radial-gradient(circle, #EC4899 0%, #DB2777 50%, transparent 75%);
-  top: -50px;
-  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #EC4899 0%, #DB2777 40%, transparent 75%);
+  top: -130px;
+  right: -130px;
   transform: rotate(25deg);
 }
 
 .splash-4 {
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, #8B5CF6 0%, #7C3AED 50%, transparent 75%);
-  bottom: -55px;
-  left: -55px;
+  width: 370px;
+  height: 370px;
+  background: radial-gradient(circle, #8B5CF6 0%, #7C3AED 40%, transparent 75%);
+  bottom: -135px;
+  left: -135px;
   transform: rotate(-20deg);
 }
 
-/* ── MANCHAS MEDIANAS ── */
+/* MANCHAS GIGANTES ADICIONALES */
+.splash-5 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #10B981 0%, #059669 40%, transparent 75%);
+  top: 25%;
+  right: -120px;
+  transform: rotate(30deg);
+}
+
+.splash-6 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #F59E0B 0%, #FCD34D 40%, transparent 75%);
+  bottom: 20%;
+  left: -110px;
+  transform: rotate(-25deg);
+}
+
+.splash-7 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #EC4899 0%, #F472B6 40%, transparent 75%);
+  top: 50%;
+  right: -130px;
+  transform: rotate(15deg);
+}
+
+.splash-8 {
+  width: 290px;
+  height: 290px;
+  background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 40%, transparent 75%);
+  bottom: 40%;
+  left: -120px;
+  transform: rotate(-15deg);
+}
+
+/* ── MANCHAS GRANDES ── */
 .splash-m {
   position: absolute;
   pointer-events: none;
@@ -89,51 +125,108 @@ body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);
 }
 
 .splash-m-1 {
-  width: 90px;
-  height: 90px;
-  background: radial-gradient(circle, #2563EB 0%, #3B82F6 50%, transparent 70%);
-  top: 15%;
-  right: -35px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #2563EB 0%, #3B82F6 45%, transparent 70%);
+  top: 10%;
+  right: -60px;
 }
 
 .splash-m-2 {
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, #F59E0B 0%, #FBBF24 50%, transparent 70%);
-  bottom: 20%;
-  left: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #F59E0B 0%, #FBBF24 45%, transparent 70%);
+  bottom: 15%;
+  left: -55px;
 }
 
 .splash-m-3 {
-  width: 85px;
-  height: 85px;
-  background: radial-gradient(circle, #EC4899 0%, #F472B6 50%, transparent 70%);
-  top: 40%;
-  left: -32px;
+  width: 155px;
+  height: 155px;
+  background: radial-gradient(circle, #EC4899 0%, #F472B6 45%, transparent 70%);
+  top: 35%;
+  left: -58px;
 }
 
 .splash-m-4 {
-  width: 75px;
-  height: 75px;
-  background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 50%, transparent 70%);
-  bottom: 35%;
-  right: -28px;
+  width: 145px;
+  height: 145px;
+  background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 45%, transparent 70%);
+  bottom: 30%;
+  right: -55px;
 }
 
 .splash-m-5 {
-  width: 70px;
-  height: 70px;
-  background: radial-gradient(circle, #10B981 0%, #34D399 50%, transparent 70%);
-  top: 8%;
-  left: -25px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #10B981 0%, #34D399 45%, transparent 70%);
+  top: 5%;
+  left: -50px;
 }
 
 .splash-m-6 {
-  width: 65px;
-  height: 65px;
-  background: radial-gradient(circle, #F59E0B 0%, #FCD34D 50%, transparent 70%);
-  bottom: 10%;
-  right: -25px;
+  width: 135px;
+  height: 135px;
+  background: radial-gradient(circle, #F59E0B 0%, #FCD34D 45%, transparent 70%);
+  bottom: 8%;
+  right: -50px;
+}
+
+/* ── MANCHAS MEDIANAS ── */
+.splash-md {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.splash-md-1 {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #2563EB 0%, #60A5FA 50%, transparent 75%);
+  top: 3%;
+  right: 180px;
+}
+
+.splash-md-2 {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #EC4899 0%, #F472B6 50%, transparent 75%);
+  bottom: 5%;
+  left: 160px;
+}
+
+.splash-md-3 {
+  width: 85px;
+  height: 85px;
+  background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 50%, transparent 75%);
+  top: 22%;
+  right: 140px;
+}
+
+.splash-md-4 {
+  width: 75px;
+  height: 75px;
+  background: radial-gradient(circle, #F59E0B 0%, #FBBF24 50%, transparent 75%);
+  bottom: 22%;
+  left: 150px;
+}
+
+.splash-md-5 {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #10B981 0%, #34D399 50%, transparent 75%);
+  top: 45%;
+  right: 120px;
+}
+
+.splash-md-6 {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #EC4899 0%, #F472B6 50%, transparent 75%);
+  bottom: 45%;
+  left: 130px;
 }
 
 /* ── MANCHAS PEQUEÑAS (salpicaduras) ── */
@@ -142,166 +235,58 @@ body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);
   pointer-events: none;
   z-index: 0;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .splash-s-1 {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   background: radial-gradient(circle, #2563EB 0%, #60A5FA 60%, transparent 80%);
-  top: 5%;
-  right: 120px;
+  top: 2%;
+  right: 250px;
 }
 
 .splash-s-2 {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   background: radial-gradient(circle, #EC4899 0%, #F472B6 60%, transparent 80%);
-  bottom: 8%;
-  left: 100px;
+  bottom: 3%;
+  left: 220px;
 }
 
 .splash-s-3 {
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
   background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 60%, transparent 80%);
-  top: 30%;
-  right: 80px;
+  top: 15%;
+  right: 200px;
 }
 
 .splash-s-4 {
-  width: 25px;
-  height: 25px;
+  width: 38px;
+  height: 38px;
   background: radial-gradient(circle, #F59E0B 0%, #FBBF24 60%, transparent 80%);
-  bottom: 30%;
-  left: 90px;
+  bottom: 15%;
+  left: 200px;
 }
 
 .splash-s-5 {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   background: radial-gradient(circle, #10B981 0%, #34D399 60%, transparent 80%);
-  top: 55%;
-  right: 60px;
+  top: 35%;
+  right: 160px;
 }
 
 .splash-s-6 {
-  width: 22px;
-  height: 22px;
+  width: 35px;
+  height: 35px;
   background: radial-gradient(circle, #EC4899 0%, #F472B6 60%, transparent 80%);
-  bottom: 55%;
-  left: 70px;
+  bottom: 35%;
+  left: 170px;
 }
 
-.splash-s-7 {
-  width: 26px;
-  height: 26px;
-  background: radial-gradient(circle, #2563EB 0%, #60A5FA 60%, transparent 80%);
-  top: 10%;
-  left: 150px;
-}
-
-.splash-s-8 {
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, #F59E0B 0%, #FCD34D 60%, transparent 80%);
-  bottom: 12%;
-  right: 140px;
-}
-
-/* ── MANCHAS CON FORMAS OVALADAS ── */
-.splash-oval {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 50%;
-  opacity: 0.55;
-}
-
-.splash-oval-1 {
-  width: 60px;
-  height: 90px;
-  background: radial-gradient(ellipse, #2563EB 0%, #3B82F6 50%, transparent 70%);
-  top: 25%;
-  right: -20px;
-  transform: rotate(30deg);
-}
-
-.splash-oval-2 {
-  width: 50px;
-  height: 80px;
-  background: radial-gradient(ellipse, #EC4899 0%, #F472B6 50%, transparent 70%);
-  bottom: 25%;
-  left: -18px;
-  transform: rotate(-25deg);
-}
-
-.splash-oval-3 {
-  width: 55px;
-  height: 85px;
-  background: radial-gradient(ellipse, #8B5CF6 0%, #A78BFA 50%, transparent 70%);
-  top: 50%;
-  right: -15px;
-  transform: rotate(45deg);
-}
-
-.splash-oval-4 {
-  width: 45px;
-  height: 75px;
-  background: radial-gradient(ellipse, #F59E0B 0%, #FBBF24 50%, transparent 70%);
-  bottom: 45%;
-  left: -15px;
-  transform: rotate(-35deg);
-}
-
-/* ── MANCHAS CON BORDES IRREGULARES (como gotas) ── */
-.splash-irregular {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 40% 60% 50% 50% / 50% 40% 60% 50%;
-  opacity: 0.5;
-}
-
-.splash-irr-1 {
-  width: 70px;
-  height: 60px;
-  background: radial-gradient(circle, #10B981 0%, #34D399 50%, transparent 70%);
-  top: 18%;
-  left: -20px;
-  transform: rotate(20deg);
-}
-
-.splash-irr-2 {
-  width: 65px;
-  height: 55px;
-  background: radial-gradient(circle, #F59E0B 0%, #FCD34D 50%, transparent 70%);
-  bottom: 15%;
-  right: -18px;
-  transform: rotate(-15deg);
-}
-
-.splash-irr-3 {
-  width: 60px;
-  height: 70px;
-  background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 50%, transparent 70%);
-  top: 45%;
-  left: -15px;
-  transform: rotate(35deg);
-  border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
-}
-
-.splash-irr-4 {
-  width: 55px;
-  height: 65px;
-  background: radial-gradient(circle, #EC4899 0%, #F472B6 50%, transparent 70%);
-  bottom: 40%;
-  right: -15px;
-  transform: rotate(-25deg);
-  border-radius: 60% 40% 50% 50% / 40% 60% 50% 50%;
-}
-
-/* ── TRAZOS DE PINCEL ── */
+/* ── TRAZOS DE PINCEL GIGANTES ── */
 .trazo-pintura {
   position: absolute;
   pointer-events: none;
@@ -311,57 +296,57 @@ body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);
 }
 
 .trazo-1 {
-  width: 120px;
-  height: 10px;
+  width: 250px;
+  height: 18px;
   background: linear-gradient(90deg, transparent, #2563EB, transparent);
-  top: 8%;
-  right: -20px;
+  top: 4%;
+  right: -40px;
   transform: rotate(-15deg);
 }
 
 .trazo-2 {
-  width: 100px;
-  height: 8px;
+  width: 220px;
+  height: 16px;
   background: linear-gradient(90deg, transparent, #F59E0B, transparent);
-  bottom: 12%;
-  left: -18px;
+  bottom: 6%;
+  left: -35px;
   transform: rotate(20deg);
 }
 
 .trazo-3 {
-  width: 90px;
-  height: 9px;
+  width: 200px;
+  height: 17px;
   background: linear-gradient(90deg, transparent, #EC4899, transparent);
-  top: 35%;
-  left: -15px;
+  top: 28%;
+  left: -35px;
   transform: rotate(-30deg);
 }
 
 .trazo-4 {
-  width: 110px;
-  height: 7px;
+  width: 230px;
+  height: 15px;
   background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
-  bottom: 30%;
-  right: -18px;
+  bottom: 25%;
+  right: -38px;
   transform: rotate(35deg);
 }
 
 .trazo-5 {
-  width: 80px;
-  height: 6px;
+  width: 190px;
+  height: 14px;
   background: linear-gradient(90deg, transparent, #10B981, transparent);
-  top: 60%;
-  left: -12px;
-  transform: rotate(10deg);
+  top: 55%;
+  left: -30px;
+  transform: rotate(12deg);
 }
 
 .trazo-6 {
-  width: 95px;
-  height: 8px;
+  width: 210px;
+  height: 16px;
   background: linear-gradient(90deg, transparent, #F59E0B, transparent);
-  bottom: 50%;
-  right: -15px;
-  transform: rotate(-20deg);
+  bottom: 45%;
+  right: -35px;
+  transform: rotate(-22deg);
 }
 
 /* ── CURSOR ── */
@@ -592,21 +577,23 @@ footer{background:#0F1623;padding:70px 0 0}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .splash, .splash-m, .splash-s, .splash-oval, .splash-irregular, .trazo-pintura {
-    opacity: 0.4 !important;
-    transform: scale(0.6) !important;
+  .splash, .splash-m, .splash-md, .splash-s, .trazo-pintura {
+    opacity: 0.35 !important;
+    transform: scale(0.4) !important;
   }
-  .splash-1 { width: 120px; height: 120px; top: -40px; left: -40px; }
-  .splash-2 { width: 110px; height: 110px; bottom: -40px; right: -40px; }
-  .splash-3 { width: 100px; height: 100px; top: -35px; right: -35px; }
-  .splash-4 { width: 105px; height: 105px; bottom: -35px; left: -35px; }
+  .splash-1 { width: 200px; height: 200px; top: -60px; left: -60px; }
+  .splash-2 { width: 190px; height: 190px; bottom: -60px; right: -60px; }
+  .splash-3 { width: 180px; height: 180px; top: -55px; right: -55px; }
+  .splash-4 { width: 185px; height: 185px; bottom: -55px; left: -55px; }
+  .splash-5, .splash-6, .splash-7, .splash-8,
   .splash-m-1, .splash-m-2, .splash-m-3, .splash-m-4,
   .splash-m-5, .splash-m-6,
-  .splash-oval-1, .splash-oval-2, .splash-oval-3, .splash-oval-4,
-  .splash-irr-1, .splash-irr-2, .splash-irr-3, .splash-irr-4,
-  .trazo-1, .trazo-2, .trazo-3, .trazo-4, .trazo-5, .trazo-6 { display: none; }
-  .splash-s-1, .splash-s-2, .splash-s-3, .splash-s-4 { display: none; }
-  .splash-s-5, .splash-s-6, .splash-s-7, .splash-s-8 { display: none; }
+  .trazo-1, .trazo-2, .trazo-3, .trazo-4,
+  .trazo-5, .trazo-6 { display: none; }
+  .splash-md-1, .splash-md-2, .splash-md-3, .splash-md-4,
+  .splash-md-5, .splash-md-6 { display: none; }
+  .splash-s-1, .splash-s-2, .splash-s-3, .splash-s-4,
+  .splash-s-5, .splash-s-6 { display: none; }
 }
 </style>
 </head>
@@ -651,28 +638,26 @@ footer{background:#0F1623;padding:70px 0 0}
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
-  <!-- MANCHAS GRANDES -->
+  <!-- MANCHAS GIGANTES -->
   <div class="splash splash-1"></div>
   <div class="splash splash-3"></div>
+  <div class="splash splash-5"></div>
+  <div class="splash splash-7"></div>
   
-  <!-- MANCHAS MEDIANAS -->
+  <!-- MANCHAS GRANDES -->
   <div class="splash-m splash-m-1"></div>
   <div class="splash-m splash-m-3"></div>
   <div class="splash-m splash-m-5"></div>
+  
+  <!-- MANCHAS MEDIANAS -->
+  <div class="splash-md splash-md-1"></div>
+  <div class="splash-md splash-md-3"></div>
+  <div class="splash-md splash-md-5"></div>
   
   <!-- MANCHAS PEQUEÑAS -->
   <div class="splash-s splash-s-1"></div>
   <div class="splash-s splash-s-3"></div>
   <div class="splash-s splash-s-5"></div>
-  <div class="splash-s splash-s-7"></div>
-  
-  <!-- MANCHAS OVALADAS -->
-  <div class="splash-oval splash-oval-1"></div>
-  <div class="splash-oval splash-oval-3"></div>
-  
-  <!-- MANCHAS IRREGULARES -->
-  <div class="splash-irregular splash-irr-1"></div>
-  <div class="splash-irregular splash-irr-3"></div>
   
   <!-- TRAZOS -->
   <div class="trazo-pintura trazo-1"></div>
@@ -749,27 +734,24 @@ footer{background:#0F1623;padding:70px 0 0}
 
 <!-- ═══ SERVICIOS ═══ -->
 <section class="section services" id="servicios">
-  <!-- MANCHAS GRANDES -->
+  <!-- MANCHAS GIGANTES -->
   <div class="splash splash-4"></div>
+  <div class="splash splash-6"></div>
   
-  <!-- MANCHAS MEDIANAS -->
+  <!-- MANCHAS GRANDES -->
   <div class="splash-m splash-m-2"></div>
   <div class="splash-m splash-m-4"></div>
-  <div class="splash-m" style="width:80px;height:80px;background:radial-gradient(circle,#10B981 0%,#34D399 50%,transparent 70%);top:10%;right:-30px;"></div>
+  <div class="splash-m" style="width:150px;height:150px;background:radial-gradient(circle,#10B981 0%,#34D399 45%,transparent 70%);top:8%;right:-55px;"></div>
+  
+  <!-- MANCHAS MEDIANAS -->
+  <div class="splash-md splash-md-2"></div>
+  <div class="splash-md splash-md-4"></div>
+  <div class="splash-md" style="width:80px;height:80px;background:radial-gradient(circle,#8B5CF6 0%,#A78BFA 50%,transparent 75%);bottom:12%;right:130px;"></div>
   
   <!-- MANCHAS PEQUEÑAS -->
   <div class="splash-s splash-s-2"></div>
   <div class="splash-s splash-s-4"></div>
-  <div class="splash-s" style="width:28px;height:28px;background:radial-gradient(circle,#8B5CF6 0%,#A78BFA 60%,transparent 80%);bottom:15%;right:80px;"></div>
-  <div class="splash-s" style="width:24px;height:24px;background:radial-gradient(circle,#F59E0B 0%,#FBBF24 60%,transparent 80%);top:20%;left:120px;"></div>
-  
-  <!-- MANCHAS OVALADAS -->
-  <div class="splash-oval splash-oval-2"></div>
-  <div class="splash-oval splash-oval-4"></div>
-  
-  <!-- MANCHAS IRREGULARES -->
-  <div class="splash-irregular splash-irr-2"></div>
-  <div class="splash-irregular splash-irr-4"></div>
+  <div class="splash-s" style="width:40px;height:40px;background:radial-gradient(circle,#F59E0B 0%,#FBBF24 60%,transparent 80%);top:18%;left:180px;"></div>
   
   <!-- TRAZOS -->
   <div class="trazo-pintura trazo-2"></div>
@@ -823,22 +805,21 @@ footer{background:#0F1623;padding:70px 0 0}
 
 <!-- ═══ PROCESO ═══ -->
 <section class="section process" id="proceso">
+  <!-- MANCHAS GIGANTES -->
+  <div class="splash" style="width:350px;height:350px;background:radial-gradient(circle,#8B5CF6 0%,#7C3AED 40%,transparent 75%);bottom:-130px;right:-130px;transform:rotate(-15deg)"></div>
+  <div class="splash" style="width:320px;height:320px;background:radial-gradient(circle,#10B981 0%,#059669 40%,transparent 75%);top:-120px;left:-120px;transform:rotate(10deg)"></div>
+  
   <!-- MANCHAS GRANDES -->
-  <div class="splash" style="width:130px;height:130px;background:radial-gradient(circle,#8B5CF6 0%,#7C3AED 50%,transparent 75%);bottom:-50px;right:-50px;transform:rotate(-15deg)"></div>
-  <div class="splash" style="width:110px;height:110px;background:radial-gradient(circle,#10B981 0%,#059669 50%,transparent 75%);top:-40px;left:-40px;transform:rotate(10deg)"></div>
+  <div class="splash-m" style="width:145px;height:145px;background:radial-gradient(circle,#EC4899 0%,#DB2777 45%,transparent 70%);top:18%;right:-55px;"></div>
+  <div class="splash-m" style="width:140px;height:140px;background:radial-gradient(circle,#F59E0B 0%,#D97706 45%,transparent 70%);bottom:22%;left:-50px;"></div>
   
   <!-- MANCHAS MEDIANAS -->
-  <div class="splash-m" style="width:75px;height:75px;background:radial-gradient(circle,#EC4899 0%,#DB2777 50%,transparent 70%);top:20%;right:-28px;"></div>
-  <div class="splash-m" style="width:70px;height:70px;background:radial-gradient(circle,#F59E0B 0%,#D97706 50%,transparent 70%);bottom:25%;left:-25px;"></div>
-  
-  <!-- MANCHAS PEQUEÑAS -->
-  <div class="splash-s" style="width:30px;height:30px;background:radial-gradient(circle,#8B5CF6 0%,#A78BFA 60%,transparent 80%);top:8%;right:130px;"></div>
-  <div class="splash-s" style="width:25px;height:25px;background:radial-gradient(circle,#10B981 0%,#34D399 60%,transparent 80%);bottom:10%;left:110px;"></div>
-  <div class="splash-s" style="width:28px;height:28px;background:radial-gradient(circle,#EC4899 0%,#F472B6 60%,transparent 80%);top:45%;right:80px;"></div>
+  <div class="splash-md" style="width:85px;height:85px;background:radial-gradient(circle,#8B5CF6 0%,#A78BFA 50%,transparent 75%);top:6%;right:160px;"></div>
+  <div class="splash-md" style="width:75px;height:75px;background:radial-gradient(circle,#10B981 0%,#34D399 50%,transparent 75%);bottom:8%;left:150px;"></div>
   
   <!-- TRAZOS -->
-  <div class="trazo-pintura" style="width:100px;height:8px;background:linear-gradient(90deg,transparent,#8B5CF6,transparent);top:15%;left:-15px;transform:rotate(-20deg);"></div>
-  <div class="trazo-pintura" style="width:90px;height:7px;background:linear-gradient(90deg,transparent,#10B981,transparent);bottom:30%;right:-15px;transform:rotate(25deg);"></div>
+  <div class="trazo-pintura" style="width:200px;height:16px;background:linear-gradient(90deg,transparent,#8B5CF6,transparent);top:12%;left:-30px;transform:rotate(-20deg);"></div>
+  <div class="trazo-pintura" style="width:190px;height:14px;background:linear-gradient(90deg,transparent,#10B981,transparent);bottom:25%;right:-30px;transform:rotate(25deg);"></div>
 
   <div class="sec-i">
     <div class="sec-label r">Proceso</div>
@@ -871,23 +852,20 @@ footer{background:#0F1623;padding:70px 0 0}
 
 <!-- ═══ PRODUCTOS ═══ -->
 <section class="section productos" id="productos">
-  <!-- MANCHAS GRANDES -->
+  <!-- MANCHAS GIGANTES -->
   <div class="splash splash-2"></div>
+  <div class="splash splash-8"></div>
+  
+  <!-- MANCHAS GRANDES -->
+  <div class="splash-m splash-m-6"></div>
+  <div class="splash-m" style="width:150px;height:150px;background:radial-gradient(circle,#8B5CF6 0%,#7C3AED 45%,transparent 70%);top:12%;left:-55px;"></div>
   
   <!-- MANCHAS MEDIANAS -->
-  <div class="splash-m splash-m-6"></div>
-  <div class="splash-m" style="width:80px;height:80px;background:radial-gradient(circle,#8B5CF6 0%,#7C3AED 50%,transparent 70%);top:15%;left:-30px;"></div>
-  
-  <!-- MANCHAS PEQUEÑAS -->
-  <div class="splash-s splash-s-6"></div>
-  <div class="splash-s splash-s-8"></div>
-  <div class="splash-s" style="width:26px;height:26px;background:radial-gradient(circle,#10B981 0%,#34D399 60%,transparent 80%);top:25%;right:100px;"></div>
-  
-  <!-- MANCHAS OVALADAS -->
-  <div class="splash-oval" style="width:50px;height:80px;background:radial-gradient(ellipse,#2563EB 0%,#3B82F6 50%,transparent 70%);bottom:30%;right:-15px;transform:rotate(40deg);"></div>
+  <div class="splash-md splash-md-6"></div>
+  <div class="splash-md" style="width:80px;height:80px;background:radial-gradient(circle,#10B981 0%,#34D399 50%,transparent 75%);top:20%;right:150px;"></div>
   
   <!-- TRAZOS -->
-  <div class="trazo-pintura" style="width:110px;height:8px;background:linear-gradient(90deg,transparent,#F59E0B,transparent);top:8%;left:-18px;transform:rotate(15deg);"></div>
+  <div class="trazo-pintura" style="width:220px;height:16px;background:linear-gradient(90deg,transparent,#F59E0B,transparent);top:6%;left:-35px;transform:rotate(15deg);"></div>
 
   <div class="sec-i">
     <div class="sec-label r">Productos</div>
@@ -943,17 +921,17 @@ footer{background:#0F1623;padding:70px 0 0}
 <!-- ═══ ABOUT ═══ -->
 <section class="section about" id="nosotros">
   <!-- MANCHAS SOBRE FONDO OSCURO -->
-  <div class="splash" style="width:160px;height:160px;background:radial-gradient(circle,rgba(37,99,235,0.20) 0%,rgba(37,99,235,0.05) 70%,transparent 90%);top:-60px;right:-60px;border-radius:50%"></div>
-  <div class="splash" style="width:140px;height:140px;background:radial-gradient(circle,rgba(245,158,11,0.12) 0%,transparent 80%);bottom:-50px;left:-50px;border-radius:50%"></div>
+  <div class="splash" style="width:350px;height:350px;background:radial-gradient(circle,rgba(37,99,235,0.15) 0%,rgba(37,99,235,0.05) 70%,transparent 90%);top:-130px;right:-130px;border-radius:50%"></div>
+  <div class="splash" style="width:320px;height:320px;background:radial-gradient(circle,rgba(245,158,11,0.10) 0%,transparent 80%);bottom:-120px;left:-120px;border-radius:50%"></div>
   
-  <div class="splash-m" style="width:80px;height:80px;background:radial-gradient(circle,rgba(236,72,153,0.15) 0%,transparent 70%);top:25%;right:-30px;"></div>
-  <div class="splash-m" style="width:70px;height:70px;background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 70%);bottom:30%;left:-25px;"></div>
+  <div class="splash-m" style="width:150px;height:150px;background:radial-gradient(circle,rgba(236,72,153,0.12) 0%,transparent 70%);top:22%;right:-55px;"></div>
+  <div class="splash-m" style="width:140px;height:140px;background:radial-gradient(circle,rgba(139,92,246,0.10) 0%,transparent 70%);bottom:28%;left:-50px;"></div>
   
-  <div class="splash-s" style="width:30px;height:30px;background:rgba(37,99,235,0.15);top:10%;right:140px;"></div>
-  <div class="splash-s" style="width:25px;height:25px;background:rgba(245,158,11,0.12);bottom:12%;left:120px;"></div>
+  <div class="splash-md" style="width:85px;height:85px;background:rgba(37,99,235,0.10);top:8%;right:200px;"></div>
+  <div class="splash-md" style="width:75px;height:75px;background:rgba(245,158,11,0.08);bottom:10%;left:180px;"></div>
   
-  <div class="trazo-pintura" style="width:120px;height:6px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);top:15%;left:-20px;transform:rotate(-10deg);"></div>
-  <div class="trazo-pintura" style="width:100px;height:6px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.05),transparent);bottom:20%;right:-18px;transform:rotate(20deg);"></div>
+  <div class="trazo-pintura" style="width:220px;height:12px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.05),transparent);top:12%;left:-35px;transform:rotate(-10deg);"></div>
+  <div class="trazo-pintura" style="width:200px;height:10px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);bottom:18%;right:-30px;transform:rotate(20deg);"></div>
 
   <div class="about-i">
     <div>
@@ -1027,18 +1005,17 @@ footer{background:#0F1623;padding:70px 0 0}
   <div class="cta-text-bg">SUBLIMAR</div>
   
   <!-- MANCHAS BLANCAS SOBRE FONDO AZUL -->
-  <div class="splash" style="width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 80%);top:-70px;right:-70px;border-radius:50%"></div>
-  <div class="splash" style="width:160px;height:160px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 80%);bottom:-60px;left:-60px;border-radius:50%"></div>
+  <div class="splash" style="width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.05) 0%,transparent 80%);top:-150px;right:-150px;border-radius:50%"></div>
+  <div class="splash" style="width:350px;height:350px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 80%);bottom:-130px;left:-130px;border-radius:50%"></div>
   
-  <div class="splash-m" style="width:90px;height:90px;background:radial-gradient(circle,rgba(255,255,255,0.05) 0%,transparent 70%);top:20%;left:-35px;"></div>
-  <div class="splash-m" style="width:80px;height:80px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);bottom:25%;right:-30px;"></div>
+  <div class="splash-m" style="width:160px;height:160px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);top:18%;left:-60px;"></div>
+  <div class="splash-m" style="width:150px;height:150px;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);bottom:22%;right:-55px;"></div>
   
-  <div class="splash-s" style="width:35px;height:35px;background:rgba(255,255,255,0.05);top:8%;right:160px;"></div>
-  <div class="splash-s" style="width:28px;height:28px;background:rgba(255,255,255,0.04);bottom:10%;left:140px;"></div>
-  <div class="splash-s" style="width:25px;height:25px;background:rgba(255,255,255,0.05);top:50%;left:100px;"></div>
+  <div class="splash-md" style="width:90px;height:90px;background:rgba(255,255,255,0.04);top:6%;right:220px;"></div>
+  <div class="splash-md" style="width:80px;height:80px;background:rgba(255,255,255,0.03);bottom:8%;left:200px;"></div>
   
-  <div class="trazo-pintura" style="width:140px;height:6px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.05),transparent);top:30%;right:-20px;transform:rotate(-15deg);"></div>
-  <div class="trazo-pintura" style="width:120px;height:6px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);bottom:35%;left:-18px;transform:rotate(25deg);"></div>
+  <div class="trazo-pintura" style="width:250px;height:14px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);top:25%;right:-40px;transform:rotate(-15deg);"></div>
+  <div class="trazo-pintura" style="width:220px;height:12px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);bottom:30%;left:-35px;transform:rotate(25deg);"></div>
 
   <div class="cta-i">
     <div class="rl">
