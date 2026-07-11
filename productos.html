@@ -45,6 +45,282 @@
             overflow-x: hidden;
         }
 
+        /* ===== MANCHAS DE PINTURA GRANDES EN BORDES ===== */
+        .splash {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            opacity: 0.75;
+        }
+
+        /* MANCHAS GIGANTES - como en las tarjetas */
+        .splash-1 {
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, #2563EB 0%, #1A45B0 45%, transparent 75%);
+            top: -100px;
+            left: -100px;
+            transform: rotate(15deg);
+        }
+
+        .splash-2 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #F59E0B 0%, #D97706 45%, transparent 75%);
+            bottom: -90px;
+            right: -90px;
+            transform: rotate(-10deg);
+        }
+
+        .splash-3 {
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, #EC4899 0%, #DB2777 45%, transparent 75%);
+            top: -80px;
+            right: -80px;
+            transform: rotate(25deg);
+        }
+
+        .splash-4 {
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle, #8B5CF6 0%, #7C3AED 45%, transparent 75%);
+            bottom: -85px;
+            left: -85px;
+            transform: rotate(-20deg);
+        }
+
+        /* MANCHAS GRANDES (adicionales) */
+        .splash-5 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #10B981 0%, #059669 45%, transparent 75%);
+            top: 30%;
+            right: -70px;
+            transform: rotate(30deg);
+        }
+
+        .splash-6 {
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, #F59E0B 0%, #FCD34D 45%, transparent 75%);
+            bottom: 25%;
+            left: -65px;
+            transform: rotate(-25deg);
+        }
+
+        .splash-7 {
+            width: 190px;
+            height: 190px;
+            background: radial-gradient(circle, #EC4899 0%, #F472B6 45%, transparent 75%);
+            top: 55%;
+            right: -65px;
+            transform: rotate(15deg);
+        }
+
+        .splash-8 {
+            width: 170px;
+            height: 170px;
+            background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 45%, transparent 75%);
+            bottom: 45%;
+            left: -60px;
+            transform: rotate(-15deg);
+        }
+
+        /* MANCHAS MEDIANAS - más grandes que antes */
+        .splash-m {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .splash-m-1 {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #2563EB 0%, #3B82F6 50%, transparent 70%);
+            top: 12%;
+            right: -45px;
+        }
+
+        .splash-m-2 {
+            width: 110px;
+            height: 110px;
+            background: radial-gradient(circle, #F59E0B 0%, #FBBF24 50%, transparent 70%);
+            bottom: 15%;
+            left: -40px;
+        }
+
+        .splash-m-3 {
+            width: 115px;
+            height: 115px;
+            background: radial-gradient(circle, #EC4899 0%, #F472B6 50%, transparent 70%);
+            top: 35%;
+            left: -42px;
+        }
+
+        .splash-m-4 {
+            width: 105px;
+            height: 105px;
+            background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 50%, transparent 70%);
+            bottom: 30%;
+            right: -40px;
+        }
+
+        .splash-m-5 {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #10B981 0%, #34D399 50%, transparent 70%);
+            top: 5%;
+            left: -38px;
+        }
+
+        .splash-m-6 {
+            width: 95px;
+            height: 95px;
+            background: radial-gradient(circle, #F59E0B 0%, #FCD34D 50%, transparent 70%);
+            bottom: 8%;
+            right: -35px;
+        }
+
+        /* MANCHAS PEQUEÑAS (salpicaduras) - también más grandes */
+        .splash-s {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .splash-s-1 {
+            width: 45px;
+            height: 45px;
+            background: radial-gradient(circle, #2563EB 0%, #60A5FA 60%, transparent 80%);
+            top: 3%;
+            right: 140px;
+        }
+
+        .splash-s-2 {
+            width: 38px;
+            height: 38px;
+            background: radial-gradient(circle, #EC4899 0%, #F472B6 60%, transparent 80%);
+            bottom: 5%;
+            left: 120px;
+        }
+
+        .splash-s-3 {
+            width: 42px;
+            height: 42px;
+            background: radial-gradient(circle, #8B5CF6 0%, #A78BFA 60%, transparent 80%);
+            top: 25%;
+            right: 100px;
+        }
+
+        .splash-s-4 {
+            width: 35px;
+            height: 35px;
+            background: radial-gradient(circle, #F59E0B 0%, #FBBF24 60%, transparent 80%);
+            bottom: 25%;
+            left: 110px;
+        }
+
+        .splash-s-5 {
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, #10B981 0%, #34D399 60%, transparent 80%);
+            top: 50%;
+            right: 80px;
+        }
+
+        .splash-s-6 {
+            width: 32px;
+            height: 32px;
+            background: radial-gradient(circle, #EC4899 0%, #F472B6 60%, transparent 80%);
+            bottom: 50%;
+            left: 90px;
+        }
+
+        .splash-s-7 {
+            width: 36px;
+            height: 36px;
+            background: radial-gradient(circle, #2563EB 0%, #60A5FA 60%, transparent 80%);
+            top: 8%;
+            left: 180px;
+        }
+
+        .splash-s-8 {
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #F59E0B 0%, #FCD34D 60%, transparent 80%);
+            bottom: 10%;
+            right: 170px;
+        }
+
+        /* TRAZOS DE PINCEL - más largos y gruesos */
+        .trazo-pintura {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50px;
+            opacity: 0.35;
+        }
+
+        .trazo-1 {
+            width: 180px;
+            height: 14px;
+            background: linear-gradient(90deg, transparent, #2563EB, transparent);
+            top: 6%;
+            right: -30px;
+            transform: rotate(-15deg);
+        }
+
+        .trazo-2 {
+            width: 160px;
+            height: 12px;
+            background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+            bottom: 8%;
+            left: -25px;
+            transform: rotate(20deg);
+        }
+
+        .trazo-3 {
+            width: 140px;
+            height: 13px;
+            background: linear-gradient(90deg, transparent, #EC4899, transparent);
+            top: 30%;
+            left: -25px;
+            transform: rotate(-30deg);
+        }
+
+        .trazo-4 {
+            width: 170px;
+            height: 11px;
+            background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
+            bottom: 25%;
+            right: -28px;
+            transform: rotate(35deg);
+        }
+
+        .trazo-5 {
+            width: 130px;
+            height: 10px;
+            background: linear-gradient(90deg, transparent, #10B981, transparent);
+            top: 55%;
+            left: -20px;
+            transform: rotate(12deg);
+        }
+
+        .trazo-6 {
+            width: 150px;
+            height: 12px;
+            background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+            bottom: 45%;
+            right: -25px;
+            transform: rotate(-22deg);
+        }
+
         /* ===== SCROLL PROGRESS ===== */
         #spb {
             position: fixed;
@@ -97,12 +373,8 @@
             animation: ldfill 1.7s var(--ease2) forwards;
         }
         @keyframes ldfill {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
+            from { width: 0; }
+            to { width: 100%; }
         }
 
         /* ===== CURSOR ===== */
@@ -175,18 +447,10 @@
             opacity: 1;
             transform: none;
         }
-        .d1 {
-            transition-delay: .05s;
-        }
-        .d2 {
-            transition-delay: .1s;
-        }
-        .d3 {
-            transition-delay: .15s;
-        }
-        .d4 {
-            transition-delay: .2s;
-        }
+        .d1 { transition-delay: .05s; }
+        .d2 { transition-delay: .1s; }
+        .d3 { transition-delay: .15s; }
+        .d4 { transition-delay: .2s; }
 
         /* ===== NAV ===== */
         nav {
@@ -197,6 +461,9 @@
             z-index: 1000;
             padding: 0;
             transition: background .4s, box-shadow .4s, padding .4s;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, .06);
         }
         nav.scrolled {
             background: rgba(255, 255, 255, .95);
@@ -302,9 +569,7 @@
         }
 
         @media(max-width:900px) {
-            .menu-toggle {
-                display: block;
-            }
+            .menu-toggle { display: block; }
             .nav-links {
                 position: fixed;
                 top: 76px;
@@ -319,12 +584,8 @@
                 z-index: 999;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
             }
-            .nav-links.active {
-                left: 0;
-            }
-            .nav-links li {
-                width: 100%;
-            }
+            .nav-links.active { left: 0; }
+            .nav-links li { width: 100%; }
             .nav-links a {
                 display: block;
                 text-align: center;
@@ -354,6 +615,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2.5rem;
+            position: relative;
+            z-index: 1;
         }
         .hero-catalogo .sec-label {
             font-size: 11px;
@@ -420,11 +683,15 @@
             top: 76px;
             z-index: 100;
             border-bottom: 1px solid rgba(0, 0, 0, .06);
+            position: relative;
+            overflow: hidden;
         }
         .filtros-section .sec-i {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2.5rem;
+            position: relative;
+            z-index: 1;
         }
         .filtros-wrapper {
             display: flex;
@@ -515,11 +782,15 @@
         .catalogo-grid-section {
             padding: 40px 0 80px;
             background: var(--white);
+            position: relative;
+            overflow: hidden;
         }
         .catalogo-grid-section .sec-i {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2.5rem;
+            position: relative;
+            z-index: 1;
         }
         .catalogo-grid {
             display: grid;
@@ -527,7 +798,7 @@
             gap: 20px;
         }
 
-        /* ===== TARJETA DE PRODUCTO CON IMAGEN ===== */
+        /* ===== TARJETA DE PRODUCTO ===== */
         .prod-card {
             background: var(--white);
             border-radius: 16px;
@@ -544,7 +815,6 @@
             border-color: var(--blue-mid);
         }
 
-        /* CONTENEDOR DE LA IMAGEN */
         .prod-img {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -565,7 +835,6 @@
             transform: scale(1.06);
         }
 
-        /* PLACEHOLDER CUANDO NO HAY IMAGEN */
         .prod-img .sin-imagen {
             width: 100%;
             height: 100%;
@@ -660,11 +929,15 @@
         footer {
             background: #0F1623;
             padding: 50px 0 0;
+            position: relative;
+            overflow: hidden;
         }
         .footer-i {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2.5rem;
+            position: relative;
+            z-index: 1;
         }
         .footer-grid {
             display: grid;
@@ -748,16 +1021,6 @@
         .footer-bottom-logo span {
             color: rgba(37, 99, 235, .6);
         }
-        @media(max-width:900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media(max-width:600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
 
         /* ===== WA FLOAT ===== */
         .wa-float {
@@ -787,77 +1050,59 @@
             fill: currentColor;
         }
         @keyframes wap {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, .5);
-            }
-            70% {
-                box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .5); }
+            70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* ===== RESPONSIVE ===== */
         @media(max-width:768px) {
-            .hero-catalogo {
-                padding: 120px 0 40px;
-            }
-            .filtros-section {
-                top: 76px;
-            }
+            .hero-catalogo { padding: 120px 0 40px; }
+            .filtros-section { top: 76px; }
             .filtros-wrapper {
                 flex-direction: column;
                 align-items: stretch;
                 gap: 10px;
                 padding: 12px 0;
             }
-            .filtros-wrapper .filtro-busqueda {
-                min-width: unset;
-            }
-            .filtros-botones {
-                justify-content: center;
-                gap: 6px;
-            }
-            .filtro-btn {
-                font-size: 11px;
-                padding: 6px 14px;
-            }
+            .filtros-wrapper .filtro-busqueda { min-width: unset; }
+            .filtros-botones { justify-content: center; gap: 6px; }
+            .filtro-btn { font-size: 11px; padding: 6px 14px; }
             .catalogo-grid {
                 grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
                 gap: 14px;
             }
-            .prod-card {
-                padding: 16px 14px;
+            .prod-card { padding: 16px 14px; }
+            .prod-card .prod-nombre { font-size: 13px; }
+            .prod-card .prod-precio { font-size: 16px; }
+            .hero-stats { gap: 16px; }
+            .hero-stats strong { font-size: 18px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            
+            /* Manchas más pequeñas en móvil pero aún grandes */
+            .splash, .splash-m, .splash-s, .trazo-pintura {
+                opacity: 0.35 !important;
+                transform: scale(0.5) !important;
             }
-            .prod-card .prod-nombre {
-                font-size: 13px;
-            }
-            .prod-card .prod-precio {
-                font-size: 16px;
-            }
-            .hero-stats {
-                gap: 16px;
-            }
-            .hero-stats strong {
-                font-size: 18px;
-            }
+            .splash-1 { width: 160px; height: 160px; top: -50px; left: -50px; }
+            .splash-2 { width: 150px; height: 150px; bottom: -50px; right: -50px; }
+            .splash-3 { width: 130px; height: 130px; top: -45px; right: -45px; }
+            .splash-4 { width: 140px; height: 140px; bottom: -45px; left: -45px; }
+            .splash-5, .splash-6, .splash-7, .splash-8 { display: none; }
+            .splash-m-1, .splash-m-2, .splash-m-3, .splash-m-4,
+            .splash-m-5, .splash-m-6 { display: none; }
+            .trazo-1, .trazo-2, .trazo-3, .trazo-4,
+            .trazo-5, .trazo-6 { display: none; }
         }
         @media(max-width:480px) {
             .catalogo-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 10px;
             }
-            .prod-card .prod-desc {
-                font-size: 11px;
-            }
-            .filtro-btn {
-                font-size: 10px;
-                padding: 5px 10px;
-            }
-            .prod-img {
-                aspect-ratio: 1 / 1;
-            }
+            .prod-card .prod-desc { font-size: 11px; }
+            .filtro-btn { font-size: 10px; padding: 5px 10px; }
+            .prod-img { aspect-ratio: 1 / 1; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -904,6 +1149,21 @@
 
     <!-- ===== HERO CATÁLOGO ===== -->
     <section class="hero-catalogo">
+        <!-- MANCHAS GIGANTES EN BORDES DEL HERO -->
+        <div class="splash splash-1"></div>
+        <div class="splash splash-3"></div>
+        <div class="splash splash-5"></div>
+        <div class="splash splash-7"></div>
+        <div class="splash-m splash-m-1"></div>
+        <div class="splash-m splash-m-5"></div>
+        <div class="splash-s splash-s-1"></div>
+        <div class="splash-s splash-s-3"></div>
+        <div class="splash-s splash-s-5"></div>
+        <div class="splash-s splash-s-7"></div>
+        <div class="trazo-pintura trazo-1"></div>
+        <div class="trazo-pintura trazo-3"></div>
+        <div class="trazo-pintura trazo-5"></div>
+
         <div class="sec-i">
             <div class="sec-label r">Catálogo</div>
             <h1 class="r d1">Explora nuestro <em>catálogo</em></h1>
@@ -917,6 +1177,11 @@
 
     <!-- ===== FILTROS ===== -->
     <section class="filtros-section" id="filtrosSection">
+        <!-- MANCHAS EN BORDES DE FILTROS -->
+        <div class="splash-m" style="width:130px;height:130px;background:radial-gradient(circle,#EC4899 0%,#DB2777 50%,transparent 70%);top:-30px;left:-40px;transform:rotate(20deg);"></div>
+        <div class="splash-s" style="width:40px;height:40px;background:radial-gradient(circle,#F59E0B 0%,#FBBF24 60%,transparent 80%);bottom:5%;right:80px;"></div>
+        <div class="splash-s" style="width:35px;height:35px;background:radial-gradient(circle,#8B5CF6 0%,#A78BFA 60%,transparent 80%);top:10%;right:120px;"></div>
+
         <div class="sec-i">
             <div class="filtros-wrapper">
                 <div class="filtro-busqueda">
@@ -935,6 +1200,24 @@
 
     <!-- ===== GRID PRODUCTOS ===== -->
     <section class="catalogo-grid-section">
+        <!-- MANCHAS GIGANTES EN BORDES DEL GRID -->
+        <div class="splash splash-2"></div>
+        <div class="splash splash-4"></div>
+        <div class="splash splash-6"></div>
+        <div class="splash splash-8"></div>
+        <div class="splash-m splash-m-2"></div>
+        <div class="splash-m splash-m-4"></div>
+        <div class="splash-m splash-m-6"></div>
+        <div class="splash-s splash-s-2"></div>
+        <div class="splash-s splash-s-4"></div>
+        <div class="splash-s splash-s-6"></div>
+        <div class="splash-s splash-s-8"></div>
+        <div class="trazo-pintura trazo-2"></div>
+        <div class="trazo-pintura trazo-4"></div>
+        <div class="trazo-pintura trazo-6"></div>
+        <!-- Mancha extra grande -->
+        <div class="splash" style="width:160px;height:160px;background:radial-gradient(circle,#10B981 0%,#059669 45%,transparent 75%);top:8%;right:-55px;transform:rotate(20deg);"></div>
+
         <div class="sec-i">
             <div class="catalogo-grid" id="catalogoGrid"></div>
         </div>
@@ -942,6 +1225,13 @@
 
     <!-- ===== FOOTER ===== -->
     <footer>
+        <!-- MANCHAS EN BORDES DEL FOOTER -->
+        <div class="splash" style="width:200px;height:200px;background:radial-gradient(circle,rgba(37,99,235,0.08) 0%,transparent 80%);top:-70px;right:-70px;border-radius:50%;"></div>
+        <div class="splash" style="width:170px;height:170px;background:radial-gradient(circle,rgba(245,158,11,0.06) 0%,transparent 80%);bottom:-60px;left:-60px;border-radius:50%;"></div>
+        <div class="splash-m" style="width:100px;height:100px;background:radial-gradient(circle,rgba(236,72,153,0.06) 0%,transparent 70%);top:20%;right:-30px;"></div>
+        <div class="splash-s" style="width:35px;height:35px;background:rgba(37,99,235,0.08);top:8%;right:160px;"></div>
+        <div class="splash-s" style="width:30px;height:30px;background:rgba(245,158,11,0.06);bottom:12%;left:140px;"></div>
+
         <div class="footer-i">
             <div class="footer-grid">
                 <div>
@@ -986,1570 +1276,218 @@
         //  DATOS DEL CATÁLOGO (TODOS LOS PRODUCTOS ÚNICOS)
         // ============================================================
         const productos = [
-
             // ========== TAZAS ==========
-            { 
-                id: 1, 
-                nombre: 'Blanca AA 11oz', 
-                categoria: 'Tazas', 
-                precio: 0, 
-                desc: 'Taza blanca estándar 11oz',
-                imagen: 'images/productos/tazas/blanca-aa-11oz.jpg'  // 👈 CAMBIA ESTA RUTA
-            },
-            { 
-                id: 2, 
-                nombre: 'Blanca AA 11oz Económica', 
-                categoria: 'Tazas', 
-                precio: 0, 
-                desc: 'Taza blanca económica 11oz',
-                imagen: 'images/productos/tazas/blanca-aa-economica.jpg'
-            },
-            { 
-                id: 3, 
-                nombre: 'Blanca 6oz Alta', 
-                categoria: 'Tazas', 
-                precio: 25, 
-                desc: 'Taza blanca 6oz',
-                imagen: 'images/productos/tazas/blanca-6oz.jpg'
-            },
-            { 
-                id: 4, 
-                nombre: 'Blanca 15oz', 
-                categoria: 'Tazas', 
-                precio: 36, 
-                desc: 'Taza blanca 15oz',
-                imagen: 'images/productos/tazas/blanca-15oz.jpg'
-            },
-            { 
-                id: 5, 
-                nombre: 'Blanca base redonda 11oz', 
-                categoria: 'Tazas', 
-                precio: 23, 
-                desc: 'Taza blanca base redonda',
-                imagen: 'images/productos/tazas/blanca-base-redonda.jpg'
-            },
-            { 
-                id: 6, 
-                nombre: 'Corazón Blanca 11oz', 
-                categoria: 'Tazas', 
-                precio: 30, 
-                desc: 'Taza blanca con forma de corazón',
-                imagen: 'images/productos/tazas/corazon-blanca.jpg'
-            },
-            { 
-                id: 7, 
-                nombre: 'Cónica 12oz blanca', 
-                categoria: 'Tazas', 
-                precio: 23, 
-                desc: 'Taza cónica blanca 12oz',
-                imagen: 'images/productos/tazas/conica-12oz.jpg'
-            },
-            { 
-                id: 8, 
-                nombre: 'Cónica 17oz blanca', 
-                categoria: 'Tazas', 
-                precio: 45, 
-                desc: 'Taza cónica blanca 17oz',
-                imagen: 'images/productos/tazas/conica-17oz.jpg'
-            },
-            { 
-                id: 9, 
-                nombre: 'Mágica 11oz (negra, roja, azul)', 
-                categoria: 'Tazas', 
-                precio: 36, 
-                desc: 'Taza mágica 11oz',
-                imagen: 'images/productos/tazas/magica-11oz.jpg'
-            },
-            { 
-                id: 10, 
-                nombre: 'Mágica Glitter 11oz', 
-                categoria: 'Tazas', 
-                precio: 41, 
-                desc: 'Taza mágica con glitter',
-                imagen: 'images/productos/tazas/magica-glitter.jpg'
-            },
-            { 
-                id: 11, 
-                nombre: 'Mágica Cora 11oz', 
-                categoria: 'Tazas', 
-                precio: 41, 
-                desc: 'Taza mágica forma corazón',
-                imagen: 'images/productos/tazas/magica-cora.jpg'
-            },
-            { 
-                id: 12, 
-                nombre: 'Mágica 3D 11oz', 
-                categoria: 'Tazas', 
-                precio: 50, 
-                desc: 'Taza mágica efecto 3D',
-                imagen: 'images/productos/tazas/magica-3d.jpg'
-            },
-            { 
-                id: 13, 
-                nombre: 'Mágica Peltre Glitter 11oz', 
-                categoria: 'Tazas', 
-                precio: 55, 
-                desc: 'Taza peltre mágica con glitter',
-                imagen: 'images/productos/tazas/magica-peltre-glitter.jpg'
-            },
-            { 
-                id: 14, 
-                nombre: 'Cónica Mágica 12oz', 
-                categoria: 'Tazas', 
-                precio: 42, 
-                desc: 'Taza cónica mágica 12oz',
-                imagen: 'images/productos/tazas/conica-magica-12oz.jpg'
-            },
-            { 
-                id: 15, 
-                nombre: 'Cónica Mágica 17oz (negra)', 
-                categoria: 'Tazas', 
-                precio: 70, 
-                desc: 'Taza cónica mágica 17oz negra',
-                imagen: 'images/productos/tazas/conica-magica-17oz.jpg'
-            },
-            { 
-                id: 16, 
-                nombre: 'Mágica Pareja 11oz negra', 
-                categoria: 'Tazas', 
-                precio: 110, 
-                desc: 'Taza mágica pareja 11oz',
-                imagen: 'images/productos/tazas/magica-pareja.jpg'
-            },
-            { 
-                id: 17, 
-                nombre: 'Taza espejo (plata/oro)', 
-                categoria: 'Tazas', 
-                precio: 40, 
-                desc: 'Taza espejo plateada/dorada',
-                imagen: 'images/productos/tazas/espejo-plata-oro.jpg'
-            },
-            { 
-                id: 18, 
-                nombre: 'Taza espejo combinada', 
-                categoria: 'Tazas', 
-                precio: 43, 
-                desc: 'Taza espejo combinada',
-                imagen: 'images/productos/tazas/espejo-combinada.jpg'
-            },
-            { 
-                id: 19, 
-                nombre: 'Glitter 11oz (rosa, azul, plata, dorada)', 
-                categoria: 'Tazas', 
-                precio: 31, 
-                desc: 'Taza con glitter',
-                imagen: 'images/productos/tazas/glitter-11oz.jpg'
-            },
-            { 
-                id: 20, 
-                nombre: 'Glitter 11oz combinada', 
-                categoria: 'Tazas', 
-                precio: 43, 
-                desc: 'Taza glitter combinada',
-                imagen: 'images/productos/tazas/glitter-combinada.jpg'
-            },
-            { 
-                id: 21, 
-                nombre: 'Aperlada 11oz', 
-                categoria: 'Tazas', 
-                precio: 41, 
-                desc: 'Taza aperlada',
-                imagen: 'images/productos/tazas/aperlada-11oz.jpg'
-            },
-            { 
-                id: 22, 
-                nombre: 'Neón 11oz', 
-                categoria: 'Tazas', 
-                precio: 30, 
-                desc: 'Taza neón',
-                imagen: 'images/productos/tazas/neon-11oz.jpg'
-            },
-            { 
-                id: 23, 
-                nombre: 'Ventana 11oz', 
-                categoria: 'Tazas', 
-                precio: 43, 
-                desc: 'Taza con ventana',
-                imagen: 'images/productos/tazas/ventana-11oz.jpg'
-            },
-            { 
-                id: 24, 
-                nombre: 'Int. Color 11oz', 
-                categoria: 'Tazas', 
-                precio: 26, 
-                desc: 'Taza interior color',
-                imagen: 'images/productos/tazas/int-color-11oz.jpg'
-            },
-            { 
-                id: 25, 
-                nombre: 'Int. Color Cora 11oz', 
-                categoria: 'Tazas', 
-                precio: 33, 
-                desc: 'Taza interior color corazón',
-                imagen: 'images/productos/tazas/int-color-cora.jpg'
-            },
-            { 
-                id: 26, 
-                nombre: 'Cuchara Color Semiconica 11oz', 
-                categoria: 'Tazas', 
-                precio: 45, 
-                desc: 'Taza semiconica con cuchara',
-                imagen: 'images/productos/tazas/cuchara-semiconica.jpg'
-            },
-            { 
-                id: 27, 
-                nombre: 'Cuchara Recta 11oz', 
-                categoria: 'Tazas', 
-                precio: 40, 
-                desc: 'Taza recta con cuchara',
-                imagen: 'images/productos/tazas/cuchara-recta.jpg'
-            },
-            { 
-                id: 28, 
-                nombre: 'Metálica tomasol 11oz', 
-                categoria: 'Tazas', 
-                precio: 39, 
-                desc: 'Taza metálica tomasol',
-                imagen: 'images/productos/tazas/metalica-tomasol.jpg'
-            },
-            { 
-                id: 29, 
-                nombre: 'Luminiscente 11oz', 
-                categoria: 'Tazas', 
-                precio: 33, 
-                desc: 'Taza luminiscente',
-                imagen: 'images/productos/tazas/luminiscente-11oz.jpg'
-            },
-            { 
-                id: 30, 
-                nombre: 'Cerámica 17oz', 
-                categoria: 'Tazas', 
-                precio: 59, 
-                desc: 'Taza cerámica 17oz',
-                imagen: 'images/productos/tazas/ceramica-17oz.jpg'
-            },
-            { 
-                id: 31, 
-                nombre: 'Cerámica Tipo Peltre 11oz', 
-                categoria: 'Tazas', 
-                precio: 42, 
-                desc: 'Taza cerámica tipo peltre',
-                imagen: 'images/productos/tazas/ceramica-peltre.jpg'
-            },
-            { 
-                id: 32, 
-                nombre: 'Peltre 6oz', 
-                categoria: 'Tazas', 
-                precio: 31, 
-                desc: 'Taza peltre 6oz',
-                imagen: 'images/productos/tazas/peltre-6oz.jpg'
-            },
-            { 
-                id: 33, 
-                nombre: 'Peltre 11oz', 
-                categoria: 'Tazas', 
-                precio: 50, 
-                desc: 'Taza peltre 11oz',
-                imagen: 'images/productos/tazas/peltre-11oz.jpg'
-            },
+            { id: 1, nombre: 'Blanca AA 11oz', categoria: 'Tazas', precio: 0, desc: 'Taza blanca estándar 11oz', imagen: 'images/productos/tazas/blanca-aa-11oz.jpg' },
+            { id: 2, nombre: 'Blanca AA 11oz Económica', categoria: 'Tazas', precio: 0, desc: 'Taza blanca económica 11oz', imagen: 'images/productos/tazas/blanca-aa-economica.jpg' },
+            { id: 3, nombre: 'Blanca 6oz Alta', categoria: 'Tazas', precio: 25, desc: 'Taza blanca 6oz', imagen: 'images/productos/tazas/blanca-6oz.jpg' },
+            { id: 4, nombre: 'Blanca 15oz', categoria: 'Tazas', precio: 36, desc: 'Taza blanca 15oz', imagen: 'images/productos/tazas/blanca-15oz.jpg' },
+            { id: 5, nombre: 'Blanca base redonda 11oz', categoria: 'Tazas', precio: 23, desc: 'Taza blanca base redonda', imagen: 'images/productos/tazas/blanca-base-redonda.jpg' },
+            { id: 6, nombre: 'Corazón Blanca 11oz', categoria: 'Tazas', precio: 30, desc: 'Taza blanca con forma de corazón', imagen: 'images/productos/tazas/corazon-blanca.jpg' },
+            { id: 7, nombre: 'Cónica 12oz blanca', categoria: 'Tazas', precio: 23, desc: 'Taza cónica blanca 12oz', imagen: 'images/productos/tazas/conica-12oz.jpg' },
+            { id: 8, nombre: 'Cónica 17oz blanca', categoria: 'Tazas', precio: 45, desc: 'Taza cónica blanca 17oz', imagen: 'images/productos/tazas/conica-17oz.jpg' },
+            { id: 9, nombre: 'Mágica 11oz (negra, roja, azul)', categoria: 'Tazas', precio: 36, desc: 'Taza mágica 11oz', imagen: 'images/productos/tazas/magica-11oz.jpg' },
+            { id: 10, nombre: 'Mágica Glitter 11oz', categoria: 'Tazas', precio: 41, desc: 'Taza mágica con glitter', imagen: 'images/productos/tazas/magica-glitter.jpg' },
+            { id: 11, nombre: 'Mágica Cora 11oz', categoria: 'Tazas', precio: 41, desc: 'Taza mágica forma corazón', imagen: 'images/productos/tazas/magica-cora.jpg' },
+            { id: 12, nombre: 'Mágica 3D 11oz', categoria: 'Tazas', precio: 50, desc: 'Taza mágica efecto 3D', imagen: 'images/productos/tazas/magica-3d.jpg' },
+            { id: 13, nombre: 'Mágica Peltre Glitter 11oz', categoria: 'Tazas', precio: 55, desc: 'Taza peltre mágica con glitter', imagen: 'images/productos/tazas/magica-peltre-glitter.jpg' },
+            { id: 14, nombre: 'Cónica Mágica 12oz', categoria: 'Tazas', precio: 42, desc: 'Taza cónica mágica 12oz', imagen: 'images/productos/tazas/conica-magica-12oz.jpg' },
+            { id: 15, nombre: 'Cónica Mágica 17oz (negra)', categoria: 'Tazas', precio: 70, desc: 'Taza cónica mágica 17oz negra', imagen: 'images/productos/tazas/conica-magica-17oz.jpg' },
+            { id: 16, nombre: 'Mágica Pareja 11oz negra', categoria: 'Tazas', precio: 110, desc: 'Taza mágica pareja 11oz', imagen: 'images/productos/tazas/magica-pareja.jpg' },
+            { id: 17, nombre: 'Taza espejo (plata/oro)', categoria: 'Tazas', precio: 40, desc: 'Taza espejo plateada/dorada', imagen: 'images/productos/tazas/espejo-plata-oro.jpg' },
+            { id: 18, nombre: 'Taza espejo combinada', categoria: 'Tazas', precio: 43, desc: 'Taza espejo combinada', imagen: 'images/productos/tazas/espejo-combinada.jpg' },
+            { id: 19, nombre: 'Glitter 11oz (rosa, azul, plata, dorada)', categoria: 'Tazas', precio: 31, desc: 'Taza con glitter', imagen: 'images/productos/tazas/glitter-11oz.jpg' },
+            { id: 20, nombre: 'Glitter 11oz combinada', categoria: 'Tazas', precio: 43, desc: 'Taza glitter combinada', imagen: 'images/productos/tazas/glitter-combinada.jpg' },
+            { id: 21, nombre: 'Aperlada 11oz', categoria: 'Tazas', precio: 41, desc: 'Taza aperlada', imagen: 'images/productos/tazas/aperlada-11oz.jpg' },
+            { id: 22, nombre: 'Neón 11oz', categoria: 'Tazas', precio: 30, desc: 'Taza neón', imagen: 'images/productos/tazas/neon-11oz.jpg' },
+            { id: 23, nombre: 'Ventana 11oz', categoria: 'Tazas', precio: 43, desc: 'Taza con ventana', imagen: 'images/productos/tazas/ventana-11oz.jpg' },
+            { id: 24, nombre: 'Int. Color 11oz', categoria: 'Tazas', precio: 26, desc: 'Taza interior color', imagen: 'images/productos/tazas/int-color-11oz.jpg' },
+            { id: 25, nombre: 'Int. Color Cora 11oz', categoria: 'Tazas', precio: 33, desc: 'Taza interior color corazón', imagen: 'images/productos/tazas/int-color-cora.jpg' },
+            { id: 26, nombre: 'Cuchara Color Semiconica 11oz', categoria: 'Tazas', precio: 45, desc: 'Taza semiconica con cuchara', imagen: 'images/productos/tazas/cuchara-semiconica.jpg' },
+            { id: 27, nombre: 'Cuchara Recta 11oz', categoria: 'Tazas', precio: 40, desc: 'Taza recta con cuchara', imagen: 'images/productos/tazas/cuchara-recta.jpg' },
+            { id: 28, nombre: 'Metálica tomasol 11oz', categoria: 'Tazas', precio: 39, desc: 'Taza metálica tomasol', imagen: 'images/productos/tazas/metalica-tomasol.jpg' },
+            { id: 29, nombre: 'Luminiscente 11oz', categoria: 'Tazas', precio: 33, desc: 'Taza luminiscente', imagen: 'images/productos/tazas/luminiscente-11oz.jpg' },
+            { id: 30, nombre: 'Cerámica 17oz', categoria: 'Tazas', precio: 59, desc: 'Taza cerámica 17oz', imagen: 'images/productos/tazas/ceramica-17oz.jpg' },
+            { id: 31, nombre: 'Cerámica Tipo Peltre 11oz', categoria: 'Tazas', precio: 42, desc: 'Taza cerámica tipo peltre', imagen: 'images/productos/tazas/ceramica-peltre.jpg' },
+            { id: 32, nombre: 'Peltre 6oz', categoria: 'Tazas', precio: 31, desc: 'Taza peltre 6oz', imagen: 'images/productos/tazas/peltre-6oz.jpg' },
+            { id: 33, nombre: 'Peltre 11oz', categoria: 'Tazas', precio: 50, desc: 'Taza peltre 11oz', imagen: 'images/productos/tazas/peltre-11oz.jpg' },
 
             // ========== VASOS Y CILINDROS ==========
-            { 
-                id: 34, 
-                nombre: 'Lata E. Chica 300ml', 
-                categoria: 'Cilindros', 
-                precio: 44, 
-                desc: 'Lata pequeña 300ml',
-                imagen: 'images/productos/cilindros/lata-chica-300ml.jpg'
-            },
-            { 
-                id: 35, 
-                nombre: 'Lata E. Grande 500ml', 
-                categoria: 'Cilindros', 
-                precio: 55, 
-                desc: 'Lata grande 500ml',
-                imagen: 'images/productos/cilindros/lata-grande-500ml.jpg'
-            },
-            { 
-                id: 36, 
-                nombre: 'Llavero 600ml', 
-                categoria: 'Cilindros', 
-                precio: 45, 
-                desc: 'Llavero sublimable 600ml',
-                imagen: 'images/productos/cilindros/llavero-600ml.jpg'
-            },
-            { 
-                id: 37, 
-                nombre: 'Llavero 750ml', 
-                categoria: 'Cilindros', 
-                precio: 54, 
-                desc: 'Llavero sublimable 750ml',
-                imagen: 'images/productos/cilindros/llavero-750ml.jpg'
-            },
-            { 
-                id: 38, 
-                nombre: 'Tapa Transp. 750ml', 
-                categoria: 'Cilindros', 
-                precio: 80, 
-                desc: 'Tapa transparente 750ml',
-                imagen: 'images/productos/cilindros/tapa-transp-750ml.jpg'
-            },
-            { 
-                id: 39, 
-                nombre: 'Botella Niño 600ml', 
-                categoria: 'Cilindros', 
-                precio: 75, 
-                desc: 'Botella infantil 600ml',
-                imagen: 'images/productos/cilindros/botella-nino-600ml.jpg'
-            },
-            { 
-                id: 40, 
-                nombre: 'Botella Aro 750ml', 
-                categoria: 'Cilindros', 
-                precio: 74, 
-                desc: 'Botella con aro 750ml',
-                imagen: 'images/productos/cilindros/botella-aro-750ml.jpg'
-            },
-            { 
-                id: 41, 
-                nombre: 'Botella de Botón 750ml', 
-                categoria: 'Cilindros', 
-                precio: 74, 
-                desc: 'Botella con botón 750ml',
-                imagen: 'images/productos/cilindros/botella-boton-750ml.jpg'
-            },
-            { 
-                id: 42, 
-                nombre: 'Botella Cuello de Color 350ml', 
-                categoria: 'Cilindros', 
-                precio: 105, 
-                desc: 'Botella cuello color 350ml',
-                imagen: 'images/productos/cilindros/botella-cuello-color.jpg'
-            },
-            { 
-                id: 43, 
-                nombre: 'Botella Tapa pet 750ml', 
-                categoria: 'Cilindros', 
-                precio: 96, 
-                desc: 'Botella tapa pet 750ml',
-                imagen: 'images/productos/cilindros/botella-tapa-pet.jpg'
-            },
-            { 
-                id: 44, 
-                nombre: 'Vaso plástico 17oz', 
-                categoria: 'Cilindros', 
-                precio: 90, 
-                desc: 'Vaso plástico 17oz',
-                imagen: 'images/productos/cilindros/vaso-plastico-17oz.jpg'
-            },
-            { 
-                id: 45, 
-                nombre: 'Vaso Jabilero 270ml', 
-                categoria: 'Cilindros', 
-                precio: 24, 
-                desc: 'Vaso jabilero vidrio color',
-                imagen: 'images/productos/cilindros/vaso-jabilero.jpg'
-            },
-            { 
-                id: 46, 
-                nombre: 'Vaso delgado vidrio color', 
-                categoria: 'Cilindros', 
-                precio: 82, 
-                desc: 'Vaso delgado vidrio con color',
-                imagen: 'images/productos/cilindros/vaso-delgado-vidrio.jpg'
-            },
+            { id: 34, nombre: 'Lata E. Chica 300ml', categoria: 'Cilindros', precio: 44, desc: 'Lata pequeña 300ml', imagen: 'images/productos/cilindros/lata-chica-300ml.jpg' },
+            { id: 35, nombre: 'Lata E. Grande 500ml', categoria: 'Cilindros', precio: 55, desc: 'Lata grande 500ml', imagen: 'images/productos/cilindros/lata-grande-500ml.jpg' },
+            { id: 36, nombre: 'Llavero 600ml', categoria: 'Cilindros', precio: 45, desc: 'Llavero sublimable 600ml', imagen: 'images/productos/cilindros/llavero-600ml.jpg' },
+            { id: 37, nombre: 'Llavero 750ml', categoria: 'Cilindros', precio: 54, desc: 'Llavero sublimable 750ml', imagen: 'images/productos/cilindros/llavero-750ml.jpg' },
+            { id: 38, nombre: 'Tapa Transp. 750ml', categoria: 'Cilindros', precio: 80, desc: 'Tapa transparente 750ml', imagen: 'images/productos/cilindros/tapa-transp-750ml.jpg' },
+            { id: 39, nombre: 'Botella Niño 600ml', categoria: 'Cilindros', precio: 75, desc: 'Botella infantil 600ml', imagen: 'images/productos/cilindros/botella-nino-600ml.jpg' },
+            { id: 40, nombre: 'Botella Aro 750ml', categoria: 'Cilindros', precio: 74, desc: 'Botella con aro 750ml', imagen: 'images/productos/cilindros/botella-aro-750ml.jpg' },
+            { id: 41, nombre: 'Botella de Botón 750ml', categoria: 'Cilindros', precio: 74, desc: 'Botella con botón 750ml', imagen: 'images/productos/cilindros/botella-boton-750ml.jpg' },
+            { id: 42, nombre: 'Botella Cuello de Color 350ml', categoria: 'Cilindros', precio: 105, desc: 'Botella cuello color 350ml', imagen: 'images/productos/cilindros/botella-cuello-color.jpg' },
+            { id: 43, nombre: 'Botella Tapa pet 750ml', categoria: 'Cilindros', precio: 96, desc: 'Botella tapa pet 750ml', imagen: 'images/productos/cilindros/botella-tapa-pet.jpg' },
+            { id: 44, nombre: 'Vaso plástico 17oz', categoria: 'Cilindros', precio: 90, desc: 'Vaso plástico 17oz', imagen: 'images/productos/cilindros/vaso-plastico-17oz.jpg' },
+            { id: 45, nombre: 'Vaso Jabilero 270ml', categoria: 'Cilindros', precio: 24, desc: 'Vaso jabilero vidrio color', imagen: 'images/productos/cilindros/vaso-jabilero.jpg' },
+            { id: 46, nombre: 'Vaso delgado vidrio color', categoria: 'Cilindros', precio: 82, desc: 'Vaso delgado vidrio con color', imagen: 'images/productos/cilindros/vaso-delgado-vidrio.jpg' },
 
             // ========== TERMOS Y TARROS ==========
-            { 
-                id: 47, 
-                nombre: 'Lata Chica 300ml Térmica', 
-                categoria: 'Termos', 
-                precio: 108, 
-                desc: 'Lata térmica 300ml',
-                imagen: 'images/productos/termos/lata-chica-termica.jpg'
-            },
-            { 
-                id: 48, 
-                nombre: 'Lata Grande 500ml Térmica', 
-                categoria: 'Termos', 
-                precio: 132, 
-                desc: 'Lata térmica 500ml',
-                imagen: 'images/productos/termos/lata-grande-termica.jpg'
-            },
-            { 
-                id: 49, 
-                nombre: 'Taza Viajera 16oz', 
-                categoria: 'Termos', 
-                precio: 100, 
-                desc: 'Taza viajera 16oz',
-                imagen: 'images/productos/termos/taza-viajera-16oz.jpg'
-            },
-            { 
-                id: 50, 
-                nombre: 'Vaso Viajero 20oz', 
-                categoria: 'Termos', 
-                precio: 153, 
-                desc: 'Vaso viajero 20oz',
-                imagen: 'images/productos/termos/vaso-viajero-20oz.jpg'
-            },
-            { 
-                id: 51, 
-                nombre: 'Vaso Viajero 20oz cónico', 
-                categoria: 'Termos', 
-                precio: 135, 
-                desc: 'Vaso viajero cónico 20oz',
-                imagen: 'images/productos/termos/vaso-viajero-conico.jpg'
-            },
-            { 
-                id: 52, 
-                nombre: 'Vaso Viajero 550ml Playero', 
-                categoria: 'Termos', 
-                precio: 93, 
-                desc: 'Vaso viajero playero',
-                imagen: 'images/productos/termos/vaso-viajero-playero.jpg'
-            },
-            { 
-                id: 53, 
-                nombre: 'Botella Lechera 500ml', 
-                categoria: 'Termos', 
-                precio: 133, 
-                desc: 'Botella lechera 500ml',
-                imagen: 'images/productos/termos/botella-lechera.jpg'
-            },
-            { 
-                id: 54, 
-                nombre: 'Vaso acero delgado 600ml', 
-                categoria: 'Termos', 
-                precio: 135, 
-                desc: 'Vaso acero delgado',
-                imagen: 'images/productos/termos/vaso-acero-delgado.jpg'
-            },
-            { 
-                id: 55, 
-                nombre: 'Tarro acero 20oz', 
-                categoria: 'Termos', 
-                precio: 184, 
-                desc: 'Tarro acero 20oz',
-                imagen: 'images/productos/termos/tarro-acero-20oz.jpg'
-            },
-            { 
-                id: 56, 
-                nombre: 'Vaso vino (plata y blanca)', 
-                categoria: 'Termos', 
-                precio: 100, 
-                desc: 'Vaso vino plata/blanca',
-                imagen: 'images/productos/termos/vaso-vino.jpg'
-            },
-            { 
-                id: 57, 
-                nombre: 'Termo láser cónico 200ml', 
-                categoria: 'Termos', 
-                precio: 158, 
-                desc: 'Termo láser cónico',
-                imagen: 'images/productos/termos/termo-laser-conico.jpg'
-            },
-            { 
-                id: 58, 
-                nombre: 'Termo láser vino 300ml', 
-                categoria: 'Termos', 
-                precio: 113, 
-                desc: 'Termo láser vino',
-                imagen: 'images/productos/termos/termo-laser-vino.jpg'
-            },
+            { id: 47, nombre: 'Lata Chica 300ml Térmica', categoria: 'Termos', precio: 108, desc: 'Lata térmica 300ml', imagen: 'images/productos/termos/lata-chica-termica.jpg' },
+            { id: 48, nombre: 'Lata Grande 500ml Térmica', categoria: 'Termos', precio: 132, desc: 'Lata térmica 500ml', imagen: 'images/productos/termos/lata-grande-termica.jpg' },
+            { id: 49, nombre: 'Taza Viajera 16oz', categoria: 'Termos', precio: 100, desc: 'Taza viajera 16oz', imagen: 'images/productos/termos/taza-viajera-16oz.jpg' },
+            { id: 50, nombre: 'Vaso Viajero 20oz', categoria: 'Termos', precio: 153, desc: 'Vaso viajero 20oz', imagen: 'images/productos/termos/vaso-viajero-20oz.jpg' },
+            { id: 51, nombre: 'Vaso Viajero 20oz cónico', categoria: 'Termos', precio: 135, desc: 'Vaso viajero cónico 20oz', imagen: 'images/productos/termos/vaso-viajero-conico.jpg' },
+            { id: 52, nombre: 'Vaso Viajero 550ml Playero', categoria: 'Termos', precio: 93, desc: 'Vaso viajero playero', imagen: 'images/productos/termos/vaso-viajero-playero.jpg' },
+            { id: 53, nombre: 'Botella Lechera 500ml', categoria: 'Termos', precio: 133, desc: 'Botella lechera 500ml', imagen: 'images/productos/termos/botella-lechera.jpg' },
+            { id: 54, nombre: 'Vaso acero delgado 600ml', categoria: 'Termos', precio: 135, desc: 'Vaso acero delgado', imagen: 'images/productos/termos/vaso-acero-delgado.jpg' },
+            { id: 55, nombre: 'Tarro acero 20oz', categoria: 'Termos', precio: 184, desc: 'Tarro acero 20oz', imagen: 'images/productos/termos/tarro-acero-20oz.jpg' },
+            { id: 56, nombre: 'Vaso vino (plata y blanca)', categoria: 'Termos', precio: 100, desc: 'Vaso vino plata/blanca', imagen: 'images/productos/termos/vaso-vino.jpg' },
+            { id: 57, nombre: 'Termo láser cónico 200ml', categoria: 'Termos', precio: 158, desc: 'Termo láser cónico', imagen: 'images/productos/termos/termo-laser-conico.jpg' },
+            { id: 58, nombre: 'Termo láser vino 300ml', categoria: 'Termos', precio: 113, desc: 'Termo láser vino', imagen: 'images/productos/termos/termo-laser-vino.jpg' },
 
             // ========== CARTÓN Y MDF ==========
-            { 
-                id: 59, 
-                nombre: 'Cartón A4 Blanco', 
-                categoria: 'Cartón', 
-                precio: 35, 
-                desc: 'Cartón sublimable A4 blanco',
-                imagen: 'images/productos/carton/carton-a4-blanco.jpg'
-            },
-            { 
-                id: 60, 
-                nombre: 'Cartón A4 Metálico', 
-                categoria: 'Cartón', 
-                precio: 38, 
-                desc: 'Cartón sublimable A4 metálico',
-                imagen: 'images/productos/carton/carton-a4-metalico.jpg'
-            },
-            { 
-                id: 61, 
-                nombre: 'Cartón A5 Blanco', 
-                categoria: 'Cartón', 
-                precio: 22, 
-                desc: 'Cartón sublimable A5 blanco',
-                imagen: 'images/productos/carton/carton-a5-blanco.jpg'
-            },
-            { 
-                id: 62, 
-                nombre: 'Cartón A5 Metálico', 
-                categoria: 'Cartón', 
-                precio: 25, 
-                desc: 'Cartón sublimable A5 metálico',
-                imagen: 'images/productos/carton/carton-a5-metalico.jpg'
-            },
-            { 
-                id: 63, 
-                nombre: 'Cartón Corazón', 
-                categoria: 'Cartón', 
-                precio: 35, 
-                desc: 'Cartón sublimable corazón',
-                imagen: 'images/productos/carton/carton-corazon.jpg'
-            },
-            { 
-                id: 64, 
-                nombre: 'Cartón Pizzas', 
-                categoria: 'Cartón', 
-                precio: 45, 
-                desc: 'Cartón sublimable pizzas',
-                imagen: 'images/productos/carton/carton-pizzas.jpg'
-            },
-            { 
-                id: 65, 
-                nombre: 'Cartón Estándar', 
-                categoria: 'Cartón', 
-                precio: 30, 
-                desc: 'Cartón sublimable estándar',
-                imagen: 'images/productos/carton/carton-estandar.jpg'
-            },
-            { 
-                id: 66, 
-                nombre: 'Cartón Grauso', 
-                categoria: 'Cartón', 
-                precio: 30, 
-                desc: 'Cartón sublimable grauso',
-                imagen: 'images/productos/carton/carton-grauso.jpg'
-            },
-            { 
-                id: 67, 
-                nombre: 'MDF Corazón', 
-                categoria: 'MDF', 
-                precio: 35, 
-                desc: 'MDF sublimable corazón',
-                imagen: 'images/productos/mdf/mdf-corazon.jpg'
-            },
-            { 
-                id: 68, 
-                nombre: 'MDF 4 pzs', 
-                categoria: 'MDF', 
-                precio: 25, 
-                desc: 'MDF sublimable 4 piezas',
-                imagen: 'images/productos/mdf/mdf-4pzs.jpg'
-            },
-            { 
-                id: 69, 
-                nombre: 'MDF 6 pzs', 
-                categoria: 'MDF', 
-                precio: 28, 
-                desc: 'MDF sublimable 6 piezas',
-                imagen: 'images/productos/mdf/mdf-6pzs.jpg'
-            },
-            { 
-                id: 70, 
-                nombre: 'MDF A4', 
-                categoria: 'MDF', 
-                precio: 55, 
-                desc: 'MDF sublimable A4',
-                imagen: 'images/productos/mdf/mdf-a4.jpg'
-            },
-            { 
-                id: 71, 
-                nombre: 'Rompecabezas 12pz', 
-                categoria: 'MDF', 
-                precio: 65, 
-                desc: 'Rompecabezas sublimable 12pz',
-                imagen: 'images/productos/mdf/rompecabezas-12pz.jpg'
-            },
-            { 
-                id: 72, 
-                nombre: 'Portarretrato MDF 15x20', 
-                categoria: 'MDF', 
-                precio: 32, 
-                desc: 'Portarretrato MDF 15x20',
-                imagen: 'images/productos/mdf/portarretrato-15x20.jpg'
-            },
-            { 
-                id: 73, 
-                nombre: 'Portarretrato MDF 20x25', 
-                categoria: 'MDF', 
-                precio: 46, 
-                desc: 'Portarretrato MDF 20x25',
-                imagen: 'images/productos/mdf/portarretrato-20x25.jpg'
-            },
+            { id: 59, nombre: 'Cartón A4 Blanco', categoria: 'Cartón', precio: 35, desc: 'Cartón sublimable A4 blanco', imagen: 'images/productos/carton/carton-a4-blanco.jpg' },
+            { id: 60, nombre: 'Cartón A4 Metálico', categoria: 'Cartón', precio: 38, desc: 'Cartón sublimable A4 metálico', imagen: 'images/productos/carton/carton-a4-metalico.jpg' },
+            { id: 61, nombre: 'Cartón A5 Blanco', categoria: 'Cartón', precio: 22, desc: 'Cartón sublimable A5 blanco', imagen: 'images/productos/carton/carton-a5-blanco.jpg' },
+            { id: 62, nombre: 'Cartón A5 Metálico', categoria: 'Cartón', precio: 25, desc: 'Cartón sublimable A5 metálico', imagen: 'images/productos/carton/carton-a5-metalico.jpg' },
+            { id: 63, nombre: 'Cartón Corazón', categoria: 'Cartón', precio: 35, desc: 'Cartón sublimable corazón', imagen: 'images/productos/carton/carton-corazon.jpg' },
+            { id: 64, nombre: 'Cartón Pizzas', categoria: 'Cartón', precio: 45, desc: 'Cartón sublimable pizzas', imagen: 'images/productos/carton/carton-pizzas.jpg' },
+            { id: 65, nombre: 'Cartón Estándar', categoria: 'Cartón', precio: 30, desc: 'Cartón sublimable estándar', imagen: 'images/productos/carton/carton-estandar.jpg' },
+            { id: 66, nombre: 'Cartón Grauso', categoria: 'Cartón', precio: 30, desc: 'Cartón sublimable grauso', imagen: 'images/productos/carton/carton-grauso.jpg' },
+            { id: 67, nombre: 'MDF Corazón', categoria: 'MDF', precio: 35, desc: 'MDF sublimable corazón', imagen: 'images/productos/mdf/mdf-corazon.jpg' },
+            { id: 68, nombre: 'MDF 4 pzs', categoria: 'MDF', precio: 25, desc: 'MDF sublimable 4 piezas', imagen: 'images/productos/mdf/mdf-4pzs.jpg' },
+            { id: 69, nombre: 'MDF 6 pzs', categoria: 'MDF', precio: 28, desc: 'MDF sublimable 6 piezas', imagen: 'images/productos/mdf/mdf-6pzs.jpg' },
+            { id: 70, nombre: 'MDF A4', categoria: 'MDF', precio: 55, desc: 'MDF sublimable A4', imagen: 'images/productos/mdf/mdf-a4.jpg' },
+            { id: 71, nombre: 'Rompecabezas 12pz', categoria: 'MDF', precio: 65, desc: 'Rompecabezas sublimable 12pz', imagen: 'images/productos/mdf/rompecabezas-12pz.jpg' },
+            { id: 72, nombre: 'Portarretrato MDF 15x20', categoria: 'MDF', precio: 32, desc: 'Portarretrato MDF 15x20', imagen: 'images/productos/mdf/portarretrato-15x20.jpg' },
+            { id: 73, nombre: 'Portarretrato MDF 20x25', categoria: 'MDF', precio: 46, desc: 'Portarretrato MDF 20x25', imagen: 'images/productos/mdf/portarretrato-20x25.jpg' },
 
             // ========== TEXTILES ==========
-            { 
-                id: 74, 
-                nombre: 'Playera Campañera adulto', 
-                categoria: 'Textiles', 
-                precio: 25, 
-                desc: 'Playera campaña adulto',
-                imagen: 'images/productos/textiles/playera-campanera.jpg'
-            },
-            { 
-                id: 75, 
-                nombre: 'Playera Niño', 
-                categoria: 'Textiles', 
-                precio: 50, 
-                desc: 'Playera infantil',
-                imagen: 'images/productos/textiles/playera-nino.jpg'
-            },
-            { 
-                id: 76, 
-                nombre: 'Playera Hombre y Mujer', 
-                categoria: 'Textiles', 
-                precio: 68, 
-                desc: 'Playera adulto hombre/mujer',
-                imagen: 'images/productos/textiles/playera-adulto.jpg'
-            },
-            { 
-                id: 77, 
-                nombre: 'Panaleros', 
-                categoria: 'Textiles', 
-                precio: 50, 
-                desc: 'Panaleros 3-12 meses',
-                imagen: 'images/productos/textiles/panaleros.jpg'
-            },
-            { 
-                id: 78, 
-                nombre: 'Gorra Malla', 
-                categoria: 'Textiles', 
-                precio: 23, 
-                desc: 'Gorra malla adulto/niño',
-                imagen: 'images/productos/textiles/gorra-malla.jpg'
-            },
-            { 
-                id: 79, 
-                nombre: 'Gorra Gabardina', 
-                categoria: 'Textiles', 
-                precio: 29, 
-                desc: 'Gorra gabardina',
-                imagen: 'images/productos/textiles/gorra-gabardina.jpg'
-            },
-            { 
-                id: 80, 
-                nombre: 'Gorra Acrilán', 
-                categoria: 'Textiles', 
-                precio: 23, 
-                desc: 'Gorra acrilán adulto/niño',
-                imagen: 'images/productos/textiles/gorra-acrilan.jpg'
-            },
-            { 
-                id: 81, 
-                nombre: 'Gorra Safari', 
-                categoria: 'Textiles', 
-                precio: 44, 
-                desc: 'Gorra safari',
-                imagen: 'images/productos/textiles/gorra-safari.jpg'
-            },
-            { 
-                id: 82, 
-                nombre: 'Gorra Plana', 
-                categoria: 'Textiles', 
-                precio: 30, 
-                desc: 'Gorra plana acrilán/malla',
-                imagen: 'images/productos/textiles/gorra-plana.jpg'
-            },
-            { 
-                id: 83, 
-                nombre: 'Gorra con Careta', 
-                categoria: 'Textiles', 
-                precio: 30, 
-                desc: 'Gorra con careta',
-                imagen: 'images/productos/textiles/gorra-careta.jpg'
-            },
-            { 
-                id: 84, 
-                nombre: 'Mandil blanco borde color', 
-                categoria: 'Textiles', 
-                precio: 30, 
-                desc: 'Mandil blanco borde color',
-                imagen: 'images/productos/textiles/mandil-blanco.jpg'
-            },
-            { 
-                id: 85, 
-                nombre: 'Mandil ecológico', 
-                categoria: 'Textiles', 
-                precio: 15, 
-                desc: 'Mandil ecológico',
-                imagen: 'images/productos/textiles/mandil-ecologico.jpg'
-            },
-            { 
-                id: 86, 
-                nombre: 'Mandil negro', 
-                categoria: 'Textiles', 
-                precio: 30, 
-                desc: 'Mandil negro',
-                imagen: 'images/productos/textiles/mandil-negro.jpg'
-            },
-            { 
-                id: 87, 
-                nombre: 'Banda edecán', 
-                categoria: 'Textiles', 
-                precio: 3, 
-                desc: 'Banda edecán',
-                imagen: 'images/productos/textiles/banda- edecan.jpg'
-            },
-            { 
-                id: 88, 
-                nombre: 'Funda cojín', 
-                categoria: 'Textiles', 
-                precio: 25, 
-                desc: 'Funda para cojín',
-                imagen: 'images/productos/textiles/funda-cojin.jpg'
-            },
-            { 
-                id: 89, 
-                nombre: 'Funda almohada', 
-                categoria: 'Textiles', 
-                precio: 50, 
-                desc: 'Funda para almohada',
-                imagen: 'images/productos/textiles/funda-almohada.jpg'
-            },
-            { 
-                id: 90, 
-                nombre: 'Servilleta 45x45cm', 
-                categoria: 'Textiles', 
-                precio: 0, 
-                desc: 'Servilleta 45x45cm',
-                imagen: 'images/productos/textiles/servilleta.jpg'
-            },
+            { id: 74, nombre: 'Playera Campañera adulto', categoria: 'Textiles', precio: 25, desc: 'Playera campaña adulto', imagen: 'images/productos/textiles/playera-campanera.jpg' },
+            { id: 75, nombre: 'Playera Niño', categoria: 'Textiles', precio: 50, desc: 'Playera infantil', imagen: 'images/productos/textiles/playera-nino.jpg' },
+            { id: 76, nombre: 'Playera Hombre y Mujer', categoria: 'Textiles', precio: 68, desc: 'Playera adulto hombre/mujer', imagen: 'images/productos/textiles/playera-adulto.jpg' },
+            { id: 77, nombre: 'Panaleros', categoria: 'Textiles', precio: 50, desc: 'Panaleros 3-12 meses', imagen: 'images/productos/textiles/panaleros.jpg' },
+            { id: 78, nombre: 'Gorra Malla', categoria: 'Textiles', precio: 23, desc: 'Gorra malla adulto/niño', imagen: 'images/productos/textiles/gorra-malla.jpg' },
+            { id: 79, nombre: 'Gorra Gabardina', categoria: 'Textiles', precio: 29, desc: 'Gorra gabardina', imagen: 'images/productos/textiles/gorra-gabardina.jpg' },
+            { id: 80, nombre: 'Gorra Acrilán', categoria: 'Textiles', precio: 23, desc: 'Gorra acrilán adulto/niño', imagen: 'images/productos/textiles/gorra-acrilan.jpg' },
+            { id: 81, nombre: 'Gorra Safari', categoria: 'Textiles', precio: 44, desc: 'Gorra safari', imagen: 'images/productos/textiles/gorra-safari.jpg' },
+            { id: 82, nombre: 'Gorra Plana', categoria: 'Textiles', precio: 30, desc: 'Gorra plana acrilán/malla', imagen: 'images/productos/textiles/gorra-plana.jpg' },
+            { id: 83, nombre: 'Gorra con Careta', categoria: 'Textiles', precio: 30, desc: 'Gorra con careta', imagen: 'images/productos/textiles/gorra-careta.jpg' },
+            { id: 84, nombre: 'Mandil blanco borde color', categoria: 'Textiles', precio: 30, desc: 'Mandil blanco borde color', imagen: 'images/productos/textiles/mandil-blanco.jpg' },
+            { id: 85, nombre: 'Mandil ecológico', categoria: 'Textiles', precio: 15, desc: 'Mandil ecológico', imagen: 'images/productos/textiles/mandil-ecologico.jpg' },
+            { id: 86, nombre: 'Mandil negro', categoria: 'Textiles', precio: 30, desc: 'Mandil negro', imagen: 'images/productos/textiles/mandil-negro.jpg' },
+            { id: 87, nombre: 'Banda edecán', categoria: 'Textiles', precio: 3, desc: 'Banda edecán', imagen: 'images/productos/textiles/banda-edecan.jpg' },
+            { id: 88, nombre: 'Funda cojín', categoria: 'Textiles', precio: 25, desc: 'Funda para cojín', imagen: 'images/productos/textiles/funda-cojin.jpg' },
+            { id: 89, nombre: 'Funda almohada', categoria: 'Textiles', precio: 50, desc: 'Funda para almohada', imagen: 'images/productos/textiles/funda-almohada.jpg' },
+            { id: 90, nombre: 'Servilleta 45x45cm', categoria: 'Textiles', precio: 0, desc: 'Servilleta 45x45cm', imagen: 'images/productos/textiles/servilleta.jpg' },
 
             // ========== ACCESORIOS ==========
-            { 
-                id: 91, 
-                nombre: 'Llavero Gancho Sencillo Liso', 
-                categoria: 'Accesorios', 
-                precio: 9, 
-                desc: 'Llavero gancho sencillo liso',
-                imagen: 'images/productos/accesorios/llavero-gancho-liso.jpg'
-            },
-            { 
-                id: 92, 
-                nombre: 'Llavero Gancho Sencillo Textura', 
-                categoria: 'Accesorios', 
-                precio: 11, 
-                desc: 'Llavero gancho textura',
-                imagen: 'images/productos/accesorios/llavero-gancho-textura.jpg'
-            },
-            { 
-                id: 93, 
-                nombre: 'Llavero Gancho Perico', 
-                categoria: 'Accesorios', 
-                precio: 13, 
-                desc: 'Llavero gancho perico',
-                imagen: 'images/productos/accesorios/llavero-perico.jpg'
-            },
-            { 
-                id: 94, 
-                nombre: 'Llavero Final Plástico', 
-                categoria: 'Accesorios', 
-                precio: 18, 
-                desc: 'Llavero final plástico',
-                imagen: 'images/productos/accesorios/llavero-final-plastico.jpg'
-            },
-            { 
-                id: 95, 
-                nombre: 'Mica para Credencial', 
-                categoria: 'Accesorios', 
-                precio: 4, 
-                desc: 'Mica para credencial',
-                imagen: 'images/productos/accesorios/mica-credencial.jpg'
-            },
-            { 
-                id: 96, 
-                nombre: 'Mica Acrílica para Credencial', 
-                categoria: 'Accesorios', 
-                precio: 15, 
-                desc: 'Mica acrílica credencial',
-                imagen: 'images/productos/accesorios/mica-acrilica.jpg'
-            },
-            { 
-                id: 97, 
-                nombre: 'Porta Boleta Carta', 
-                categoria: 'Accesorios', 
-                precio: 13, 
-                desc: 'Porta boleta tamaño carta',
-                imagen: 'images/productos/accesorios/porta-boleta-carta.jpg'
-            },
-            { 
-                id: 98, 
-                nombre: 'Porta Boleta Oficio', 
-                categoria: 'Accesorios', 
-                precio: 14, 
-                desc: 'Porta boleta tamaño oficio',
-                imagen: 'images/productos/accesorios/porta-boleta-oficio.jpg'
-            },
-            { 
-                id: 99, 
-                nombre: 'Carpeta Curpiel Carta', 
-                categoria: 'Accesorios', 
-                precio: 80, 
-                desc: 'Carpeta curpiel carta',
-                imagen: 'images/productos/accesorios/carpeta-curpiel-carta.jpg'
-            },
-            { 
-                id: 100, 
-                nombre: 'Carpeta Curpiel Oficio', 
-                categoria: 'Accesorios', 
-                precio: 90, 
-                desc: 'Carpeta curpiel oficio',
-                imagen: 'images/productos/accesorios/carpeta-curpiel-oficio.jpg'
-            },
-            { 
-                id: 101, 
-                nombre: 'Carpeta Vinil Carta', 
-                categoria: 'Accesorios', 
-                precio: 60, 
-                desc: 'Carpeta vinil carta',
-                imagen: 'images/productos/accesorios/carpeta-vinil-carta.jpg'
-            },
-            { 
-                id: 102, 
-                nombre: 'Carpeta Vinil Oficio', 
-                categoria: 'Accesorios', 
-                precio: 70, 
-                desc: 'Carpeta vinil oficio',
-                imagen: 'images/productos/accesorios/carpeta-vinil-oficio.jpg'
-            },
-            { 
-                id: 103, 
-                nombre: 'Bolsa Mandadera M', 
-                categoria: 'Accesorios', 
-                precio: 18, 
-                desc: 'Bolsa mandadera mediana',
-                imagen: 'images/productos/accesorios/bolsa-mandadera-m.jpg'
-            },
-            { 
-                id: 104, 
-                nombre: 'Bolsa Mandadera Gde', 
-                categoria: 'Accesorios', 
-                precio: 20, 
-                desc: 'Bolsa mandadera grande',
-                imagen: 'images/productos/accesorios/bolsa-mandadera-gde.jpg'
-            },
-            { 
-                id: 105, 
-                nombre: 'Bolsa Ecológica', 
-                categoria: 'Accesorios', 
-                precio: 12, 
-                desc: 'Bolsa ecológica',
-                imagen: 'images/productos/accesorios/bolsa-ecologica.jpg'
-            },
-            { 
-                id: 106, 
-                nombre: 'Morral para Sublimar', 
-                categoria: 'Accesorios', 
-                precio: 22, 
-                desc: 'Morral para sublimar',
-                imagen: 'images/productos/accesorios/morral-sublimar.jpg'
-            },
-            { 
-                id: 107, 
-                nombre: 'Morral Ecológico', 
-                categoria: 'Accesorios', 
-                precio: 15, 
-                desc: 'Morral ecológico',
-                imagen: 'images/productos/accesorios/morral-ecologico.jpg'
-            },
-            { 
-                id: 108, 
-                nombre: 'Morral Dulcero', 
-                categoria: 'Accesorios', 
-                precio: 8, 
-                desc: 'Morral dulcero',
-                imagen: 'images/productos/accesorios/morral-dulcero.jpg'
-            },
-            { 
-                id: 109, 
-                nombre: 'Lentejuela Circular', 
-                categoria: 'Accesorios', 
-                precio: 30, 
-                desc: 'Lentejuela circular',
-                imagen: 'images/productos/accesorios/lentejuela-circular.jpg'
-            },
-            { 
-                id: 110, 
-                nombre: 'Lentejuela Corazón', 
-                categoria: 'Accesorios', 
-                precio: 30, 
-                desc: 'Lentejuela corazón',
-                imagen: 'images/productos/accesorios/lentejuela-corazon.jpg'
-            },
-            { 
-                id: 111, 
-                nombre: 'Lentejuela A4', 
-                categoria: 'Accesorios', 
-                precio: 45, 
-                desc: 'Lentejuela A4',
-                imagen: 'images/productos/accesorios/lentejuela-a4.jpg'
-            },
-            { 
-                id: 112, 
-                nombre: 'Mouse Pad Corazón', 
-                categoria: 'Accesorios', 
-                precio: 22, 
-                desc: 'Mouse pad corazón',
-                imagen: 'images/productos/accesorios/mousepad-corazon.jpg'
-            },
-            { 
-                id: 113, 
-                nombre: 'Mouse Pad Circular', 
-                categoria: 'Accesorios', 
-                precio: 22, 
-                desc: 'Mouse pad circular',
-                imagen: 'images/productos/accesorios/mousepad-circular.jpg'
-            },
-            { 
-                id: 114, 
-                nombre: 'Mouse Pad Rectangular', 
-                categoria: 'Accesorios', 
-                precio: 22, 
-                desc: 'Mouse pad rectangular',
-                imagen: 'images/productos/accesorios/mousepad-rectangular.jpg'
-            },
-            { 
-                id: 115, 
-                nombre: 'Popsocket', 
-                categoria: 'Accesorios', 
-                precio: 15, 
-                desc: 'Popsocket blanco/negro',
-                imagen: 'images/productos/accesorios/popsocket.jpg'
-            },
-            { 
-                id: 116, 
-                nombre: 'Destapador sublimable', 
-                categoria: 'Accesorios', 
-                precio: 18.50, 
-                desc: 'Destapador sublimable',
-                imagen: 'images/productos/accesorios/destapador.jpg'
-            },
-            { 
-                id: 117, 
-                nombre: 'Perforador de credencial', 
-                categoria: 'Accesorios', 
-                precio: 280, 
-                desc: 'Perforador de credencial',
-                imagen: 'images/productos/accesorios/perforador-credencial.jpg'
-            },
+            { id: 91, nombre: 'Llavero Gancho Sencillo Liso', categoria: 'Accesorios', precio: 9, desc: 'Llavero gancho sencillo liso', imagen: 'images/productos/accesorios/llavero-gancho-liso.jpg' },
+            { id: 92, nombre: 'Llavero Gancho Sencillo Textura', categoria: 'Accesorios', precio: 11, desc: 'Llavero gancho textura', imagen: 'images/productos/accesorios/llavero-gancho-textura.jpg' },
+            { id: 93, nombre: 'Llavero Gancho Perico', categoria: 'Accesorios', precio: 13, desc: 'Llavero gancho perico', imagen: 'images/productos/accesorios/llavero-perico.jpg' },
+            { id: 94, nombre: 'Llavero Final Plástico', categoria: 'Accesorios', precio: 18, desc: 'Llavero final plástico', imagen: 'images/productos/accesorios/llavero-final-plastico.jpg' },
+            { id: 95, nombre: 'Mica para Credencial', categoria: 'Accesorios', precio: 4, desc: 'Mica para credencial', imagen: 'images/productos/accesorios/mica-credencial.jpg' },
+            { id: 96, nombre: 'Mica Acrílica para Credencial', categoria: 'Accesorios', precio: 15, desc: 'Mica acrílica credencial', imagen: 'images/productos/accesorios/mica-acrilica.jpg' },
+            { id: 97, nombre: 'Porta Boleta Carta', categoria: 'Accesorios', precio: 13, desc: 'Porta boleta tamaño carta', imagen: 'images/productos/accesorios/porta-boleta-carta.jpg' },
+            { id: 98, nombre: 'Porta Boleta Oficio', categoria: 'Accesorios', precio: 14, desc: 'Porta boleta tamaño oficio', imagen: 'images/productos/accesorios/porta-boleta-oficio.jpg' },
+            { id: 99, nombre: 'Carpeta Curpiel Carta', categoria: 'Accesorios', precio: 80, desc: 'Carpeta curpiel carta', imagen: 'images/productos/accesorios/carpeta-curpiel-carta.jpg' },
+            { id: 100, nombre: 'Carpeta Curpiel Oficio', categoria: 'Accesorios', precio: 90, desc: 'Carpeta curpiel oficio', imagen: 'images/productos/accesorios/carpeta-curpiel-oficio.jpg' },
+            { id: 101, nombre: 'Carpeta Vinil Carta', categoria: 'Accesorios', precio: 60, desc: 'Carpeta vinil carta', imagen: 'images/productos/accesorios/carpeta-vinil-carta.jpg' },
+            { id: 102, nombre: 'Carpeta Vinil Oficio', categoria: 'Accesorios', precio: 70, desc: 'Carpeta vinil oficio', imagen: 'images/productos/accesorios/carpeta-vinil-oficio.jpg' },
+            { id: 103, nombre: 'Bolsa Mandadera M', categoria: 'Accesorios', precio: 18, desc: 'Bolsa mandadera mediana', imagen: 'images/productos/accesorios/bolsa-mandadera-m.jpg' },
+            { id: 104, nombre: 'Bolsa Mandadera Gde', categoria: 'Accesorios', precio: 20, desc: 'Bolsa mandadera grande', imagen: 'images/productos/accesorios/bolsa-mandadera-gde.jpg' },
+            { id: 105, nombre: 'Bolsa Ecológica', categoria: 'Accesorios', precio: 12, desc: 'Bolsa ecológica', imagen: 'images/productos/accesorios/bolsa-ecologica.jpg' },
+            { id: 106, nombre: 'Morral para Sublimar', categoria: 'Accesorios', precio: 22, desc: 'Morral para sublimar', imagen: 'images/productos/accesorios/morral-sublimar.jpg' },
+            { id: 107, nombre: 'Morral Ecológico', categoria: 'Accesorios', precio: 15, desc: 'Morral ecológico', imagen: 'images/productos/accesorios/morral-ecologico.jpg' },
+            { id: 108, nombre: 'Morral Dulcero', categoria: 'Accesorios', precio: 8, desc: 'Morral dulcero', imagen: 'images/productos/accesorios/morral-dulcero.jpg' },
+            { id: 109, nombre: 'Lentejuela Circular', categoria: 'Accesorios', precio: 30, desc: 'Lentejuela circular', imagen: 'images/productos/accesorios/lentejuela-circular.jpg' },
+            { id: 110, nombre: 'Lentejuela Corazón', categoria: 'Accesorios', precio: 30, desc: 'Lentejuela corazón', imagen: 'images/productos/accesorios/lentejuela-corazon.jpg' },
+            { id: 111, nombre: 'Lentejuela A4', categoria: 'Accesorios', precio: 45, desc: 'Lentejuela A4', imagen: 'images/productos/accesorios/lentejuela-a4.jpg' },
+            { id: 112, nombre: 'Mouse Pad Corazón', categoria: 'Accesorios', precio: 22, desc: 'Mouse pad corazón', imagen: 'images/productos/accesorios/mousepad-corazon.jpg' },
+            { id: 113, nombre: 'Mouse Pad Circular', categoria: 'Accesorios', precio: 22, desc: 'Mouse pad circular', imagen: 'images/productos/accesorios/mousepad-circular.jpg' },
+            { id: 114, nombre: 'Mouse Pad Rectangular', categoria: 'Accesorios', precio: 22, desc: 'Mouse pad rectangular', imagen: 'images/productos/accesorios/mousepad-rectangular.jpg' },
+            { id: 115, nombre: 'Popsocket', categoria: 'Accesorios', precio: 15, desc: 'Popsocket blanco/negro', imagen: 'images/productos/accesorios/popsocket.jpg' },
+            { id: 116, nombre: 'Destapador sublimable', categoria: 'Accesorios', precio: 18.50, desc: 'Destapador sublimable', imagen: 'images/productos/accesorios/destapador.jpg' },
+            { id: 117, nombre: 'Perforador de credencial', categoria: 'Accesorios', precio: 280, desc: 'Perforador de credencial', imagen: 'images/productos/accesorios/perforador-credencial.jpg' },
 
             // ========== RESISTENCIAS ==========
-            { 
-                id: 118, 
-                nombre: 'Resistencia 11oz (Nacional)', 
-                categoria: 'Resistencias', 
-                precio: 1040, 
-                desc: 'Resistencia 11oz nacional',
-                imagen: 'images/productos/resistencias/resistencia-11oz-nacional.jpg'
-            },
-            { 
-                id: 119, 
-                nombre: 'Resistencia 11oz (Importada)', 
-                categoria: 'Resistencias', 
-                precio: 700, 
-                desc: 'Resistencia 11oz importada',
-                imagen: 'images/productos/resistencias/resistencia-11oz-importada.jpg'
-            },
-            { 
-                id: 120, 
-                nombre: 'Resistencia 11oz (Tinec)', 
-                categoria: 'Resistencias', 
-                precio: 950, 
-                desc: 'Resistencia 11oz Tinec',
-                imagen: 'images/productos/resistencias/resistencia-11oz-tinec.jpg'
-            },
-            { 
-                id: 121, 
-                nombre: 'Resistencia 12oz Cónica', 
-                categoria: 'Resistencias', 
-                precio: 1080, 
-                desc: 'Resistencia cónica 12oz',
-                imagen: 'images/productos/resistencias/resistencia-12oz-conica.jpg'
-            },
-            { 
-                id: 122, 
-                nombre: 'Resistencia 17oz Cónica', 
-                categoria: 'Resistencias', 
-                precio: 1160, 
-                desc: 'Resistencia cónica 17oz',
-                imagen: 'images/productos/resistencias/resistencia-17oz-conica.jpg'
-            },
-            { 
-                id: 123, 
-                nombre: 'Resistencia 6oz', 
-                categoria: 'Resistencias', 
-                precio: 930, 
-                desc: 'Resistencia 6oz',
-                imagen: 'images/productos/resistencias/resistencia-6oz.jpg'
-            },
-            { 
-                id: 124, 
-                nombre: 'Resistencia 750ml Cilindro', 
-                categoria: 'Resistencias', 
-                precio: 1240, 
-                desc: 'Resistencia cilindro 750ml',
-                imagen: 'images/productos/resistencias/resistencia-750ml.jpg'
-            },
-            { 
-                id: 125, 
-                nombre: 'Resistencia Tequilero', 
-                categoria: 'Resistencias', 
-                precio: 770, 
-                desc: 'Resistencia tequilero',
-                imagen: 'images/productos/resistencias/resistencia-tequilero.jpg'
-            },
-            { 
-                id: 126, 
-                nombre: 'Resistencia p/ Bolígrafos', 
-                categoria: 'Resistencias', 
-                precio: 1490, 
-                desc: 'Resistencia para bolígrafos',
-                imagen: 'images/productos/resistencias/resistencia-boligrafos.jpg'
-            },
-            { 
-                id: 127, 
-                nombre: 'Resistencia cilindro larga', 
-                categoria: 'Resistencias', 
-                precio: 900, 
-                desc: 'Resistencia cilindro larga',
-                imagen: 'images/productos/resistencias/resistencia-cilindro-larga.jpg'
-            },
-            { 
-                id: 128, 
-                nombre: 'Resistencia Cilindrica 30oz', 
-                categoria: 'Resistencias', 
-                precio: 1400, 
-                desc: 'Resistencia cilíndrica 30oz',
-                imagen: 'images/productos/resistencias/resistencia-cilindrica-30oz.jpg'
-            },
-            { 
-                id: 129, 
-                nombre: 'Resistencia Cilindrica Delgada 17oz', 
-                categoria: 'Resistencias', 
-                precio: 1300, 
-                desc: 'Resistencia cilíndrica delgada',
-                imagen: 'images/productos/resistencias/resistencia-cilindrica-delgada.jpg'
-            },
-            { 
-                id: 130, 
-                nombre: 'Resistencia Cilindrica Botellas 20oz', 
-                categoria: 'Resistencias', 
-                precio: 1300, 
-                desc: 'Resistencia para botellas 20oz',
-                imagen: 'images/productos/resistencias/resistencia-botellas-20oz.jpg'
-            },
-            { 
-                id: 131, 
-                nombre: 'Resistencia Cónica Shots 3oz', 
-                categoria: 'Resistencias', 
-                precio: 650, 
-                desc: 'Resistencia cónica shots 3oz',
-                imagen: 'images/productos/resistencias/resistencia-shots-3oz.jpg'
-            },
+            { id: 118, nombre: 'Resistencia 11oz (Nacional)', categoria: 'Resistencias', precio: 1040, desc: 'Resistencia 11oz nacional', imagen: 'images/productos/resistencias/resistencia-11oz-nacional.jpg' },
+            { id: 119, nombre: 'Resistencia 11oz (Importada)', categoria: 'Resistencias', precio: 700, desc: 'Resistencia 11oz importada', imagen: 'images/productos/resistencias/resistencia-11oz-importada.jpg' },
+            { id: 120, nombre: 'Resistencia 11oz (Tinec)', categoria: 'Resistencias', precio: 950, desc: 'Resistencia 11oz Tinec', imagen: 'images/productos/resistencias/resistencia-11oz-tinec.jpg' },
+            { id: 121, nombre: 'Resistencia 12oz Cónica', categoria: 'Resistencias', precio: 1080, desc: 'Resistencia cónica 12oz', imagen: 'images/productos/resistencias/resistencia-12oz-conica.jpg' },
+            { id: 122, nombre: 'Resistencia 17oz Cónica', categoria: 'Resistencias', precio: 1160, desc: 'Resistencia cónica 17oz', imagen: 'images/productos/resistencias/resistencia-17oz-conica.jpg' },
+            { id: 123, nombre: 'Resistencia 6oz', categoria: 'Resistencias', precio: 930, desc: 'Resistencia 6oz', imagen: 'images/productos/resistencias/resistencia-6oz.jpg' },
+            { id: 124, nombre: 'Resistencia 750ml Cilindro', categoria: 'Resistencias', precio: 1240, desc: 'Resistencia cilindro 750ml', imagen: 'images/productos/resistencias/resistencia-750ml.jpg' },
+            { id: 125, nombre: 'Resistencia Tequilero', categoria: 'Resistencias', precio: 770, desc: 'Resistencia tequilero', imagen: 'images/productos/resistencias/resistencia-tequilero.jpg' },
+            { id: 126, nombre: 'Resistencia p/ Bolígrafos', categoria: 'Resistencias', precio: 1490, desc: 'Resistencia para bolígrafos', imagen: 'images/productos/resistencias/resistencia-boligrafos.jpg' },
+            { id: 127, nombre: 'Resistencia cilindro larga', categoria: 'Resistencias', precio: 900, desc: 'Resistencia cilindro larga', imagen: 'images/productos/resistencias/resistencia-cilindro-larga.jpg' },
+            { id: 128, nombre: 'Resistencia Cilindrica 30oz', categoria: 'Resistencias', precio: 1400, desc: 'Resistencia cilíndrica 30oz', imagen: 'images/productos/resistencias/resistencia-cilindrica-30oz.jpg' },
+            { id: 129, nombre: 'Resistencia Cilindrica Delgada 17oz', categoria: 'Resistencias', precio: 1300, desc: 'Resistencia cilíndrica delgada', imagen: 'images/productos/resistencias/resistencia-cilindrica-delgada.jpg' },
+            { id: 130, nombre: 'Resistencia Cilindrica Botellas 20oz', categoria: 'Resistencias', precio: 1300, desc: 'Resistencia para botellas 20oz', imagen: 'images/productos/resistencias/resistencia-botellas-20oz.jpg' },
+            { id: 131, nombre: 'Resistencia Cónica Shots 3oz', categoria: 'Resistencias', precio: 650, desc: 'Resistencia cónica shots 3oz', imagen: 'images/productos/resistencias/resistencia-shots-3oz.jpg' },
 
             // ========== MAQUINARIA ==========
-            { 
-                id: 132, 
-                nombre: 'Plancha Tazas (Importada)', 
-                categoria: 'Maquinaria', 
-                precio: 1600, 
-                desc: 'Plancha para tazas importada',
-                imagen: 'images/productos/maquinaria/plancha-tazas-importada.jpg'
-            },
-            { 
-                id: 133, 
-                nombre: 'Plancha Taza Doble', 
-                categoria: 'Maquinaria', 
-                precio: 3000, 
-                desc: 'Plancha taza doble',
-                imagen: 'images/productos/maquinaria/plancha-taza-doble.jpg'
-            },
-            { 
-                id: 134, 
-                nombre: 'Plancha Gorra (Importada)', 
-                categoria: 'Maquinaria', 
-                precio: 5200, 
-                desc: 'Plancha para gorras',
-                imagen: 'images/productos/maquinaria/plancha-gorra-importada.jpg'
-            },
-            { 
-                id: 135, 
-                nombre: 'Plancha Plana 38x38 (Importada)', 
-                categoria: 'Maquinaria', 
-                precio: 6000, 
-                desc: 'Plancha plana 38x38cm',
-                imagen: 'images/productos/maquinaria/plancha-plana-38x38.jpg'
-            },
-            { 
-                id: 136, 
-                nombre: 'Plancha Plana 40x60 (Importada)', 
-                categoria: 'Maquinaria', 
-                precio: 9000, 
-                desc: 'Plancha plana 40x60cm',
-                imagen: 'images/productos/maquinaria/plancha-plana-40x60.jpg'
-            },
-            { 
-                id: 137, 
-                nombre: 'Plancha Tazas (Color Make)', 
-                categoria: 'Maquinaria', 
-                precio: 1850, 
-                desc: 'Plancha tazas Color Make',
-                imagen: 'images/productos/maquinaria/plancha-tazas-colormake.jpg'
-            },
-            { 
-                id: 138, 
-                nombre: 'Plancha Tazas Ferrari', 
-                categoria: 'Maquinaria', 
-                precio: 3150, 
-                desc: 'Plancha tazas Ferrari',
-                imagen: 'images/productos/maquinaria/plancha-tazas-ferrari.jpg'
-            },
-            { 
-                id: 139, 
-                nombre: 'Plancha Gorra (Color Make)', 
-                categoria: 'Maquinaria', 
-                precio: 5500, 
-                desc: 'Plancha gorras Color Make',
-                imagen: 'images/productos/maquinaria/plancha-gorra-colormake.jpg'
-            },
-            { 
-                id: 140, 
-                nombre: 'Plancha Plana 38x38 (Color Make)', 
-                categoria: 'Maquinaria', 
-                precio: 10100, 
-                desc: 'Plancha plana 38x38 Color Make',
-                imagen: 'images/productos/maquinaria/plancha-plana-38x38-colormake.jpg'
-            },
-            { 
-                id: 141, 
-                nombre: 'Plancha Plana 40x60 (Color Make)', 
-                categoria: 'Maquinaria', 
-                precio: 12500, 
-                desc: 'Plancha plana 40x60 Color Make',
-                imagen: 'images/productos/maquinaria/plancha-plana-40x60-colormake.jpg'
-            },
-            { 
-                id: 142, 
-                nombre: 'Plancha Tazas (Tinec)', 
-                categoria: 'Maquinaria', 
-                precio: 2750, 
-                desc: 'Plancha tazas Tinec',
-                imagen: 'images/productos/maquinaria/plancha-tazas-tinec.jpg'
-            },
-            { 
-                id: 143, 
-                nombre: 'Plancha Gorra (Tinec)', 
-                categoria: 'Maquinaria', 
-                precio: 5500, 
-                desc: 'Plancha gorras Tinec',
-                imagen: 'images/productos/maquinaria/plancha-gorra-tinec.jpg'
-            },
-            { 
-                id: 144, 
-                nombre: 'Combo 8 en 1 38x38', 
-                categoria: 'Maquinaria', 
-                precio: 11700, 
-                desc: 'Combo 8 en 1 38x38',
-                imagen: 'images/productos/maquinaria/combo-8en1-38x38.jpg'
-            },
-            { 
-                id: 145, 
-                nombre: 'Combo 9 en 1 38x38', 
-                categoria: 'Maquinaria', 
-                precio: 18000, 
-                desc: 'Combo 9 en 1 38x38',
-                imagen: 'images/productos/maquinaria/combo-9en1-38x38.jpg'
-            },
-            { 
-                id: 146, 
-                nombre: 'Combo 10 en 1 29x38', 
-                categoria: 'Maquinaria', 
-                precio: 13100, 
-                desc: 'Combo 10 en 1 29x38',
-                imagen: 'images/productos/maquinaria/combo-10en1-29x38.jpg'
-            },
-            { 
-                id: 147, 
-                nombre: 'Horno Sublimación 25L', 
-                categoria: 'Maquinaria', 
-                precio: 7000, 
-                desc: 'Horno sublimación 25L',
-                imagen: 'images/productos/maquinaria/horno-25l.jpg'
-            },
-            { 
-                id: 148, 
-                nombre: 'Horno Sublimación 40L', 
-                categoria: 'Maquinaria', 
-                precio: 9000, 
-                desc: 'Horno sublimación 40L',
-                imagen: 'images/productos/maquinaria/horno-40l.jpg'
-            },
-            { 
-                id: 149, 
-                nombre: 'Pistola de Calor', 
-                categoria: 'Maquinaria', 
-                precio: 550, 
-                desc: 'Pistola de calor plegable',
-                imagen: 'images/productos/maquinaria/pistola-calor.jpg'
-            },
-            { 
-                id: 150, 
-                nombre: 'Prensa para tazas Pro Easy', 
-                categoria: 'Maquinaria', 
-                precio: 2500, 
-                desc: 'Prensa tazas Pro Easy',
-                imagen: 'images/productos/maquinaria/prensa-tazas-proeasy.jpg'
-            },
-            { 
-                id: 151, 
-                nombre: 'Prensa de Calor Elite Pro', 
-                categoria: 'Maquinaria', 
-                precio: 4000, 
-                desc: 'Prensa Elite Pro',
-                imagen: 'images/productos/maquinaria/prensa-elite-pro.jpg'
-            },
-            { 
-                id: 152, 
-                nombre: 'Mini Prensa 2x3', 
-                categoria: 'Maquinaria', 
-                precio: 1200, 
-                desc: 'Mini prensa 2x3',
-                imagen: 'images/productos/maquinaria/mini-prensa-2x3.jpg'
-            },
-            { 
-                id: 153, 
-                nombre: 'Prensa Eco Portatil 9x9', 
-                categoria: 'Maquinaria', 
-                precio: 2500, 
-                desc: 'Prensa eco portátil 9x9',
-                imagen: 'images/productos/maquinaria/prensa-eco-9x9.jpg'
-            },
-            { 
-                id: 154, 
-                nombre: 'Laminadora de credencial', 
-                categoria: 'Maquinaria', 
-                precio: 1300, 
-                desc: 'Laminadora de credencial',
-                imagen: 'images/productos/maquinaria/laminadora-credencial.jpg'
-            },
-            { 
-                id: 155, 
-                nombre: 'Sujadora de credencial', 
-                categoria: 'Maquinaria', 
-                precio: 1000, 
-                desc: 'Sujadora de credencial',
-                imagen: 'images/productos/maquinaria/sujadora-credencial.jpg'
-            },
-            { 
-                id: 156, 
-                nombre: 'Prensa para botón 5.5', 
-                categoria: 'Maquinaria', 
-                precio: 2800, 
-                desc: 'Prensa para botón 5.5',
-                imagen: 'images/productos/maquinaria/prensa-boton-5.5.jpg'
-            },
+            { id: 132, nombre: 'Plancha Tazas (Importada)', categoria: 'Maquinaria', precio: 1600, desc: 'Plancha para tazas importada', imagen: 'images/productos/maquinaria/plancha-tazas-importada.jpg' },
+            { id: 133, nombre: 'Plancha Taza Doble', categoria: 'Maquinaria', precio: 3000, desc: 'Plancha taza doble', imagen: 'images/productos/maquinaria/plancha-taza-doble.jpg' },
+            { id: 134, nombre: 'Plancha Gorra (Importada)', categoria: 'Maquinaria', precio: 5200, desc: 'Plancha para gorras', imagen: 'images/productos/maquinaria/plancha-gorra-importada.jpg' },
+            { id: 135, nombre: 'Plancha Plana 38x38 (Importada)', categoria: 'Maquinaria', precio: 6000, desc: 'Plancha plana 38x38cm', imagen: 'images/productos/maquinaria/plancha-plana-38x38.jpg' },
+            { id: 136, nombre: 'Plancha Plana 40x60 (Importada)', categoria: 'Maquinaria', precio: 9000, desc: 'Plancha plana 40x60cm', imagen: 'images/productos/maquinaria/plancha-plana-40x60.jpg' },
+            { id: 137, nombre: 'Plancha Tazas (Color Make)', categoria: 'Maquinaria', precio: 1850, desc: 'Plancha tazas Color Make', imagen: 'images/productos/maquinaria/plancha-tazas-colormake.jpg' },
+            { id: 138, nombre: 'Plancha Tazas Ferrari', categoria: 'Maquinaria', precio: 3150, desc: 'Plancha tazas Ferrari', imagen: 'images/productos/maquinaria/plancha-tazas-ferrari.jpg' },
+            { id: 139, nombre: 'Plancha Gorra (Color Make)', categoria: 'Maquinaria', precio: 5500, desc: 'Plancha gorras Color Make', imagen: 'images/productos/maquinaria/plancha-gorra-colormake.jpg' },
+            { id: 140, nombre: 'Plancha Plana 38x38 (Color Make)', categoria: 'Maquinaria', precio: 10100, desc: 'Plancha plana 38x38 Color Make', imagen: 'images/productos/maquinaria/plancha-plana-38x38-colormake.jpg' },
+            { id: 141, nombre: 'Plancha Plana 40x60 (Color Make)', categoria: 'Maquinaria', precio: 12500, desc: 'Plancha plana 40x60 Color Make', imagen: 'images/productos/maquinaria/plancha-plana-40x60-colormake.jpg' },
+            { id: 142, nombre: 'Plancha Tazas (Tinec)', categoria: 'Maquinaria', precio: 2750, desc: 'Plancha tazas Tinec', imagen: 'images/productos/maquinaria/plancha-tazas-tinec.jpg' },
+            { id: 143, nombre: 'Plancha Gorra (Tinec)', categoria: 'Maquinaria', precio: 5500, desc: 'Plancha gorras Tinec', imagen: 'images/productos/maquinaria/plancha-gorra-tinec.jpg' },
+            { id: 144, nombre: 'Combo 8 en 1 38x38', categoria: 'Maquinaria', precio: 11700, desc: 'Combo 8 en 1 38x38', imagen: 'images/productos/maquinaria/combo-8en1-38x38.jpg' },
+            { id: 145, nombre: 'Combo 9 en 1 38x38', categoria: 'Maquinaria', precio: 18000, desc: 'Combo 9 en 1 38x38', imagen: 'images/productos/maquinaria/combo-9en1-38x38.jpg' },
+            { id: 146, nombre: 'Combo 10 en 1 29x38', categoria: 'Maquinaria', precio: 13100, desc: 'Combo 10 en 1 29x38', imagen: 'images/productos/maquinaria/combo-10en1-29x38.jpg' },
+            { id: 147, nombre: 'Horno Sublimación 25L', categoria: 'Maquinaria', precio: 7000, desc: 'Horno sublimación 25L', imagen: 'images/productos/maquinaria/horno-25l.jpg' },
+            { id: 148, nombre: 'Horno Sublimación 40L', categoria: 'Maquinaria', precio: 9000, desc: 'Horno sublimación 40L', imagen: 'images/productos/maquinaria/horno-40l.jpg' },
+            { id: 149, nombre: 'Pistola de Calor', categoria: 'Maquinaria', precio: 550, desc: 'Pistola de calor plegable', imagen: 'images/productos/maquinaria/pistola-calor.jpg' },
+            { id: 150, nombre: 'Prensa para tazas Pro Easy', categoria: 'Maquinaria', precio: 2500, desc: 'Prensa tazas Pro Easy', imagen: 'images/productos/maquinaria/prensa-tazas-proeasy.jpg' },
+            { id: 151, nombre: 'Prensa de Calor Elite Pro', categoria: 'Maquinaria', precio: 4000, desc: 'Prensa Elite Pro', imagen: 'images/productos/maquinaria/prensa-elite-pro.jpg' },
+            { id: 152, nombre: 'Mini Prensa 2x3', categoria: 'Maquinaria', precio: 1200, desc: 'Mini prensa 2x3', imagen: 'images/productos/maquinaria/mini-prensa-2x3.jpg' },
+            { id: 153, nombre: 'Prensa Eco Portatil 9x9', categoria: 'Maquinaria', precio: 2500, desc: 'Prensa eco portátil 9x9', imagen: 'images/productos/maquinaria/prensa-eco-9x9.jpg' },
+            { id: 154, nombre: 'Laminadora de credencial', categoria: 'Maquinaria', precio: 1300, desc: 'Laminadora de credencial', imagen: 'images/productos/maquinaria/laminadora-credencial.jpg' },
+            { id: 155, nombre: 'Sujadora de credencial', categoria: 'Maquinaria', precio: 1000, desc: 'Sujadora de credencial', imagen: 'images/productos/maquinaria/sujadora-credencial.jpg' },
+            { id: 156, nombre: 'Prensa para botón 5.5', categoria: 'Maquinaria', precio: 2800, desc: 'Prensa para botón 5.5', imagen: 'images/productos/maquinaria/prensa-boton-5.5.jpg' },
 
             // ========== INSUMOS ==========
-            { 
-                id: 157, 
-                nombre: 'Papel Sublimación A4 (Premium)', 
-                categoria: 'Insumos', 
-                precio: 200, 
-                desc: 'Papel sublimación A4 premium',
-                imagen: 'images/productos/insumos/papel-a4-premium.jpg'
-            },
-            { 
-                id: 158, 
-                nombre: 'Papel Sublimación A3 (Premium)', 
-                categoria: 'Insumos', 
-                precio: 400, 
-                desc: 'Papel sublimación A3 premium',
-                imagen: 'images/productos/insumos/papel-a3-premium.jpg'
-            },
-            { 
-                id: 159, 
-                nombre: 'Papel Sublimación A4 (Color Make)', 
-                categoria: 'Insumos', 
-                precio: 118, 
-                desc: 'Papel sublimación A4 Color Make',
-                imagen: 'images/productos/insumos/papel-a4-colormake.jpg'
-            },
-            { 
-                id: 160, 
-                nombre: 'Papel Sublimación A4 (Tinec)', 
-                categoria: 'Insumos', 
-                precio: 115, 
-                desc: 'Papel sublimación A4 Tinec',
-                imagen: 'images/productos/insumos/papel-a4-tinec.jpg'
-            },
-            { 
-                id: 161, 
-                nombre: 'Rollo Papel 21cm x 100m', 
-                categoria: 'Insumos', 
-                precio: 225, 
-                desc: 'Rollo papel sublimación 21cm',
-                imagen: 'images/productos/insumos/rollo-21cm.jpg'
-            },
-            { 
-                id: 162, 
-                nombre: 'Rollo Papel 60cm x 100m', 
-                categoria: 'Insumos', 
-                precio: 980, 
-                desc: 'Rollo papel sublimación 60cm',
-                imagen: 'images/productos/insumos/rollo-60cm.jpg'
-            },
-            { 
-                id: 163, 
-                nombre: 'Papel Fotográfico Normal', 
-                categoria: 'Insumos', 
-                precio: 110, 
-                desc: 'Papel fotográfico normal 50h',
-                imagen: 'images/productos/insumos/papel-fotografico-normal.jpg'
-            },
-            { 
-                id: 164, 
-                nombre: 'Papel Fotográfico Adhesivo', 
-                categoria: 'Insumos', 
-                precio: 130, 
-                desc: 'Papel fotográfico adhesivo 50h',
-                imagen: 'images/productos/insumos/papel-fotografico-adhesivo.jpg'
-            },
-            { 
-                id: 165, 
-                nombre: 'Transfer Oscuro', 
-                categoria: 'Insumos', 
-                precio: 20, 
-                desc: 'Transfer para prendas oscuras',
-                imagen: 'images/productos/insumos/transfer-oscuro.jpg'
-            },
-            { 
-                id: 166, 
-                nombre: 'Transfer Claro', 
-                categoria: 'Insumos', 
-                precio: 11, 
-                desc: 'Transfer para prendas claras',
-                imagen: 'images/productos/insumos/transfer-claro.jpg'
-            },
-            { 
-                id: 167, 
-                nombre: 'Sublicoton Carta', 
-                categoria: 'Insumos', 
-                precio: 175, 
-                desc: 'Sublicoton para algodón',
-                imagen: 'images/productos/insumos/sublicoton.jpg'
-            },
-            { 
-                id: 168, 
-                nombre: 'Papel Esmeralda', 
-                categoria: 'Insumos', 
-                precio: 100, 
-                desc: 'Papel esmeralda 25pzs',
-                imagen: 'images/productos/insumos/papel-esmeralda.jpg'
-            },
-            { 
-                id: 169, 
-                nombre: 'Papel Cebolla', 
-                categoria: 'Insumos', 
-                precio: 20, 
-                desc: 'Papel cebolla',
-                imagen: 'images/productos/insumos/papel-cebolla.jpg'
-            },
-            { 
-                id: 170, 
-                nombre: 'Tinta Sublimación 70g', 
-                categoria: 'Insumos', 
-                precio: 108, 
-                desc: 'Tinta sublimación 70g',
-                imagen: 'images/productos/insumos/tinta-70g.jpg'
-            },
-            { 
-                id: 171, 
-                nombre: 'Tinta Sublimación 125g', 
-                categoria: 'Insumos', 
-                precio: 155, 
-                desc: 'Tinta sublimación 125g',
-                imagen: 'images/productos/insumos/tinta-125g.jpg'
-            },
-            { 
-                id: 172, 
-                nombre: 'Tinta Sublimación 1/8L', 
-                categoria: 'Insumos', 
-                precio: 140, 
-                desc: 'Tinta sublimación 1/8L',
-                imagen: 'images/productos/insumos/tinta-1-8l.jpg'
-            },
-            { 
-                id: 173, 
-                nombre: 'Tinta Sublimación 1L', 
-                categoria: 'Insumos', 
-                precio: 990, 
-                desc: 'Tinta sublimación 1L',
-                imagen: 'images/productos/insumos/tinta-1l.jpg'
-            },
-            { 
-                id: 174, 
-                nombre: 'Tinta Normal Epson 544', 
-                categoria: 'Insumos', 
-                precio: 600, 
-                desc: 'Tinta normal Epson 544 4 colores',
-                imagen: 'images/productos/insumos/tinta-epson-544.jpg'
-            },
-            { 
-                id: 175, 
-                nombre: 'Vinil blanco/negro', 
-                categoria: 'Insumos', 
-                precio: 60, 
-                desc: 'Vinil blanco/negro metro',
-                imagen: 'images/productos/insumos/vinil-blanco-negro.jpg'
-            },
-            { 
-                id: 176, 
-                nombre: 'Transfer para vinil', 
-                categoria: 'Insumos', 
-                precio: 60, 
-                desc: 'Transfer para vinil',
-                imagen: 'images/productos/insumos/transfer-vinil.jpg'
-            },
-            { 
-                id: 177, 
-                nombre: 'Cinta Térmica 6mm', 
-                categoria: 'Insumos', 
-                precio: 28, 
-                desc: 'Cinta térmica 6mm x 3.3m',
-                imagen: 'images/productos/insumos/cinta-6mm.jpg'
-            },
-            { 
-                id: 178, 
-                nombre: 'Cinta Térmica 10mm', 
-                categoria: 'Insumos', 
-                precio: 39, 
-                desc: 'Cinta térmica 10mm x 3.3m',
-                imagen: 'images/productos/insumos/cinta-10mm.jpg'
-            },
-            { 
-                id: 179, 
-                nombre: 'Film Retráctil', 
-                categoria: 'Insumos', 
-                precio: 235, 
-                desc: 'Film retráctil 50 hojas',
-                imagen: 'images/productos/insumos/film-retractil.jpg'
-            },
+            { id: 157, nombre: 'Papel Sublimación A4 (Premium)', categoria: 'Insumos', precio: 200, desc: 'Papel sublimación A4 premium', imagen: 'images/productos/insumos/papel-a4-premium.jpg' },
+            { id: 158, nombre: 'Papel Sublimación A3 (Premium)', categoria: 'Insumos', precio: 400, desc: 'Papel sublimación A3 premium', imagen: 'images/productos/insumos/papel-a3-premium.jpg' },
+            { id: 159, nombre: 'Papel Sublimación A4 (Color Make)', categoria: 'Insumos', precio: 118, desc: 'Papel sublimación A4 Color Make', imagen: 'images/productos/insumos/papel-a4-colormake.jpg' },
+            { id: 160, nombre: 'Papel Sublimación A4 (Tinec)', categoria: 'Insumos', precio: 115, desc: 'Papel sublimación A4 Tinec', imagen: 'images/productos/insumos/papel-a4-tinec.jpg' },
+            { id: 161, nombre: 'Rollo Papel 21cm x 100m', categoria: 'Insumos', precio: 225, desc: 'Rollo papel sublimación 21cm', imagen: 'images/productos/insumos/rollo-21cm.jpg' },
+            { id: 162, nombre: 'Rollo Papel 60cm x 100m', categoria: 'Insumos', precio: 980, desc: 'Rollo papel sublimación 60cm', imagen: 'images/productos/insumos/rollo-60cm.jpg' },
+            { id: 163, nombre: 'Papel Fotográfico Normal', categoria: 'Insumos', precio: 110, desc: 'Papel fotográfico normal 50h', imagen: 'images/productos/insumos/papel-fotografico-normal.jpg' },
+            { id: 164, nombre: 'Papel Fotográfico Adhesivo', categoria: 'Insumos', precio: 130, desc: 'Papel fotográfico adhesivo 50h', imagen: 'images/productos/insumos/papel-fotografico-adhesivo.jpg' },
+            { id: 165, nombre: 'Transfer Oscuro', categoria: 'Insumos', precio: 20, desc: 'Transfer para prendas oscuras', imagen: 'images/productos/insumos/transfer-oscuro.jpg' },
+            { id: 166, nombre: 'Transfer Claro', categoria: 'Insumos', precio: 11, desc: 'Transfer para prendas claras', imagen: 'images/productos/insumos/transfer-claro.jpg' },
+            { id: 167, nombre: 'Sublicoton Carta', categoria: 'Insumos', precio: 175, desc: 'Sublicoton para algodón', imagen: 'images/productos/insumos/sublicoton.jpg' },
+            { id: 168, nombre: 'Papel Esmeralda', categoria: 'Insumos', precio: 100, desc: 'Papel esmeralda 25pzs', imagen: 'images/productos/insumos/papel-esmeralda.jpg' },
+            { id: 169, nombre: 'Papel Cebolla', categoria: 'Insumos', precio: 20, desc: 'Papel cebolla', imagen: 'images/productos/insumos/papel-cebolla.jpg' },
+            { id: 170, nombre: 'Tinta Sublimación 70g', categoria: 'Insumos', precio: 108, desc: 'Tinta sublimación 70g', imagen: 'images/productos/insumos/tinta-70g.jpg' },
+            { id: 171, nombre: 'Tinta Sublimación 125g', categoria: 'Insumos', precio: 155, desc: 'Tinta sublimación 125g', imagen: 'images/productos/insumos/tinta-125g.jpg' },
+            { id: 172, nombre: 'Tinta Sublimación 1/8L', categoria: 'Insumos', precio: 140, desc: 'Tinta sublimación 1/8L', imagen: 'images/productos/insumos/tinta-1-8l.jpg' },
+            { id: 173, nombre: 'Tinta Sublimación 1L', categoria: 'Insumos', precio: 990, desc: 'Tinta sublimación 1L', imagen: 'images/productos/insumos/tinta-1l.jpg' },
+            { id: 174, nombre: 'Tinta Normal Epson 544', categoria: 'Insumos', precio: 600, desc: 'Tinta normal Epson 544 4 colores', imagen: 'images/productos/insumos/tinta-epson-544.jpg' },
+            { id: 175, nombre: 'Vinil blanco/negro', categoria: 'Insumos', precio: 60, desc: 'Vinil blanco/negro metro', imagen: 'images/productos/insumos/vinil-blanco-negro.jpg' },
+            { id: 176, nombre: 'Transfer para vinil', categoria: 'Insumos', precio: 60, desc: 'Transfer para vinil', imagen: 'images/productos/insumos/transfer-vinil.jpg' },
+            { id: 177, nombre: 'Cinta Térmica 6mm', categoria: 'Insumos', precio: 28, desc: 'Cinta térmica 6mm x 3.3m', imagen: 'images/productos/insumos/cinta-6mm.jpg' },
+            { id: 178, nombre: 'Cinta Térmica 10mm', categoria: 'Insumos', precio: 39, desc: 'Cinta térmica 10mm x 3.3m', imagen: 'images/productos/insumos/cinta-10mm.jpg' },
+            { id: 179, nombre: 'Film Retráctil', categoria: 'Insumos', precio: 235, desc: 'Film retráctil 50 hojas', imagen: 'images/productos/insumos/film-retractil.jpg' },
 
             // ========== EXTRAS ==========
-            { 
-                id: 180, 
-                nombre: 'Placa Blanca 20x30', 
-                categoria: 'Extras', 
-                precio: 30, 
-                desc: 'Placa blanca 20x30cm',
-                imagen: 'images/productos/extras/placa-blanca-20x30.jpg'
-            },
-            { 
-                id: 181, 
-                nombre: 'Placa Oro 20x30', 
-                categoria: 'Extras', 
-                precio: 30, 
-                desc: 'Placa oro 20x30cm',
-                imagen: 'images/productos/extras/placa-oro-20x30.jpg'
-            },
-            { 
-                id: 182, 
-                nombre: 'Placa Plata 20x30', 
-                categoria: 'Extras', 
-                precio: 30, 
-                desc: 'Placa plata 20x30cm',
-                imagen: 'images/productos/extras/placa-plata-20x30.jpg'
-            },
-            { 
-                id: 183, 
-                nombre: 'Placa Cepillada 20x30', 
-                categoria: 'Extras', 
-                precio: 35, 
-                desc: 'Placa cepillada 20x30cm',
-                imagen: 'images/productos/extras/placa-cepillada-20x30.jpg'
-            },
-            { 
-                id: 184, 
-                nombre: 'Placa Espejo 20x30', 
-                categoria: 'Extras', 
-                precio: 35, 
-                desc: 'Placa espejo 20x30cm',
-                imagen: 'images/productos/extras/placa-espejo-20x30.jpg'
-            },
-            { 
-                id: 185, 
-                nombre: 'Base Madera 33.5x24', 
-                categoria: 'Extras', 
-                precio: 125, 
-                desc: 'Base madera 33.5x24',
-                imagen: 'images/productos/extras/base-madera-33x24.jpg'
-            },
-            { 
-                id: 186, 
-                nombre: 'Base Madera 66.6x44.7', 
-                categoria: 'Extras', 
-                precio: 350, 
-                desc: 'Base madera 66.6x44.7',
-                imagen: 'images/productos/extras/base-madera-66x44.jpg'
-            },
-            { 
-                id: 187, 
-                nombre: 'Piedra Corazón', 
-                categoria: 'Extras', 
-                precio: 110, 
-                desc: 'Piedra corazón sublimable',
-                imagen: 'images/productos/extras/piedra-corazon.jpg'
-            },
-            { 
-                id: 188, 
-                nombre: 'Piedra Gde 30x19x2.7', 
-                categoria: 'Extras', 
-                precio: 140, 
-                desc: 'Piedra grande',
-                imagen: 'images/productos/extras/piedra-gde.jpg'
-            },
-            { 
-                id: 189, 
-                nombre: 'Cristal Octagonal', 
-                categoria: 'Extras', 
-                precio: 240, 
-                desc: 'Cristal octagonal 16cm',
-                imagen: 'images/productos/extras/cristal-octagonal.jpg'
-            },
-            { 
-                id: 190, 
-                nombre: 'Plato filo 20cm Oro/Plata', 
-                categoria: 'Extras', 
-                precio: 85, 
-                desc: 'Plato filo oro/plata 20cm',
-                imagen: 'images/productos/extras/plato-filo-20cm.jpg'
-            },
-            { 
-                id: 191, 
-                nombre: 'Tortillero 22cm', 
-                categoria: 'Extras', 
-                precio: 16, 
-                desc: 'Tortillero 22cm',
-                imagen: 'images/productos/extras/tortillero-22cm.jpg'
-            },
-            { 
-                id: 192, 
-                nombre: 'Banderas 32x38.5', 
-                categoria: 'Extras', 
-                precio: 8, 
-                desc: 'Banderas 32x38.5',
-                imagen: 'images/productos/extras/banderas.jpg'
-            },
-            { 
-                id: 193, 
-                nombre: 'Pantufla', 
-                categoria: 'Extras', 
-                precio: 37, 
-                desc: 'Pantufla sublimable',
-                imagen: 'images/productos/extras/pantufla.jpg'
-            },
+            { id: 180, nombre: 'Placa Blanca 20x30', categoria: 'Extras', precio: 30, desc: 'Placa blanca 20x30cm', imagen: 'images/productos/extras/placa-blanca-20x30.jpg' },
+            { id: 181, nombre: 'Placa Oro 20x30', categoria: 'Extras', precio: 30, desc: 'Placa oro 20x30cm', imagen: 'images/productos/extras/placa-oro-20x30.jpg' },
+            { id: 182, nombre: 'Placa Plata 20x30', categoria: 'Extras', precio: 30, desc: 'Placa plata 20x30cm', imagen: 'images/productos/extras/placa-plata-20x30.jpg' },
+            { id: 183, nombre: 'Placa Cepillada 20x30', categoria: 'Extras', precio: 35, desc: 'Placa cepillada 20x30cm', imagen: 'images/productos/extras/placa-cepillada-20x30.jpg' },
+            { id: 184, nombre: 'Placa Espejo 20x30', categoria: 'Extras', precio: 35, desc: 'Placa espejo 20x30cm', imagen: 'images/productos/extras/placa-espejo-20x30.jpg' },
+            { id: 185, nombre: 'Base Madera 33.5x24', categoria: 'Extras', precio: 125, desc: 'Base madera 33.5x24', imagen: 'images/productos/extras/base-madera-33x24.jpg' },
+            { id: 186, nombre: 'Base Madera 66.6x44.7', categoria: 'Extras', precio: 350, desc: 'Base madera 66.6x44.7', imagen: 'images/productos/extras/base-madera-66x44.jpg' },
+            { id: 187, nombre: 'Piedra Corazón', categoria: 'Extras', precio: 110, desc: 'Piedra corazón sublimable', imagen: 'images/productos/extras/piedra-corazon.jpg' },
+            { id: 188, nombre: 'Piedra Gde 30x19x2.7', categoria: 'Extras', precio: 140, desc: 'Piedra grande', imagen: 'images/productos/extras/piedra-gde.jpg' },
+            { id: 189, nombre: 'Cristal Octagonal', categoria: 'Extras', precio: 240, desc: 'Cristal octagonal 16cm', imagen: 'images/productos/extras/cristal-octagonal.jpg' },
+            { id: 190, nombre: 'Plato filo 20cm Oro/Plata', categoria: 'Extras', precio: 85, desc: 'Plato filo oro/plata 20cm', imagen: 'images/productos/extras/plato-filo-20cm.jpg' },
+            { id: 191, nombre: 'Tortillero 22cm', categoria: 'Extras', precio: 16, desc: 'Tortillero 22cm', imagen: 'images/productos/extras/tortillero-22cm.jpg' },
+            { id: 192, nombre: 'Banderas 32x38.5', categoria: 'Extras', precio: 8, desc: 'Banderas 32x38.5', imagen: 'images/productos/extras/banderas.jpg' },
+            { id: 193, nombre: 'Pantufla', categoria: 'Extras', precio: 37, desc: 'Pantufla sublimable', imagen: 'images/productos/extras/pantufla.jpg' },
         ];
 
         // ============================================================
@@ -2616,7 +1554,6 @@
                 const msgWhats = `Hola, me interesa cotizar: ${p.nombre} (${p.categoria})`;
                 const urlWhats = `https://wa.me/5212223569095?text=${encodeURIComponent(msgWhats)}`;
                 
-                // Si no hay imagen, mostrar placeholder
                 const imgSrc = p.imagen || 'images/productos/placeholder.jpg';
                 
                 return `
