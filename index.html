@@ -323,53 +323,30 @@ body{font-family:'Inter',sans-serif;color:var(--carbon);background:var(--white);
 .d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}
 .d4{transition-delay:.2s}.d5{transition-delay:.25s}.d6{transition-delay:.3s}
 
-/* ── NAVBAR CON LOGO GRANDE ── */
+/* ── NAVBAR CON LOGO GRANDE (igual que productos) ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0;transition:background .4s,box-shadow .4s,padding .4s;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
-.nav-i{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:80px}
-.nav-logo{display:flex;align-items:center;gap:16px;text-decoration:none}
-
-/* LOGO GRANDE - CC estilizado */
+.nav-i{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .nav-logo-mark{
-  width:52px;
-  height:52px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--blue),#1A45B0);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Syne',sans-serif;
-  font-size:24px;
-  font-weight:800;
-  color:#fff;
-  flex-shrink:0;
-  box-shadow:0 4px 14px rgba(37,99,235,.3);
-  transition:transform .3s var(--ease),box-shadow .3s;
-  letter-spacing:-1px;
+  width:70px;
+  height:70px;
+  border-radius:8px;
+  object-fit:cover;
 }
-.nav-logo:hover .nav-logo-mark{
-  transform:scale(1.05);
-  box-shadow:0 6px 24px rgba(37,99,235,.4);
-}
-
 .nav-logo-text{
   font-family:'Inter',sans-serif;
-  font-size:18px;
+  font-size:15px;
   font-weight:700;
   color:var(--carbon);
   line-height:1.1;
 }
 .nav-logo-text span{
   display:block;
-  font-size:11px;
+  font-size:10px;
   font-weight:400;
   color:var(--muted);
-  letter-spacing:.8px;
-  text-transform:uppercase;
+  letter-spacing:.5px;
 }
-.nav-logo-text .highlight{
-  color:var(--blue);
-}
-
 .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
 .nav-links a{font-size:13px;font-weight:500;color:var(--carbon);text-decoration:none;padding:7px 14px;border-radius:6px;transition:background .2s,color .2s;letter-spacing:.2px}
 .nav-links a:hover{background:var(--blue-light);color:var(--blue)}
@@ -386,9 +363,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0;transition:backgr
   .nav-links.active{left:0}
   .nav-links li{width:100%}
   .nav-links a{display:block;text-align:center;padding:12px;font-size:15px}
-  .nav-logo-mark{width:42px;height:42px;font-size:20px}
-  .nav-logo-text{font-size:15px}
-  .nav-logo-text span{font-size:10px}
+  .nav-logo-mark{width:50px;height:50px}
+  .nav-logo-text{font-size:13px}
+  .nav-logo-text span{font-size:9px}
 }
 
 /* ── HERO ── */
@@ -408,7 +385,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0;transition:backgr
 .hero-visual{position:relative}
 .hero-card-main{background:var(--white);border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.08),0 1px 0 rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.06)}
 
-/* LOGO GRANDE EN LA TARJETA DEL HERO */
+/* LOGO EN LA TARJETA DEL HERO */
 .hero-card-img{
   width:100%;
   height:220px;
@@ -422,16 +399,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0;transition:backgr
   position:relative;
 }
 
-.hero-card-logo{
-  font-family:'Syne',sans-serif;
-  font-size:100px;
-  font-weight:800;
-  color:var(--blue);
-  opacity:.12;
-  letter-spacing:-6px;
+.hero-card-logo-img{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  opacity:.15;
+  filter:grayscale(1);
   position:relative;
   z-index:1;
-  text-shadow:0 0 60px rgba(37,99,235,.1);
 }
 
 .hero-card-logo-small{
@@ -615,7 +590,7 @@ footer{background:#0F1623;padding:70px 0 0}
   .trazo-1, .trazo-2, .trazo-3, .trazo-4 { display: none; }
   .splash-md-1, .splash-md-2, .splash-md-3, .splash-md-4 { display: none; }
   .splash-s-1, .splash-s-2, .splash-s-3, .splash-s-4 { display: none; }
-  .hero-card-logo{font-size:60px}
+  .hero-card-logo-img{width:80px;height:80px}
 }
 </style>
 </head>
@@ -639,10 +614,10 @@ footer{background:#0F1623;padding:70px 0 0}
 <nav id="mainNav">
   <div class="nav-i">
     <a href="#" class="nav-logo">
-      <div class="nav-logo-mark">CC</div>
+      <img src="images/logocomercializadora.png" alt="d'Cortes" class="nav-logo-mark">
       <div class="nav-logo-text">
-        Comercializadora <span class="highlight">D'Cortes</span>
-        <span>"Todo para Sublimar"</span>
+        Comercializadora D'Cortes
+        <span>Todo para Sublimar</span>
       </div>
     </a>
     <button class="menu-toggle" id="menuToggle">
@@ -710,7 +685,7 @@ footer{background:#0F1623;padding:70px 0 0}
         </div>
         <div class="hero-card-main">
           <div class="hero-card-img">
-            <div class="hero-card-logo">CC</div>
+            <img src="images/logocomercializadora.png" alt="d'Cortes" class="hero-card-logo-img">
             <div class="hero-card-logo-small">d'Cortes</div>
           </div>
           <div class="hero-card-tag">Sublimación</div>
@@ -1020,7 +995,9 @@ footer{background:#0F1623;padding:70px 0 0}
     <div class="footer-grid">
       <div class="r">
         <div class="footer-logo">
-          <div class="footer-logo-cc">CC</div>
+          <div class="footer-logo-cc">
+            <img src="images/logocomercializadora.png" alt="d'Cortes" style="width:28px;height:28px;border-radius:6px;object-fit:cover">
+          </div>
           Comercializadora <span>d'Cortes</span>
         </div>
         <p class="footer-desc">Todo para sublimar en Puebla. Impresión en lonas, gorras, camisas y diseño digital. Tu idea, nuestro trabajo.</p>
