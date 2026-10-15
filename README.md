@@ -27,15 +27,7 @@ add('Taza mágica 11 oz', 35, { d: 'Descripción', a: { k: 'mug', fin: 'matte' }
 - `top: 1` lo muestra en "Lo que más se llevan" en el inicio.
 - `u: 'paq. 10'` cambia la unidad ("por paq. 10").
 
-## Fotos de producto
 
-Cada producto trae una ilustración generada (`assets/js/art.js`) con fondo transparente.
-Para usar una foto real, guárdala en `images/productos/` (PNG o WebP sin fondo, cuadrada, unos 800 px)
-y agrega `img` al producto:
-
-```js
-add('Taza blanca AA 11 oz', null, { img: 'images/productos/taza-blanca-11oz.webp', a: { k: 'mug' } });
-```
 
 También puedes poner `img` dentro de una variante para que cada color tenga su foto.
 
