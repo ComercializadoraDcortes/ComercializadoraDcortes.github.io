@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo y lista de precios | Comercializadora D'Cortés</title>
+<meta name="description" content="Lista de precios de artículos para sublimar: tazas, termos, botellas, textiles, gorras, reconocimientos, tintas, papel, resistencias y planchas. Precios más IVA.">
+<meta name="theme-color" content="#1E2B4D">
+<link rel="canonical" href="https://comercializadoradcortes.github.io/catalogo.html">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="Catálogo y lista de precios | D'Cortés">
+<meta property="og:description" content="Más de 240 artículos para sublimar con precio publicado. Arma tu cotización y envíala por WhatsApp.">
+<meta property="og:image" content="https://comercializadoradcortes.github.io/images/web/s2.webp">
+<link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#resultados">Saltar a los productos</a>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="./" aria-label="Comercializadora D'Cortés, inicio">
+      <img src="assets/img/logo.png" alt="" width="40" height="40">
+      <div><b>D'Cortés</b><span>Todo para sublimar</span></div>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="catalogo.html" aria-current="page">Catálogo</a>
+      <a href="catalogo.html?cat=maquinaria">Planchas</a>
+      <a href="./#comprar">Cómo comprar</a>
+      <a href="./#visitanos">Visítanos</a>
+    </nav>
+    <div class="hdr-actions">
+      <a class="btn btn-wa btn-sm" href="https://wa.me/5212223569095" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>WhatsApp</a>
+      <button type="button" class="quote-btn" data-open-quote aria-label="Abrir cotización"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="lbl">Cotización</span><span class="quote-count" data-n="0">0</span></button>
+    </div>
+    <button type="button" class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+  </div>
+</header>
+<main id="main">
+  <section class="cat-hero">
+    <div class="wrap">
+      <h1 class="d2">Catálogo y lista de precios</h1>
+      <p class="lead">Elige color u opción, agrega a tu cotización y envíanos la lista por WhatsApp. Te confirmamos existencias y total.</p>
+      <div class="notice" style="margin-top:18px"><span><strong>Precios más IVA.</strong> Producto sin impresión.</span><span>Sujetos a cambio sin previo aviso y a disponibilidad.</span><span>¿Compras por caja? Pregunta por mayoreo.</span></div>
+    </div>
+  </section>
+  <div class="toolbar">
+    <div class="wrap toolbar-in">
+      <form class="search" role="search" onsubmit="return false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <label for="q" class="sr-only">Buscar en el catálogo</label>
+        <input id="q" type="search" placeholder="Buscar producto, color o medida" autocomplete="off">
+      </form>
+      <label for="sort" class="sr-only">Ordenar</label>
+      <select id="sort" class="select">
+        <option value="">Ordenar</option>
+        <option value="asc">Precio: menor a mayor</option>
+        <option value="desc">Precio: mayor a menor</option>
+        <option value="az">Nombre: A a Z</option>
+      </select>
+    </div>
+    <div class="wrap"><div class="mchips" id="mchips" role="group" aria-label="Categorías"></div></div>
+  </div>
+  <div class="wrap layout">
+    <aside class="side" aria-label="Categorías"><h2>Categorías</h2><ul id="side"></ul></aside>
+    <div>
+      <div class="results-bar"><p id="count" aria-live="polite"></p><div class="brands" id="brands"></div></div>
+      <div id="resultados" tabindex="-1"></div>
+    </div>
+  </div>
+</main>
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <a class="brand" href="./"><img src="assets/img/logo.png" alt="" width="40" height="40"><div><b>D'Cortés</b><span>Todo para sublimar</span></div></a>
+      <p>Los mejores productos para sublimar y serigrafía, en el Centro de Puebla.</p>
+    </div>
+    <div><h4>Catálogo</h4><ul><li><a href="catalogo.html?cat=tazas">Tazas</a></li><li><a href="catalogo.html?cat=termos">Termos</a></li><li><a href="catalogo.html?cat=textiles">Textiles</a></li><li><a href="catalogo.html?cat=insumos">Tintas y papel</a></li><li><a href="catalogo.html?cat=maquinaria">Planchas e impresoras</a></li></ul></div>
+    <div><h4>Tienda</h4><ul><li><a href="./#comprar">Cómo comprar</a></li><li><a href="./#pago">Datos de pago</a></li><li><a href="./#servicios">Personalización</a></li><li><a href="./#visitanos">Ubicación</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li><a href="https://wa.me/5212223569095" target="_blank" rel="noopener">WhatsApp 222 356 9095</a></li><li><a href="tel:+522222555200">Tel. 222 255 5200</a></li><li>Calle 17 Pte. 105, Local 11, Centro, Puebla</li></ul></div>
+  </div>
+  <div class="wrap ftr-bottom"><span>© <span data-year>2026</span> Comercializadora D'Cortés. Precios más IVA, sujetos a cambio sin previo aviso.</span><span>Sitio por <a href="https://github.com/miguelhuerta-dev" target="_blank" rel="noopener">Miguel Ángel Huerta Vázquez</a></span></div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5212223569095" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/catalogo.js"></script>
+</body>
+</html>
